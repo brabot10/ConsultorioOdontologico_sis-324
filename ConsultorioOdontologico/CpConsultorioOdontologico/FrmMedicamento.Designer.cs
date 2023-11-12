@@ -36,48 +36,48 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMedicamento));
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.pnlAcciones = new System.Windows.Forms.Panel();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnPersonal = new System.Windows.Forms.Button();
-            this.btnMedicamentos = new System.Windows.Forms.Button();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnPaciente = new System.Windows.Forms.Button();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblPaciente = new System.Windows.Forms.Label();
+            this.cbxPaciente = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.lblArticulo = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.erpArticulo = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpPrecio = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblPaciente = new System.Windows.Forms.Label();
-            this.cbxPaciente = new System.Windows.Forms.ComboBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnPersonal = new System.Windows.Forms.Button();
+            this.btnMedicamentos = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
+            this.btnPaciente = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.gbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -104,80 +104,6 @@
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(592, 72);
             this.pnlAcciones.TabIndex = 36;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.btnEditar;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(175, 5);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(111, 59);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources._3017912_annul_cancel_clean_delete_eliminate_icon;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(317, 5);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(111, 59);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.btnNuevo;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(36, 5);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(111, 59);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources._1891023_cancel_cercle_close_delete_dismiss_icon;
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(454, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(111, 59);
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // gbxLista
             // 
@@ -247,24 +173,6 @@
             this.dgvLista.Size = new System.Drawing.Size(582, 103);
             this.dgvLista.TabIndex = 0;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.btnCliente;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 5);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(111, 52);
-            this.btnBuscar.TabIndex = 33;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // txtParametro
             // 
             this.txtParametro.Location = new System.Drawing.Point(6, 37);
@@ -318,6 +226,226 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(157, 341);
             this.pnlMenu.TabIndex = 38;
+            // 
+            // gbxDatos
+            // 
+            this.gbxDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.gbxDatos.Controls.Add(this.lblPaciente);
+            this.gbxDatos.Controls.Add(this.cbxPaciente);
+            this.gbxDatos.Controls.Add(this.btnGuardar);
+            this.gbxDatos.Controls.Add(this.txtPrecio);
+            this.gbxDatos.Controls.Add(this.lblPrecio);
+            this.gbxDatos.Controls.Add(this.txtDescripcion);
+            this.gbxDatos.Controls.Add(this.lblDescripcion);
+            this.gbxDatos.Controls.Add(this.txtArticulo);
+            this.gbxDatos.Controls.Add(this.lblArticulo);
+            this.gbxDatos.Controls.Add(this.btnCancelar);
+            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDatos.ForeColor = System.Drawing.Color.White;
+            this.gbxDatos.Location = new System.Drawing.Point(0, 342);
+            this.gbxDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxDatos.Name = "gbxDatos";
+            this.gbxDatos.Padding = new System.Windows.Forms.Padding(2);
+            this.gbxDatos.Size = new System.Drawing.Size(777, 151);
+            this.gbxDatos.TabIndex = 41;
+            this.gbxDatos.TabStop = false;
+            this.gbxDatos.Text = "Datos del Medicamento";
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Location = new System.Drawing.Point(417, 34);
+            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.Size = new System.Drawing.Size(114, 15);
+            this.lblPaciente.TabIndex = 33;
+            this.lblPaciente.Text = "Asignar la cita a:";
+            // 
+            // cbxPaciente
+            // 
+            this.cbxPaciente.BackColor = System.Drawing.Color.Wheat;
+            this.cbxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxPaciente.FormattingEnabled = true;
+            this.cbxPaciente.Items.AddRange(new object[] {
+            "CANCELADO",
+            "PENDIENTE"});
+            this.cbxPaciente.Location = new System.Drawing.Point(535, 26);
+            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPaciente.Name = "cbxPaciente";
+            this.cbxPaciente.Size = new System.Drawing.Size(230, 23);
+            this.cbxPaciente.TabIndex = 32;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(127, 100);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.MaxLength = 250;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(265, 21);
+            this.txtPrecio.TabIndex = 21;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(8, 104);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(52, 15);
+            this.lblPrecio.TabIndex = 16;
+            this.lblPrecio.Text = "Precio:";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(127, 59);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.MaxLength = 250;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(265, 21);
+            this.txtDescripcion.TabIndex = 15;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(8, 59);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(87, 15);
+            this.lblDescripcion.TabIndex = 14;
+            this.lblDescripcion.Text = "Descripción:";
+            // 
+            // txtArticulo
+            // 
+            this.txtArticulo.Location = new System.Drawing.Point(127, 20);
+            this.txtArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtArticulo.MaxLength = 250;
+            this.txtArticulo.Name = "txtArticulo";
+            this.txtArticulo.Size = new System.Drawing.Size(265, 21);
+            this.txtArticulo.TabIndex = 13;
+            // 
+            // lblArticulo
+            // 
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Location = new System.Drawing.Point(8, 23);
+            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(59, 15);
+            this.lblArticulo.TabIndex = 8;
+            this.lblArticulo.Text = "Artículo:";
+            // 
+            // erpArticulo
+            // 
+            this.erpArticulo.ContainerControl = this;
+            // 
+            // erpDescripcion
+            // 
+            this.erpDescripcion.ContainerControl = this;
+            // 
+            // erpPrecio
+            // 
+            this.erpPrecio.ContainerControl = this;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnEditar.FlatAppearance.BorderSize = 3;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_editar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(175, 5);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(111, 59);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 3;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(317, 5);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(111, 59);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 3;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.med_agregar;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(36, 5);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(111, 59);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 3;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_cerrar;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(454, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(111, 59);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 3;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_buscar1;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(494, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(111, 60);
+            this.btnBuscar.TabIndex = 33;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnPersonal
             // 
@@ -403,36 +531,14 @@
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
             // 
-            // gbxDatos
-            // 
-            this.gbxDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.gbxDatos.Controls.Add(this.lblPaciente);
-            this.gbxDatos.Controls.Add(this.cbxPaciente);
-            this.gbxDatos.Controls.Add(this.btnGuardar);
-            this.gbxDatos.Controls.Add(this.txtPrecio);
-            this.gbxDatos.Controls.Add(this.lblPrecio);
-            this.gbxDatos.Controls.Add(this.txtDescripcion);
-            this.gbxDatos.Controls.Add(this.lblDescripcion);
-            this.gbxDatos.Controls.Add(this.txtArticulo);
-            this.gbxDatos.Controls.Add(this.lblArticulo);
-            this.gbxDatos.Controls.Add(this.btnCancelar);
-            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatos.ForeColor = System.Drawing.Color.White;
-            this.gbxDatos.Location = new System.Drawing.Point(0, 342);
-            this.gbxDatos.Margin = new System.Windows.Forms.Padding(2);
-            this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxDatos.Size = new System.Drawing.Size(777, 151);
-            this.gbxDatos.TabIndex = 41;
-            this.gbxDatos.TabStop = false;
-            this.gbxDatos.Text = "Datos del Medicamento";
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 3;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources._1891021_approved_check_checkbox_checkmark_confirm_icon;
+            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(442, 62);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
@@ -444,116 +550,24 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(127, 100);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrecio.MaxLength = 250;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(265, 21);
-            this.txtPrecio.TabIndex = 21;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(8, 104);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(52, 15);
-            this.lblPrecio.TabIndex = 16;
-            this.lblPrecio.Text = "Precio:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(127, 59);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripcion.MaxLength = 250;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(265, 21);
-            this.txtDescripcion.TabIndex = 15;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(8, 59);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(87, 15);
-            this.lblDescripcion.TabIndex = 14;
-            this.lblDescripcion.Text = "Descripción:";
-            // 
-            // txtArticulo
-            // 
-            this.txtArticulo.Location = new System.Drawing.Point(127, 20);
-            this.txtArticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtArticulo.MaxLength = 250;
-            this.txtArticulo.Name = "txtArticulo";
-            this.txtArticulo.Size = new System.Drawing.Size(265, 21);
-            this.txtArticulo.TabIndex = 13;
-            // 
-            // lblArticulo
-            // 
-            this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Location = new System.Drawing.Point(8, 23);
-            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(59, 15);
-            this.lblArticulo.TabIndex = 8;
-            this.lblArticulo.Text = "Artículo:";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 3;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.btnCancelar;
+            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(605, 64);
+            this.btnCancelar.Location = new System.Drawing.Point(593, 62);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
+            this.btnCancelar.Size = new System.Drawing.Size(132, 59);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // erpArticulo
-            // 
-            this.erpArticulo.ContainerControl = this;
-            // 
-            // erpDescripcion
-            // 
-            this.erpDescripcion.ContainerControl = this;
-            // 
-            // erpPrecio
-            // 
-            this.erpPrecio.ContainerControl = this;
-            // 
-            // lblPaciente
-            // 
-            this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Location = new System.Drawing.Point(417, 34);
-            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(114, 15);
-            this.lblPaciente.TabIndex = 33;
-            this.lblPaciente.Text = "Asignar la cita a:";
-            // 
-            // cbxPaciente
-            // 
-            this.cbxPaciente.BackColor = System.Drawing.Color.Wheat;
-            this.cbxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxPaciente.FormattingEnabled = true;
-            this.cbxPaciente.Items.AddRange(new object[] {
-            "CANCELADO",
-            "PENDIENTE"});
-            this.cbxPaciente.Location = new System.Drawing.Point(535, 26);
-            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxPaciente.Name = "cbxPaciente";
-            this.cbxPaciente.Size = new System.Drawing.Size(230, 23);
-            this.cbxPaciente.TabIndex = 32;
             // 
             // FrmMedicamento
             // 
@@ -577,12 +591,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

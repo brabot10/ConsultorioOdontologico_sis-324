@@ -264,6 +264,51 @@
   <ItemGroup>
     <None Include="Resources\CalcelarCitas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\per_cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_buscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_cancelar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
