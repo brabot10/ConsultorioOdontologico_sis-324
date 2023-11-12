@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed20ae42da7b4aaca8e19f0f7c1dd121" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Cita" Width="1.5" PointX="4.375" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Medicamento" Width="1.5" PointX="9.125" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Paciente" Width="1.5" PointX="6.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Personal" Width="1.5" PointX="6.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Usuario" Width="1.5" PointX="9.25" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Cita_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Medicamento_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Paciente_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Usuario_Personal" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
