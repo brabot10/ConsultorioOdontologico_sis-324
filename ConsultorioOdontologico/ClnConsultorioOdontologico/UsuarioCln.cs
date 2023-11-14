@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CadConsultorioOdontologico;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +9,71 @@ namespace ClnConsultorioOdontologico
 {
     public class UsuarioCln
     {
-        public static MySqlConnection conexion()
+        public static int insertar(Usuario usuario)
         {
-            string servidor = "(localdb)\\MSSQLLocalDB";
-            string puerto = "1433"; // Puerto MySQL
-            string bd = "LabConsultorioOdontologico";
-            string usuario = "usrconsultorio ";
-            string password = "123456";
-
-            string cadenaConexion = $"Server={servidor};Port={puerto};Database={bd};User Id={usuario};Password={password};";
-            //string cadenaConexion = $"Server={servidor};Database={bd};User Id={usuario};Password={password};";
-            try
+            using (var context = new LabConsultorioOdontologicoEntities())
             {
-                MySqlConnection conexionDB = new MySqlConnection(cadenaConexion);
-
-                return conexionDB;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-
-                return null;
+                context.Usuario.Add(usuario);
+                context.SaveChanges();
+                return usuario.id;
             }
         }
+
+        public static int actualizar(Usuario usuario)
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                var existente = context.Usuario.Find(usuario.id);
+                existente.usuario1 = usuario.usuario1;
+                existente.clave = usuario.clave;
+                existente.usuarioRegistro = usuario.usuarioRegistro;
+                existente.fechaRegistro = usuario.fechaRegistro;
+                return context.SaveChanges();
+            }
+        }
+
+        public static int eliminar(int id, string usuarioRegistro)
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                var existente = context.Usuario.Find(id);
+                existente.estado = -1;
+                existente.usuarioRegistro = usuarioRegistro;
+                return context.SaveChanges();
+            }
+        }
+
+        public static Usuario get(int id)
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                return context.Usuario.Find(id);
+            }
+        }
+
+        public static List<Usuario> listar()
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                return context.Usuario.Where(x => x.estado != -1).ToList();
+            }
+        }
+
+        public static List<paUsuarioListar_Result> listarPa(string parametro1)
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                return context.paUsuarioListar(parametro1).ToList();
+            }
+        }
+        /*public static Usuario validar(string usuario, string clave)
+        {
+            using (var context = new LabConsultorioOdontologicoEntities())
+            {
+                return context.Usuario
+                    .Where(x => x.usuario1 == usuario && x.clave == clave)
+                    .FirstOrDefault();
+            }
+        }*/
     }
 }

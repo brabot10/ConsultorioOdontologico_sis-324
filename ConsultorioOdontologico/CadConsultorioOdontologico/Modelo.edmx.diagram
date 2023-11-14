@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ed20ae42da7b4aaca8e19f0f7c1dd121" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Cita" Width="1.5" PointX="4.375" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Medicamento" Width="1.5" PointX="9.125" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Paciente" Width="1.5" PointX="6.625" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Personal" Width="1.5" PointX="6.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Usuario" Width="1.5" PointX="9.25" PointY="1.375" IsExpanded="true" />
+      <Diagram DiagramId="51369d1b959747ef85d56951beb9f476" Name="Diagram1">
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Cita" Width="1.5" PointX="2.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Medicamento" Width="1.5" PointX="8.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Paciente" Width="1.5" PointX="5.625" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Personal" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabConsultorioOdontologicoModel.Usuario" Width="1.5" PointX="8.625" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Cita_Paciente" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Medicamento_Paciente" ManuallyRouted="false" />
         <AssociationConnector Association="LabConsultorioOdontologicoModel.fk_Paciente_Personal" ManuallyRouted="false" />

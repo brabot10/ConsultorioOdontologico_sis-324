@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -42,11 +43,15 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.lblAutor = new System.Windows.Forms.Label();
+            this.erpUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpClave = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClave)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxLogo
@@ -84,6 +89,7 @@
             this.pnlCabeza.Size = new System.Drawing.Size(775, 137);
             this.pnlCabeza.TabIndex = 3;
             this.pnlCabeza.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeza_Paint);
+            this.pnlCabeza.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeza_MouseMove);
             // 
             // lblTitulo
             // 
@@ -139,6 +145,7 @@
             this.txtClave.Size = new System.Drawing.Size(249, 17);
             this.txtClave.TabIndex = 3;
             this.txtClave.UseSystemPasswordChar = true;
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // lblUsuario
             // 
@@ -202,6 +209,14 @@
             this.lblAutor.TabIndex = 8;
             this.lblAutor.Text = "By: Bryan Pilcolora Mendoza";
             // 
+            // erpUsuario
+            // 
+            this.erpUsuario.ContainerControl = this;
+            // 
+            // erpClave
+            // 
+            this.erpClave.ContainerControl = this;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,7 +230,7 @@
             this.Controls.Add(this.pnlDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = ":::Principal:::Consultorio Odontologico";
@@ -226,6 +241,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClave)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,6 +261,8 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Panel pnlDatos;
         private System.Windows.Forms.Label lblAutor;
+        private System.Windows.Forms.ErrorProvider erpUsuario;
+        private System.Windows.Forms.ErrorProvider erpClave;
     }
 }
 

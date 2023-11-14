@@ -55,6 +55,8 @@
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.pnlDatosDes = new System.Windows.Forms.Panel();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.lblPersonal = new System.Windows.Forms.Label();
+            this.cbxPersonal = new System.Windows.Forms.ComboBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.lblCelular = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.erpAlergias = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpFechaNacimiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCelular = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblPersonal = new System.Windows.Forms.Label();
-            this.cbxPersonal = new System.Windows.Forms.ComboBox();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
@@ -196,6 +196,7 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(620, 71);
             this.pnlTitulo.TabIndex = 2;
+            this.pnlTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseMove);
             // 
             // lblTitulo
             // 
@@ -450,6 +451,31 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos del Producto";
             // 
+            // lblPersonal
+            // 
+            this.lblPersonal.AutoSize = true;
+            this.lblPersonal.Location = new System.Drawing.Point(439, 46);
+            this.lblPersonal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPersonal.Name = "lblPersonal";
+            this.lblPersonal.Size = new System.Drawing.Size(94, 15);
+            this.lblPersonal.TabIndex = 35;
+            this.lblPersonal.Text = "Asignar al Dr:";
+            // 
+            // cbxPersonal
+            // 
+            this.cbxPersonal.BackColor = System.Drawing.Color.Wheat;
+            this.cbxPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxPersonal.FormattingEnabled = true;
+            this.cbxPersonal.Items.AddRange(new object[] {
+            "CANCELADO",
+            "PENDIENTE"});
+            this.cbxPersonal.Location = new System.Drawing.Point(537, 43);
+            this.cbxPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPersonal.Name = "cbxPersonal";
+            this.cbxPersonal.Size = new System.Drawing.Size(214, 23);
+            this.cbxPersonal.TabIndex = 34;
+            // 
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
@@ -603,31 +629,6 @@
             // 
             this.erpCelular.ContainerControl = this;
             // 
-            // lblPersonal
-            // 
-            this.lblPersonal.AutoSize = true;
-            this.lblPersonal.Location = new System.Drawing.Point(439, 46);
-            this.lblPersonal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPersonal.Name = "lblPersonal";
-            this.lblPersonal.Size = new System.Drawing.Size(94, 15);
-            this.lblPersonal.TabIndex = 35;
-            this.lblPersonal.Text = "Asignar al Dr:";
-            // 
-            // cbxPersonal
-            // 
-            this.cbxPersonal.BackColor = System.Drawing.Color.Wheat;
-            this.cbxPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxPersonal.FormattingEnabled = true;
-            this.cbxPersonal.Items.AddRange(new object[] {
-            "CANCELADO",
-            "PENDIENTE"});
-            this.cbxPersonal.Location = new System.Drawing.Point(537, 43);
-            this.cbxPersonal.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxPersonal.Name = "cbxPersonal";
-            this.cbxPersonal.Size = new System.Drawing.Size(214, 23);
-            this.cbxPersonal.TabIndex = 34;
-            // 
             // FrmPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,6 +643,7 @@
             this.Name = "FrmPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPaciente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPaciente_FormClosing);
             this.Load += new System.EventHandler(this.FrmPaciente_Load);
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();

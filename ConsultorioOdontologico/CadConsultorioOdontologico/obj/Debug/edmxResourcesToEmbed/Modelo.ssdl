@@ -67,6 +67,9 @@
     <Property Name="idPersonal" Type="int" Nullable="false" />
     <Property Name="usuario" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
   <Association Name="fk_Cita_Paciente">
     <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
@@ -127,6 +130,9 @@
   </Function>
   <Function Name="paPersonalListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro1" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paUsuarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="LabConsultorioOdontologicoModelStoreContainer">
     <EntitySet Name="Cita" EntityType="Self.Cita" Schema="dbo" store:Type="Tables" />

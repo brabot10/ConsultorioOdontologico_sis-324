@@ -15,11 +15,15 @@ namespace CpConsultorioOdontologico
 {
     public partial class FrmPaciente : Form
     {
+        //FrmPrincipal frmPrincipal;
+
         bool esNuevo = false;
         bool cedula = false;
+        //(FrmPrincipal frmPrincipal)
         public FrmPaciente()
         {
             InitializeComponent();
+            //this.frmPrincipal = frmPrincipal;
         }
         private void listar()
         {
@@ -70,7 +74,6 @@ namespace CpConsultorioOdontologico
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             var paciente = PacienteCln.get(id);
             txtNombre.Text = paciente.nombres;
-            txtCelular.Text = paciente.nombres;
             txtCedulaIdentidad.Text = paciente.cedulaIdentidad;
             txtAlergias.Text = paciente.alergias;
             dtpFechaNacimiento.Value = paciente.fechaNacimiento;
@@ -291,6 +294,27 @@ namespace CpConsultorioOdontologico
             llamar.Show();
             Size = new Size(776, 344);
             this.Hide();
+        }
+
+        private void FrmPaciente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // frmPrincipal.Visible = true;
+        }
+
+        int posY = 0;
+        int posX = 0;
+        private void pnlTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
         }
     }
 }

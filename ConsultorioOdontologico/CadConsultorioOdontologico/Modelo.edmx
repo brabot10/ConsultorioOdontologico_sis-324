@@ -72,6 +72,9 @@
           <Property Name="idPersonal" Type="int" Nullable="false" />
           <Property Name="usuario" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
         </EntityType>
         <Association Name="fk_Cita_Paciente">
           <End Role="Paciente" Type="Self.Paciente" Multiplicity="1" />
@@ -132,6 +135,9 @@
         </Function>
         <Function Name="paPersonalListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro1" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paUsuarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="LabConsultorioOdontologicoModelStoreContainer">
           <EntitySet Name="Cita" EntityType="Self.Cita" Schema="dbo" store:Type="Tables" />
@@ -235,6 +241,9 @@
           <Property Name="idPersonal" Type="Int32" Nullable="false" />
           <Property Name="usuario1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Personal" Relationship="Self.fk_Usuario_Personal" FromRole="Usuario" ToRole="Personal" />
         </EntityType>
         <Association Name="fk_Cita_Paciente">
@@ -319,6 +328,9 @@
           <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paPersonalListar_Result)">
             <Parameter Name="parametro1" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paUsuarioListar_Result)">
+            <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="paCitaListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -360,6 +372,14 @@
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
           <Property Type="Int64" Name="celular" Nullable="false" />
           <Property Type="String" Name="cargo" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="paUsuarioListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="usuario" Nullable="false" MaxLength="12" />
+          <Property Type="String" Name="clave" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
@@ -440,6 +460,9 @@
                 <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
                 <ScalarProperty Name="usuario1" ColumnName="usuario" />
                 <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -497,6 +520,18 @@
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
                 <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paUsuarioListar" FunctionName="LabConsultorioOdontologicoModel.Store.paUsuarioListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paUsuarioListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />

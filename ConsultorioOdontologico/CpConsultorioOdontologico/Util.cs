@@ -17,7 +17,7 @@ namespace CpConsultorioOdontologico
         static bool notPaste = false;
         public static string Encrypt(string clearText)
         {
-            string EncryptionKey = "SIS457-1nf0!";
+            string EncryptionKey = "SIS324-1nf0!";
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
             using (Aes encryptor = Aes.Create())
             {

@@ -155,7 +155,7 @@ namespace CpConsultorioOdontologico
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-                        {
+            {
                 int index = dgvLista.CurrentCell.RowIndex;
                 int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
                 string articulo = dgvLista.Rows[index].Cells["articulo"].Value.ToString();
@@ -194,6 +194,23 @@ namespace CpConsultorioOdontologico
             llamar.Show();
             Size = new Size(776, 344);
             this.Hide();
+        }
+
+        int posY = 0;
+        int posX = 0;
+
+        private void pnlTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
         }
     }
 }

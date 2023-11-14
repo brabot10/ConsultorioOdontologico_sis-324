@@ -68,5 +68,14 @@ namespace CadConsultorioOdontologico
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paPersonalListar_Result>("paPersonalListar", parametro1Parameter);
         }
+    
+        public virtual ObjectResult<paUsuarioListar_Result> paUsuarioListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paUsuarioListar_Result>("paUsuarioListar", parametroParameter);
+        }
     }
 }

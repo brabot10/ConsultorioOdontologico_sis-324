@@ -46,3 +46,15 @@ D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologi
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\Consultorio_Odontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.csproj.CopyComplete
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\Consultorio_Odontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.dll
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\Consultorio_Odontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.pdb
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\CadConsultorioOdontologico.dll.config
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\CadConsultorioOdontologico.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\CadConsultorioOdontologico.pdb
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\EntityFramework.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\EntityFramework.SqlServer.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\EntityFramework.xml
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Debug\EntityFramework.SqlServer.xml
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.csproj.AssemblyReference.cache
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.csproj.CoreCompileInputs.cache
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.csproj.CopyComplete
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Debug\CadConsultorioOdontologico.pdb
