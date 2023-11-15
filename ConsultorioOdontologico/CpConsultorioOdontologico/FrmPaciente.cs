@@ -31,6 +31,7 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = paciente;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["idPersonal"].HeaderText = "Doctor Asignado";
             dgvLista.Columns["nombres"].HeaderText = "Nombre";
             dgvLista.Columns["cedulaIdentidad"].HeaderText = "Cedula de Identidad";
             dgvLista.Columns["alergias"].HeaderText = "Alergias";

@@ -105,7 +105,7 @@ EXEC paPersonalListar 'Juan';
 
 CREATE PROC paPacienteListar @parametro2 VARCHAR(50)
 AS
-  SELECT id, cedulaIdentidad, nombres, alergias, fechaNacimiento, celular, usuarioRegistro, fechaRegistro, estado
+  SELECT id, idPersonal, cedulaIdentidad, nombres, alergias, fechaNacimiento, celular, usuarioRegistro, fechaRegistro, estado
   FROM Paciente
   WHERE estado<>-1 AND nombres LIKE '%'+REPLACE(@parametro2,' ','%')+'%';
   
@@ -114,7 +114,7 @@ EXEC paPacienteListar 'María';
 
 CREATE PROC paCitaListar @parametro3 VARCHAR(50)
 AS
-  SELECT id, fecha, hora, tratamiento, pago, aCuenta, usuarioRegistro, fechaRegistro, estado
+  SELECT id, idPaciente, fecha, hora, tratamiento, pago, aCuenta, usuarioRegistro, fechaRegistro, estado
   FROM Cita
   WHERE estado<>-1 AND fecha LIKE '%'+REPLACE(@parametro3,' ','%')+'%';
 EXEC paCitaListar 'Limpieza dental';
@@ -122,7 +122,7 @@ EXEC paCitaListar 'Limpieza dental';
 
 CREATE PROC paMedicamentoListar @parametro4 VARCHAR(50)
 AS
-  SELECT id, articulo, descripcion, precio, usuarioRegistro, fechaRegistro, estado
+  SELECT id, idPaciente, articulo, descripcion, precio, usuarioRegistro, fechaRegistro, estado
   FROM Medicamento
   WHERE estado<>-1 AND articulo LIKE '%'+REPLACE(@parametro4,' ','%')+'%';
 
@@ -131,7 +131,7 @@ EXEC paMedicamentoListar 'Paracetamol';
 
 CREATE PROC paUsuarioListar @parametro VARCHAR(50)
 AS
-  SELECT id, usuario, clave, usuarioRegistro, fechaRegistro, estado
+  SELECT id, idPersonal, usuario, clave, usuarioRegistro, fechaRegistro, estado
   FROM Usuario
   WHERE estado<>-1 AND usuario LIKE '%'+REPLACE(@parametro,' ','%')+'%';
 

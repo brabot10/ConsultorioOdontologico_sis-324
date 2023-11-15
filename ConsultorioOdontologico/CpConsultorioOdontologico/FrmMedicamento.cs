@@ -26,6 +26,7 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = medicamento;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["idPaciente"].HeaderText = "Nombre del Paciente";
             dgvLista.Columns["articulo"].HeaderText = "Nombre del Medicamento";
             dgvLista.Columns["descripcion"].HeaderText = "Descripcion del Medicamento";
             dgvLista.Columns["precio"].HeaderText = "Precio del Medicamento en Bs";

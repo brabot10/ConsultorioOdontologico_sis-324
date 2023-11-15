@@ -28,6 +28,7 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = usuario;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["idPersonal"].HeaderText = "Encargado";
             dgvLista.Columns["usuario"].HeaderText = "Usuario";
             dgvLista.Columns["clave"].HeaderText = "Clave";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
@@ -135,6 +136,20 @@ namespace CpConsultorioOdontologico
             txtUsuario.Text = string.Empty;
         }
 
-
+        int posY = 0;
+        int posX = 0;
+        private void pnlMovimiento_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
     }
 }

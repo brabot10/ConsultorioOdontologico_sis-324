@@ -27,6 +27,7 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = cita;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["idPaciente"].HeaderText = "Nombre del paciente";
             dgvLista.Columns["fecha"].HeaderText = "Fecha de la Consulta";
             dgvLista.Columns["hora"].HeaderText = "Hora de la Consulta";
             dgvLista.Columns["tratamiento"].HeaderText = "Tratamiento";
@@ -175,7 +176,6 @@ namespace CpConsultorioOdontologico
                     cita.fechaRegistro = DateTime.Now;
                     cita.estado = 1;
                     cita.idPaciente = Convert.ToInt32(cbxPaciente.SelectedValue);
-
                     CitaCln.insertar(cita);
                 }
                 else
