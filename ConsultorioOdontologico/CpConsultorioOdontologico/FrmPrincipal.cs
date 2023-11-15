@@ -41,16 +41,10 @@ namespace CpConsultorioOdontologico
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
             if (validar())
             {
-                FrmPaciente llamar = new FrmPaciente();
-                llamar.Show();
-                Size = new Size(776, 344);
-                this.Hide();
-            }
-            /*if (validar())
-            {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                var usuario = UsuarioCln.validar(txtUsuario.Text, txtClave.Text);
                 if (usuario != null)
                 {
                     Util.usuario = usuario;
@@ -68,8 +62,15 @@ namespace CpConsultorioOdontologico
                         "::: Minerva - Mensaje :::", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
+            }
+            /*if (validar())
+            {   
+                new FrmPaciente().ShowDialog();
+                FrmPaciente llamar = new FrmPaciente();
+                llamar.Show();
+                Size = new Size(776, 344);
+                this.Hide();
             }*/
-
             /*if (validar())
             {
                 var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
@@ -110,7 +111,7 @@ namespace CpConsultorioOdontologico
 
         private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
+
         }
         int posY = 0;
         int posX = 0;

@@ -313,5 +313,52 @@ namespace CpConsultorioOdontologico
                 Top = Top + (e.Y - posY);
             }
         }
+        private Dictionary<Control, Color> coloresOriginales = new Dictionary<Control, Color>();
+        private void CambiarColorControles(Control.ControlCollection controles, Color nuevoColor)
+        {
+            foreach (Control control in controles)
+            {
+                coloresOriginales[control] = control.BackColor;
+
+                control.BackColor = nuevoColor;
+
+                if (control.HasChildren)
+                {
+                    CambiarColorControles(control.Controls, nuevoColor);
+                }
+            }
+        }
+        private void RecargarFormularioPersonal()
+        {
+            // Coloca aquí cualquier código adicional necesario antes de recargar el formulario
+            FrmPersonal nuevoFormulario = new FrmPersonal();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
+        }
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            var colorOriginal = this.BackColor;
+
+            // Cambia el color de fondo de todos los controles a gris y guarda los colores originales
+            CambiarColorControles(this.Controls, SystemColors.ControlDark);
+
+            // Creamos el formulario usuario
+            FrmUsuario frmUsuario = new FrmUsuario();
+
+            // Mostramos el formulario usuario de manera modal
+            DialogResult result = frmUsuario.ShowDialog();
+
+            // Limpia el diccionario de colores originales
+            //coloresOriginales.Clear();
+
+            // Verificamos si el formulario de usuario se cerró correctamente
+            if (result == DialogResult.OK)
+            {
+                // El código aquí se ejecutará después de que FrmUsuario se cierre
+                // Desbloqueamos el funcionamiento del formulario personal
+                RecargarFormularioPersonal();
+                this.Enabled = true;
+            }
+        }
     }
 }

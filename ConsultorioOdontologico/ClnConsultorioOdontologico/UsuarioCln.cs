@@ -27,7 +27,6 @@ namespace ClnConsultorioOdontologico
                 existente.usuario1 = usuario.usuario1;
                 existente.clave = usuario.clave;
                 existente.usuarioRegistro = usuario.usuarioRegistro;
-                existente.fechaRegistro = usuario.fechaRegistro;
                 return context.SaveChanges();
             }
         }
@@ -66,7 +65,7 @@ namespace ClnConsultorioOdontologico
                 return context.paUsuarioListar(parametro1).ToList();
             }
         }
-        /*public static Usuario validar(string usuario, string clave)
+        public static Usuario validar(string usuario, string clave)
         {
             using (var context = new LabConsultorioOdontologicoEntities())
             {
@@ -74,6 +73,6 @@ namespace ClnConsultorioOdontologico
                     .Where(x => x.usuario1 == usuario && x.clave == clave)
                     .FirstOrDefault();
             }
-        }*/
+        }
     }
 }

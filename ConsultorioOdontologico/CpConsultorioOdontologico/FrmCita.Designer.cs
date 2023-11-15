@@ -99,7 +99,7 @@
             this.pnlDatos.Controls.Add(this.txtParametro);
             this.pnlDatos.Controls.Add(this.lblBusqueda);
             this.pnlDatos.Location = new System.Drawing.Point(207, 87);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(828, 334);
             this.pnlDatos.TabIndex = 40;
@@ -235,7 +235,7 @@
             this.dgvLista.EnableHeadersVisualStyles = false;
             this.dgvLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
             this.dgvLista.Location = new System.Drawing.Point(7, 26);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLista.MultiSelect = false;
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
@@ -304,7 +304,7 @@
             this.pnlDatosDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
             this.pnlDatosDes.Controls.Add(this.groupBox1);
             this.pnlDatosDes.Location = new System.Drawing.Point(0, 421);
-            this.pnlDatosDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDatosDes.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatosDes.Name = "pnlDatosDes";
             this.pnlDatosDes.Size = new System.Drawing.Size(1035, 187);
             this.pnlDatosDes.TabIndex = 42;
@@ -391,7 +391,7 @@
             this.dtpFecha.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(204, 18);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(352, 26);
             this.dtpFecha.TabIndex = 26;
@@ -498,7 +498,7 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Location = new System.Drawing.Point(207, -1);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(828, 89);
             this.pnlTitulo.TabIndex = 39;
@@ -525,7 +525,7 @@
             this.pnlMenu.Controls.Add(this.btnPaciente);
             this.pnlMenu.Controls.Add(this.pbxLogo);
             this.pnlMenu.Location = new System.Drawing.Point(-1, -1);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(209, 422);
             this.pnlMenu.TabIndex = 38;
@@ -610,7 +610,7 @@
             this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxLogo.Image = global::CpConsultorioOdontologico.Properties.Resources.pacientes;
             this.pbxLogo.Location = new System.Drawing.Point(56, 4);
-            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(97, 114);
             this.pbxLogo.TabIndex = 0;
