@@ -11,7 +11,7 @@ namespace ClnConsultorioOdontologico
     {
         public static int insertar(Medicamento medicamento)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 context.Medicamento.Add(medicamento);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnConsultorioOdontologico
 
         public static int actualizar(Medicamento medicamento)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Medicamento.Find(medicamento.id);
                 existente.articulo = medicamento.articulo;
@@ -35,7 +35,7 @@ namespace ClnConsultorioOdontologico
 
         public static int eliminar(int id, string usuarioRegistro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Medicamento.Find(id);
                 existente.estado = -1;
@@ -46,7 +46,7 @@ namespace ClnConsultorioOdontologico
 
         public static Medicamento get(int id)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Medicamento.Find(id);
             }
@@ -54,7 +54,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<Medicamento> listar()
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Medicamento.Where(x => x.estado != -1).ToList();
             }
@@ -62,7 +62,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<paMedicamentoListar_Result> listarPa(string parametro4)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.paMedicamentoListar(parametro4).ToList();
             }

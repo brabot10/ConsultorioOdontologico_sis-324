@@ -81,7 +81,14 @@ namespace CpConsultorioOdontologico
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            RecargarFormularioLogin();
             Close();
+        }
+        private void RecargarFormularioLogin()
+        {
+            FrmPrincipal nuevoFormulario = new FrmPrincipal();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -169,13 +176,13 @@ namespace CpConsultorioOdontologico
                 {
                     var personal = new Personal();
                     personal.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
-                    personal.nombres = txtCelular.Text.Trim();
+                    personal.nombres = txtNombre.Text.Trim();
                     personal.primerApellido = txtPrimerApellido.Text;
                     personal.segundoApellido = txtSegundoApellido.Text;
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
                     personal.cargo = txtCargo.Text;
-                    personal.usuarioRegistro = "SIS257";
+                    personal.usuarioRegistro = "SIS324";
                     var existePersonales = PersonalCln.listar();
                     bool personalExiste = false;
 
@@ -198,6 +205,7 @@ namespace CpConsultorioOdontologico
                         personal.fechaRegistro = DateTime.Now;
                         personal.estado = 1;
                         PersonalCln.insertar(personal);
+                        cedula = false;
                     }
                     else
                     {
@@ -218,13 +226,13 @@ namespace CpConsultorioOdontologico
                 {
                     var personal = new Personal();
                     personal.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
-                    personal.nombres = txtCelular.Text.Trim();
+                    personal.nombres = txtNombre.Text.Trim();
                     personal.primerApellido = txtPrimerApellido.Text;
                     personal.segundoApellido = txtSegundoApellido.Text;
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
                     personal.cargo = txtCargo.Text;
-                    personal.usuarioRegistro = "SIS257";
+                    personal.usuarioRegistro = "SIS324";
                     if (esNuevo)
                     {
                         personal.fechaRegistro = DateTime.Now;
@@ -267,7 +275,7 @@ namespace CpConsultorioOdontologico
                     "::: Consultorio Odontologico - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dialog == DialogResult.OK)
                 {
-                    PersonalCln.eliminar(id, "SIS457");
+                    PersonalCln.eliminar(id, "SIS324");
                     listar();
                     MessageBox.Show("Personal dado de baja correctamente", "::: Consultorio Odontologico - Mensaje :::",
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -298,6 +306,7 @@ namespace CpConsultorioOdontologico
             Size = new Size(776, 344);
             this.Hide();
         }
+
         int posY = 0;
         int posX = 0;
         private void pnlTitulo_MouseMove(object sender, MouseEventArgs e)
@@ -335,6 +344,7 @@ namespace CpConsultorioOdontologico
             nuevoFormulario.Show();
             this.Close();  // Cierra el formulario actual
         }
+
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             var colorOriginal = this.BackColor;

@@ -11,7 +11,7 @@ namespace ClnConsultorioOdontologico
     {
         public static int insertar(Paciente paciente)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 context.Paciente.Add(paciente);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnConsultorioOdontologico
 
         public static int actualizar(Paciente paciente)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Paciente.Find(paciente.id);
                 existente.nombres = paciente.nombres;
@@ -36,7 +36,7 @@ namespace ClnConsultorioOdontologico
 
         public static int eliminar(int id, string usuarioRegistro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Paciente.Find(id);
                 existente.estado = -1;
@@ -47,7 +47,7 @@ namespace ClnConsultorioOdontologico
 
         public static Paciente get(int id)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Paciente.Find(id);
             }
@@ -55,7 +55,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<Paciente> listar()
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Paciente.Where(x => x.estado != -1).ToList();
             }
@@ -63,7 +63,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<paPacienteListar_Result> listarPa(string parametro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.paPacienteListar(parametro).ToList();
             }

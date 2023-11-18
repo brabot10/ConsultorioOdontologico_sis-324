@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="LabConsultorioOdontologicoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="LabSis324Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Cita">
     <Key>
       <PropertyRef Name="id" />
@@ -127,7 +127,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="LabConsultorioOdontologicoEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="LabSis324Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Cita" EntityType="Self.Cita" />
     <EntitySet Name="Medicamento" EntityType="Self.Medicamento" />
     <EntitySet Name="Paciente" EntityType="Self.Paciente" />
@@ -149,25 +149,25 @@
       <End Role="Personal" EntitySet="Personal" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
-    <FunctionImport Name="paCitaListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paCitaListar_Result)">
+    <FunctionImport Name="paCitaListar" ReturnType="Collection(LabSis324Model.paCitaListar_Result)">
       <Parameter Name="parametro3" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paMedicamentoListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paMedicamentoListar_Result)">
+    <FunctionImport Name="paMedicamentoListar" ReturnType="Collection(LabSis324Model.paMedicamentoListar_Result)">
       <Parameter Name="parametro4" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paPacienteListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paPacienteListar_Result)">
+    <FunctionImport Name="paPacienteListar" ReturnType="Collection(LabSis324Model.paPacienteListar_Result)">
       <Parameter Name="parametro2" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paPersonalListar_Result)">
+    <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabSis324Model.paPersonalListar_Result)">
       <Parameter Name="parametro1" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paUsuarioListar_Result)">
+    <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabSis324Model.paUsuarioListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="paCitaListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="Int32" Name="idPaciente" Nullable="false" />
+    <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
     <Property Type="DateTime" Name="fecha" Nullable="false" />
     <Property Type="String" Name="hora" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="tratamiento" Nullable="false" MaxLength="250" />
@@ -180,6 +180,7 @@
   <ComplexType Name="paMedicamentoListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="Int32" Name="idPaciente" Nullable="false" />
+    <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="articulo" Nullable="false" MaxLength="250" />
     <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
     <Property Type="Decimal" Name="precio" Nullable="false" Precision="18" Scale="0" />
@@ -190,6 +191,7 @@
   <ComplexType Name="paPacienteListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="Int32" Name="idPersonal" Nullable="false" />
+    <Property Type="String" Name="nombresPersonal" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="15" />
     <Property Type="String" Name="nombres" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="alergias" Nullable="true" MaxLength="250" />
@@ -215,6 +217,7 @@
   <ComplexType Name="paUsuarioListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="Int32" Name="idPersonal" Nullable="false" />
+    <Property Type="String" Name="nombresPersonal" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="usuario" Nullable="false" MaxLength="12" />
     <Property Type="String" Name="clave" Nullable="false" MaxLength="100" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />

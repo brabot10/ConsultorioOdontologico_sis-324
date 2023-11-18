@@ -27,7 +27,8 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = cita;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
-            dgvLista.Columns["idPaciente"].HeaderText = "Nombre del paciente";
+            //dgvLista.Columns["idPaciente"].Visible = false;
+            dgvLista.Columns["nombresPaciente"].HeaderText = "Nombre del paciente";
             dgvLista.Columns["fecha"].HeaderText = "Fecha de la Consulta";
             dgvLista.Columns["hora"].HeaderText = "Hora de la Consulta";
             dgvLista.Columns["tratamiento"].HeaderText = "Tratamiento";
@@ -38,7 +39,6 @@ namespace CpConsultorioOdontologico
             btnEditar.Enabled = cita.Count > 0;
             btnEliminar.Enabled = cita.Count > 0;
             if (cita.Count > 0) dgvLista.Rows[0].Cells["tratamiento"].Selected = true;
-
         }
         private void cargarPaciente()
         {
@@ -59,6 +59,8 @@ namespace CpConsultorioOdontologico
             Size = new Size(776, 493);
             esNuevo = true;
             txtTratamiento.Focus();
+            cbxPaciente.Visible = true;
+            lblPaciente.Visible = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -74,6 +76,8 @@ namespace CpConsultorioOdontologico
             cbxPago.Text = cita.pago;
             txtAcuenta.Text = cita.aCuenta;
             txtHora.Text = cita.hora;
+            cbxPaciente.Visible = false;
+            lblPaciente.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)//Cancelar
@@ -84,7 +88,14 @@ namespace CpConsultorioOdontologico
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            RecargarFormularioLogin();
             Close();
+        }
+        private void RecargarFormularioLogin()
+        {
+            FrmPrincipal nuevoFormulario = new FrmPrincipal();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -230,10 +241,7 @@ namespace CpConsultorioOdontologico
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            FrmCita llamar = new FrmCita();
-            llamar.Show();
-            Size = new Size(776, 344);
-            this.Hide();
+ 
         }
 
         private void btnMedicamentos_Click(object sender, EventArgs e)

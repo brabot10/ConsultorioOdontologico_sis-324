@@ -11,7 +11,7 @@ namespace ClnConsultorioOdontologico
     {
         public static int insertar(Personal personal)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 context.Personal.Add(personal);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnConsultorioOdontologico
 
         public static int actualizar(Personal personal)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Personal.Find(personal.id);
                 existente.cedulaIdentidad = personal.cedulaIdentidad;
@@ -38,7 +38,7 @@ namespace ClnConsultorioOdontologico
 
         public static int eliminar(int id, string usuarioRegistro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Personal.Find(id);
                 existente.estado = -1;
@@ -49,7 +49,7 @@ namespace ClnConsultorioOdontologico
 
         public static Personal get(int id)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Personal.Find(id);
             }
@@ -57,7 +57,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<Personal> listar()
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Personal.Where(x => x.estado != -1).ToList();
             }
@@ -65,7 +65,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<paPersonalListar_Result> listarPa(string parametro1)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.paPersonalListar(parametro1).ToList();
             }

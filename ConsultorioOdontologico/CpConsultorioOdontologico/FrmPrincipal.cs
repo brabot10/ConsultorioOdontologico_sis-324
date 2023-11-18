@@ -44,13 +44,14 @@ namespace CpConsultorioOdontologico
 
             if (validar())
             {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, txtClave.Text);
+                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
                 if (usuario != null)
                 {
                     Util.usuario = usuario;
-                    txtClave.Text = string.Empty;
                     txtUsuario.Focus();
                     txtUsuario.SelectAll();
+                    txtClave.Text = string.Empty;
+                    Visible = false;
                     FrmPaciente llamar = new FrmPaciente();
                     llamar.Show();
                     Size = new Size(776, 344);
@@ -59,39 +60,14 @@ namespace CpConsultorioOdontologico
                 else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrectos",
-                        "::: Minerva - Mensaje :::", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    "::: Minerva - Mensaje :::", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 }
             }
-            /*if (validar())
-            {   
-                new FrmPaciente().ShowDialog();
-                FrmPaciente llamar = new FrmPaciente();
-                llamar.Show();
-                Size = new Size(776, 344);
-                this.Hide();
-            }*/
-            /*if (validar())
-            {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
-                if (usuario != null)
-                {
-                    Util.usuario = usuario;
-                    txtClave.Text = string.Empty;
-                    txtUsuario.Focus();
-                    txtUsuario.SelectAll();
-                    Visible = false;
-                    new FrmPaciente (this).ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario y/o contraseña incorrectos",
-                        "::: Minerva - Mensaje :::", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-            }*/
-
-
+        }
+        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
         }
 
         private void pnlCabeza_Paint(object sender, PaintEventArgs e)
@@ -105,11 +81,6 @@ namespace CpConsultorioOdontologico
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

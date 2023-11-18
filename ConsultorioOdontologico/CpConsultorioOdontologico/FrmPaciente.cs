@@ -15,15 +15,11 @@ namespace CpConsultorioOdontologico
 {
     public partial class FrmPaciente : Form
     {
-        //FrmPrincipal frmPrincipal;
-
         bool esNuevo = false;
         bool cedula = false;
-        //(FrmPrincipal frmPrincipal)
         public FrmPaciente()
         {
             InitializeComponent();
-            //this.frmPrincipal = frmPrincipal;
         }
         private void listar()
         {
@@ -31,7 +27,8 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = paciente;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
-            dgvLista.Columns["idPersonal"].HeaderText = "Doctor Asignado";
+            dgvLista.Columns["idPersonal"].Visible = false;
+            dgvLista.Columns["nombresPersonal"].HeaderText = "Doctor Asignado";
             dgvLista.Columns["nombres"].HeaderText = "Nombre";
             dgvLista.Columns["cedulaIdentidad"].HeaderText = "Cedula de Identidad";
             dgvLista.Columns["alergias"].HeaderText = "Alergias";
@@ -64,6 +61,8 @@ namespace CpConsultorioOdontologico
             esNuevo = true;
             txtCelular.Focus();
             cedula = true;
+            cbxPersonal.Visible = true;
+            lblPersonal.Visible = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -79,6 +78,8 @@ namespace CpConsultorioOdontologico
             txtAlergias.Text = paciente.alergias;
             dtpFechaNacimiento.Value = paciente.fechaNacimiento;
             txtCelular.Text = paciente.celular.ToString();
+            cbxPersonal.Visible = false;
+            lblPersonal.Visible = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -89,9 +90,15 @@ namespace CpConsultorioOdontologico
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            RecargarFormularioLogin();
             Close();
         }
-
+        private void RecargarFormularioLogin()
+        {
+            FrmPrincipal nuevoFormulario = new FrmPrincipal();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             listar();
@@ -195,6 +202,7 @@ namespace CpConsultorioOdontologico
                         paciente.estado = 1;
                         paciente.idPersonal = Convert.ToInt32(cbxPersonal.SelectedValue);
                         PacienteCln.insertar(paciente);
+                        cedula = false;
                     }
                     else
                     {

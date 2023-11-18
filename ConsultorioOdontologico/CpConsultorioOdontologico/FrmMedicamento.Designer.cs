@@ -292,9 +292,9 @@
             this.lblBusqueda.Location = new System.Drawing.Point(7, 11);
             this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(141, 16);
+            this.lblBusqueda.Size = new System.Drawing.Size(233, 16);
             this.lblBusqueda.TabIndex = 31;
-            this.lblBusqueda.Text = "Buscar por articulo:";
+            this.lblBusqueda.Text = "Buscar por nombre del Paciente:";
             // 
             // pnlTitulo
             // 
@@ -441,7 +441,7 @@
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Location = new System.Drawing.Point(417, 34);
+            this.lblPaciente.Location = new System.Drawing.Point(417, 20);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(114, 15);
@@ -457,7 +457,7 @@
             this.cbxPaciente.Items.AddRange(new object[] {
             "CANCELADO",
             "PENDIENTE"});
-            this.cbxPaciente.Location = new System.Drawing.Point(535, 26);
+            this.cbxPaciente.Location = new System.Drawing.Point(535, 12);
             this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPaciente.Name = "cbxPaciente";
             this.cbxPaciente.Size = new System.Drawing.Size(230, 23);
@@ -472,7 +472,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(442, 62);
+            this.btnGuardar.Location = new System.Drawing.Point(443, 82);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(132, 59);
@@ -484,17 +484,17 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(127, 100);
+            this.txtPrecio.Location = new System.Drawing.Point(535, 39);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.MaxLength = 250;
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(265, 21);
+            this.txtPrecio.Size = new System.Drawing.Size(230, 21);
             this.txtPrecio.TabIndex = 21;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(8, 104);
+            this.lblPrecio.Location = new System.Drawing.Point(417, 45);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(52, 15);
@@ -503,17 +503,18 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(127, 59);
+            this.txtDescripcion.Location = new System.Drawing.Point(127, 82);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.MaxLength = 250;
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(265, 21);
+            this.txtDescripcion.Size = new System.Drawing.Size(265, 58);
             this.txtDescripcion.TabIndex = 15;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(8, 59);
+            this.lblDescripcion.Location = new System.Drawing.Point(8, 81);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(87, 15);
@@ -525,8 +526,9 @@
             this.txtArticulo.Location = new System.Drawing.Point(127, 20);
             this.txtArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtArticulo.MaxLength = 250;
+            this.txtArticulo.Multiline = true;
             this.txtArticulo.Name = "txtArticulo";
-            this.txtArticulo.Size = new System.Drawing.Size(265, 21);
+            this.txtArticulo.Size = new System.Drawing.Size(265, 58);
             this.txtArticulo.TabIndex = 13;
             // 
             // lblArticulo
@@ -548,7 +550,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(593, 62);
+            this.btnCancelar.Location = new System.Drawing.Point(603, 81);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(132, 59);

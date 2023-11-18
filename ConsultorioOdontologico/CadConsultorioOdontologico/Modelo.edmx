@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LabConsultorioOdontologicoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="LabSis324Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cita">
           <Key>
             <PropertyRef Name="id" />
@@ -139,7 +139,7 @@
         <Function Name="paUsuarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
-        <EntityContainer Name="LabConsultorioOdontologicoModelStoreContainer">
+        <EntityContainer Name="LabSis324ModelStoreContainer">
           <EntitySet Name="Cita" EntityType="Self.Cita" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Medicamento" EntityType="Self.Medicamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
@@ -166,7 +166,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="LabConsultorioOdontologicoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="LabSis324Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Cita">
           <Key>
             <PropertyRef Name="id" />
@@ -294,7 +294,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LabConsultorioOdontologicoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LabSis324Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cita" EntityType="Self.Cita" />
           <EntitySet Name="Medicamento" EntityType="Self.Medicamento" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" />
@@ -316,25 +316,25 @@
             <End Role="Personal" EntitySet="Personal" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <FunctionImport Name="paCitaListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paCitaListar_Result)">
+          <FunctionImport Name="paCitaListar" ReturnType="Collection(LabSis324Model.paCitaListar_Result)">
             <Parameter Name="parametro3" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paMedicamentoListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paMedicamentoListar_Result)">
+          <FunctionImport Name="paMedicamentoListar" ReturnType="Collection(LabSis324Model.paMedicamentoListar_Result)">
             <Parameter Name="parametro4" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paPacienteListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paPacienteListar_Result)">
+          <FunctionImport Name="paPacienteListar" ReturnType="Collection(LabSis324Model.paPacienteListar_Result)">
             <Parameter Name="parametro2" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paPersonalListar_Result)">
+          <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabSis324Model.paPersonalListar_Result)">
             <Parameter Name="parametro1" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabConsultorioOdontologicoModel.paUsuarioListar_Result)">
+          <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabSis324Model.paUsuarioListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="paCitaListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="Int32" Name="idPaciente" Nullable="false" />
+          <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
           <Property Type="DateTime" Name="fecha" Nullable="false" />
           <Property Type="String" Name="hora" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="tratamiento" Nullable="false" MaxLength="250" />
@@ -347,6 +347,7 @@
         <ComplexType Name="paMedicamentoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idPaciente" Nullable="false" />
+          <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="articulo" Nullable="false" MaxLength="250" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
           <Property Type="Decimal" Name="precio" Nullable="false" Precision="18" Scale="0" />
@@ -357,6 +358,7 @@
         <ComplexType Name="paPacienteListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idPersonal" Nullable="false" />
+          <Property Type="String" Name="nombresPersonal" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="15" />
           <Property Type="String" Name="nombres" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="alergias" Nullable="true" MaxLength="250" />
@@ -382,6 +384,7 @@
         <ComplexType Name="paUsuarioListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idPersonal" Nullable="false" />
+          <Property Type="String" Name="nombresPersonal" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="usuario" Nullable="false" MaxLength="12" />
           <Property Type="String" Name="clave" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
@@ -393,9 +396,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LabConsultorioOdontologicoModelStoreContainer" CdmEntityContainer="LabConsultorioOdontologicoEntities">
+        <EntityContainerMapping StorageEntityContainer="LabSis324ModelStoreContainer" CdmEntityContainer="LabSis324Entities">
           <EntitySetMapping Name="Cita">
-            <EntityTypeMapping TypeName="LabConsultorioOdontologicoModel.Cita">
+            <EntityTypeMapping TypeName="LabSis324Model.Cita">
               <MappingFragment StoreEntitySet="Cita">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
@@ -411,7 +414,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Medicamento">
-            <EntityTypeMapping TypeName="LabConsultorioOdontologicoModel.Medicamento">
+            <EntityTypeMapping TypeName="LabSis324Model.Medicamento">
               <MappingFragment StoreEntitySet="Medicamento">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
@@ -425,7 +428,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Paciente">
-            <EntityTypeMapping TypeName="LabConsultorioOdontologicoModel.Paciente">
+            <EntityTypeMapping TypeName="LabSis324Model.Paciente">
               <MappingFragment StoreEntitySet="Paciente">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
@@ -441,7 +444,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Personal">
-            <EntityTypeMapping TypeName="LabConsultorioOdontologicoModel.Personal">
+            <EntityTypeMapping TypeName="LabSis324Model.Personal">
               <MappingFragment StoreEntitySet="Personal">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
@@ -458,7 +461,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="LabConsultorioOdontologicoModel.Usuario">
+            <EntityTypeMapping TypeName="LabSis324Model.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
@@ -470,11 +473,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="paCitaListar" FunctionName="LabConsultorioOdontologicoModel.Store.paCitaListar">
+          <FunctionImportMapping FunctionImportName="paCitaListar" FunctionName="LabSis324Model.Store.paCitaListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paCitaListar_Result">
+              <ComplexTypeMapping TypeName="LabSis324Model.paCitaListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+                <ScalarProperty Name="nombresPaciente" ColumnName="nombresPaciente" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="hora" ColumnName="hora" />
                 <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
@@ -486,11 +489,12 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paMedicamentoListar" FunctionName="LabConsultorioOdontologicoModel.Store.paMedicamentoListar">
+          <FunctionImportMapping FunctionImportName="paMedicamentoListar" FunctionName="LabSis324Model.Store.paMedicamentoListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paMedicamentoListar_Result">
+              <ComplexTypeMapping TypeName="LabSis324Model.paMedicamentoListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+                <ScalarProperty Name="nombresPaciente" ColumnName="nombresPaciente" />
                 <ScalarProperty Name="articulo" ColumnName="articulo" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="precio" ColumnName="precio" />
@@ -500,11 +504,12 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paPacienteListar" FunctionName="LabConsultorioOdontologicoModel.Store.paPacienteListar">
+          <FunctionImportMapping FunctionImportName="paPacienteListar" FunctionName="LabSis324Model.Store.paPacienteListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paPacienteListar_Result">
+              <ComplexTypeMapping TypeName="LabSis324Model.paPacienteListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
+                <ScalarProperty Name="nombresPersonal" ColumnName="nombresPersonal" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
                 <ScalarProperty Name="alergias" ColumnName="alergias" />
@@ -516,9 +521,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paPersonalListar" FunctionName="LabConsultorioOdontologicoModel.Store.paPersonalListar">
+          <FunctionImportMapping FunctionImportName="paPersonalListar" FunctionName="LabSis324Model.Store.paPersonalListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paPersonalListar_Result">
+              <ComplexTypeMapping TypeName="LabSis324Model.paPersonalListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
@@ -533,11 +538,12 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paUsuarioListar" FunctionName="LabConsultorioOdontologicoModel.Store.paUsuarioListar">
+          <FunctionImportMapping FunctionImportName="paUsuarioListar" FunctionName="LabSis324Model.Store.paUsuarioListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="LabConsultorioOdontologicoModel.paUsuarioListar_Result">
+              <ComplexTypeMapping TypeName="LabSis324Model.paUsuarioListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
+                <ScalarProperty Name="nombresPersonal" ColumnName="nombresPersonal" />
                 <ScalarProperty Name="usuario" ColumnName="usuario" />
                 <ScalarProperty Name="clave" ColumnName="clave" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />

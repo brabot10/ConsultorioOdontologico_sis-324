@@ -1,19 +1,19 @@
 ﻿-- DDL
-CREATE DATABASE LabConsultorioOdontologico; 
+CREATE DATABASE LabSis324; 
 
 
 USE master
 GO
-CREATE LOGIN usrconsultorio WITH PASSWORD=N'123456',
-	DEFAULT_DATABASE=LabConsultorioOdontologico,
+CREATE LOGIN usrodontologia WITH PASSWORD=N'123456',
+	DEFAULT_DATABASE=LabSis324,
 	CHECK_EXPIRATION=OFF,
 	CHECK_POLICY=ON
 GO
-USE LabConsultorioOdontologico
+USE LabSis324
 GO        
-CREATE USER usrconsultorio FOR LOGIN usrconsultorio
+CREATE USER usrodontologia FOR LOGIN usrodontologia
 GO
-ALTER ROLE db_owner ADD MEMBER usrconsultorio
+ALTER ROLE db_owner ADD MEMBER usrodontologia
 GO
 
 
@@ -93,49 +93,116 @@ ALTER TABLE Medicamento ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Medicamento ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
 
+-- PROCEDIMIENTOS ALTERADOS FUNCIONALES
 
 CREATE PROC paPersonalListar @parametro1 VARCHAR(50) 
 AS
   SELECT id, cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo, usuarioRegistro, fechaRegistro, estado 
-  FROM Personal  --De que tabla lo tomaremos
+  FROM Personal  
   WHERE estado<>-1 AND nombres LIKE '%'+REPLACE(@parametro1,' ','%')+'%';
 
 EXEC paPersonalListar 'Juan';
 
 
-CREATE PROC paPacienteListar @parametro2 VARCHAR(50)
+CREATE PROC paCitaListar 
+  @parametro3 VARCHAR(50)
 AS
-  SELECT id, idPersonal, cedulaIdentidad, nombres, alergias, fechaNacimiento, celular, usuarioRegistro, fechaRegistro, estado
+BEGIN
+  -- Mostrar resultados
+  SELECT 
+    Cita.id, 
+    Paciente.nombres AS nombresPaciente,
+    Cita.fecha, 
+    Cita.hora, 
+    Cita.tratamiento, 
+    Cita.pago, 
+    Cita.aCuenta, 
+    Cita.usuarioRegistro, 
+    Cita.fechaRegistro, 
+    Cita.estado
+  FROM Cita
+  INNER JOIN Paciente ON Cita.idPaciente = Paciente.id
+  WHERE Cita.estado <> -1 AND Paciente.nombres LIKE '%' + REPLACE(@parametro3, ' ', '%') + '%';
+END;
+
+ 	-- Doctor Asignado Pacientes
+
+CREATE PROC paPacienteListar 
+  @parametro2 VARCHAR(50)
+AS
+BEGIN
+  -- Mostrar resultados
+  SELECT 
+    Paciente.id, 
+    Paciente.idPersonal, 
+    Personal.nombres AS nombresPersonal,
+    Paciente.cedulaIdentidad, 
+    Paciente.nombres, 
+    Paciente.alergias, 
+    Paciente.fechaNacimiento, 
+    Paciente.celular, 
+    Paciente.usuarioRegistro, 
+    Paciente.fechaRegistro, 
+    Paciente.estado
   FROM Paciente
-  WHERE estado<>-1 AND nombres LIKE '%'+REPLACE(@parametro2,' ','%')+'%';
-  
+  INNER JOIN Personal ON Paciente.idPersonal = Personal.id
+  WHERE Paciente.estado <> -1 AND Paciente.nombres LIKE '%' + REPLACE(@parametro2, ' ', '%') + '%';
+END;
+
+-- Ejecutar el procedimiento almacenado
 EXEC paPacienteListar 'María';
 
 
-CREATE PROC paCitaListar @parametro3 VARCHAR(50)
+ 	-- Encargado  Usuario
+
+CREATE PROC paUsuarioListar 
+  @parametro VARCHAR(50)
 AS
-  SELECT id, idPaciente, fecha, hora, tratamiento, pago, aCuenta, usuarioRegistro, fechaRegistro, estado
-  FROM Cita
-  WHERE estado<>-1 AND fecha LIKE '%'+REPLACE(@parametro3,' ','%')+'%';
-EXEC paCitaListar 'Limpieza dental';
+BEGIN
+  -- Mostrar resultados
+  SELECT 
+    Usuario.id, 
+    Usuario.idPersonal, 
+    Personal.nombres AS nombresPersonal,
+    Usuario.usuario, 
+    Usuario.clave, 
+    Usuario.usuarioRegistro, 
+    Usuario.fechaRegistro, 
+    Usuario.estado
+  FROM Usuario
+  INNER JOIN Personal ON Usuario.idPersonal = Personal.id
+  WHERE Usuario.estado <> -1 AND Usuario.usuario LIKE '%' + REPLACE(@parametro, ' ', '%') + '%';
+END;
+
+-- Ejecutar el procedimiento almacenado
+EXEC paUsuarioListar 'bryan';
 
 
-CREATE PROC paMedicamentoListar @parametro4 VARCHAR(50)
+	-- Nombre del paciente Medicamentos
+
+CREATE PROC paMedicamentoListar 
+  @parametro4 VARCHAR(50)
 AS
-  SELECT id, idPaciente, articulo, descripcion, precio, usuarioRegistro, fechaRegistro, estado
-  FROM Medicamento
-  WHERE estado<>-1 AND articulo LIKE '%'+REPLACE(@parametro4,' ','%')+'%';
+BEGIN
+  SELECT 
+    Medicamento.id, 
+    Medicamento.idPaciente, 
+    Paciente.nombres AS nombresPaciente,
+    Medicamento.articulo, 
+    Medicamento.descripcion, 
+    Medicamento.precio, 
+    Medicamento.usuarioRegistro, 
+    Medicamento.fechaRegistro, 
+    Medicamento.estado
+FROM Medicamento
+INNER JOIN Paciente ON Medicamento.idPaciente = Paciente.id
+WHERE Medicamento.estado <> -1 AND Paciente.nombres LIKE '%' + REPLACE(@parametro4, ' ', '%') + '%';
+END;
 
+-- Ejecutar el procedimiento almacenado
 EXEC paMedicamentoListar 'Paracetamol';
 
 
-CREATE PROC paUsuarioListar @parametro VARCHAR(50)
-AS
-  SELECT id, idPersonal, usuario, clave, usuarioRegistro, fechaRegistro, estado
-  FROM Usuario
-  WHERE estado<>-1 AND usuario LIKE '%'+REPLACE(@parametro,' ','%')+'%';
-
-EXEC paUsuarioListar 'bryan';
 
 --DML
 

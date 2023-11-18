@@ -35,9 +35,7 @@
             this.pnlCabeza = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pbsUsuario = new System.Windows.Forms.PictureBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -45,6 +43,8 @@
             this.lblAutor = new System.Windows.Forms.Label();
             this.erpUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpClave = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsUsuario)).BeginInit();
@@ -112,17 +112,6 @@
             this.pbsUsuario.TabIndex = 0;
             this.pbsUsuario.TabStop = false;
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(8, 76);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(249, 17);
-            this.txtUsuario.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CpConsultorioOdontologico.Properties.Resources.background_text;
@@ -132,20 +121,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(271, 53);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtClave
-            // 
-            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.ForeColor = System.Drawing.Color.White;
-            this.txtClave.Location = new System.Drawing.Point(8, 168);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(249, 17);
-            this.txtClave.TabIndex = 3;
-            this.txtClave.UseSystemPasswordChar = true;
-            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // lblUsuario
             // 
@@ -217,6 +192,32 @@
             // 
             this.erpClave.ContainerControl = this;
             // 
+            // txtClave
+            // 
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.ForeColor = System.Drawing.Color.White;
+            this.txtClave.Location = new System.Drawing.Point(8, 168);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(249, 17);
+            this.txtClave.TabIndex = 3;
+            this.txtClave.UseSystemPasswordChar = true;
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(8, 76);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(249, 17);
+            this.txtUsuario.TabIndex = 1;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,9 +254,7 @@
         private System.Windows.Forms.Panel pnlCabeza;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pbsUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Button btnIngresar;
@@ -263,6 +262,8 @@
         private System.Windows.Forms.Label lblAutor;
         private System.Windows.Forms.ErrorProvider erpUsuario;
         private System.Windows.Forms.ErrorProvider erpClave;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }
 

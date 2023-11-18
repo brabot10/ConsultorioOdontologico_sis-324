@@ -11,7 +11,7 @@ namespace ClnConsultorioOdontologico
     {
         public static int insertar(Cita cita)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 context.Cita.Add(cita);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace ClnConsultorioOdontologico
         }
         public static int actualizar(Cita cita)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Cita.Find(cita.id);
                 existente.fecha = cita.fecha;
@@ -34,7 +34,7 @@ namespace ClnConsultorioOdontologico
         }
         public static int eliminar(int id, string usuarioRegistro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Cita.Find(id);
                 existente.estado = -1;
@@ -44,21 +44,21 @@ namespace ClnConsultorioOdontologico
         }
         public static Cita get(int id)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Cita.Find(id);
             }
         }
         public static List<Cita> Listar()
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Cita.Where(x => x.estado != -1).ToList();
             }
         }
         public static List<paCitaListar_Result> listarPa(string parametro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.paCitaListar(parametro).ToList();
             }

@@ -26,7 +26,8 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = medicamento;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
-            dgvLista.Columns["idPaciente"].HeaderText = "Nombre del Paciente";
+            dgvLista.Columns["idPaciente"].Visible = false;
+            dgvLista.Columns["nombresPaciente"].HeaderText = "Nombre del Paciente";
             dgvLista.Columns["articulo"].HeaderText = "Nombre del Medicamento";
             dgvLista.Columns["descripcion"].HeaderText = "Descripcion del Medicamento";
             dgvLista.Columns["precio"].HeaderText = "Precio del Medicamento en Bs";
@@ -55,6 +56,8 @@ namespace CpConsultorioOdontologico
             Size = new Size(776, 493);
             esNuevo = true;
             txtArticulo.Focus();
+            cbxPaciente.Visible = true;
+            lblPaciente.Visible = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -68,6 +71,8 @@ namespace CpConsultorioOdontologico
             txtArticulo.Text = medicamento.articulo;
             txtDescripcion.Text = medicamento.descripcion;
             txtPrecio.Text = medicamento.precio.ToString();
+            cbxPaciente.Visible = false;
+            lblPaciente.Visible = false;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -77,7 +82,14 @@ namespace CpConsultorioOdontologico
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            RecargarFormularioLogin();
             Close();
+        }
+        private void RecargarFormularioLogin()
+        {
+            FrmPrincipal nuevoFormulario = new FrmPrincipal();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace CadConsultorioOdontologico
     {
         public int id { get; set; }
         public int idPaciente { get; set; }
+        public string nombresPaciente { get; set; }
         public string articulo { get; set; }
         public string descripcion { get; set; }
         public decimal precio { get; set; }

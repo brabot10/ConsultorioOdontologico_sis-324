@@ -15,10 +15,10 @@ namespace CadConsultorioOdontologico
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class LabConsultorioOdontologicoEntities : DbContext
+    public partial class LabSis324Entities : DbContext
     {
-        public LabConsultorioOdontologicoEntities()
-            : base("name=LabConsultorioOdontologicoEntities")
+        public LabSis324Entities()
+            : base("name=LabSis324Entities")
         {
         }
     

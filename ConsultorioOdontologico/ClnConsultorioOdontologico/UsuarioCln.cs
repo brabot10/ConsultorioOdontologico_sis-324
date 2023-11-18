@@ -11,7 +11,7 @@ namespace ClnConsultorioOdontologico
     {
         public static int insertar(Usuario usuario)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 context.Usuario.Add(usuario);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnConsultorioOdontologico
 
         public static int actualizar(Usuario usuario)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Usuario.Find(usuario.id);
                 existente.usuario1 = usuario.usuario1;
@@ -33,7 +33,7 @@ namespace ClnConsultorioOdontologico
 
         public static int eliminar(int id, string usuarioRegistro)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 var existente = context.Usuario.Find(id);
                 existente.estado = -1;
@@ -44,7 +44,7 @@ namespace ClnConsultorioOdontologico
 
         public static Usuario get(int id)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Usuario.Find(id);
             }
@@ -52,7 +52,7 @@ namespace ClnConsultorioOdontologico
 
         public static List<Usuario> listar()
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Usuario.Where(x => x.estado != -1).ToList();
             }
@@ -60,14 +60,14 @@ namespace ClnConsultorioOdontologico
 
         public static List<paUsuarioListar_Result> listarPa(string parametro1)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.paUsuarioListar(parametro1).ToList();
             }
         }
         public static Usuario validar(string usuario, string clave)
         {
-            using (var context = new LabConsultorioOdontologicoEntities())
+            using (var context = new LabSis324Entities())
             {
                 return context.Usuario
                     .Where(x => x.usuario1 == usuario && x.clave == clave)

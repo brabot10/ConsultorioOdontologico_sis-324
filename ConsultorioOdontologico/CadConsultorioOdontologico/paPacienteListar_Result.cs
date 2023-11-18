@@ -15,6 +15,7 @@ namespace CadConsultorioOdontologico
     {
         public int id { get; set; }
         public int idPersonal { get; set; }
+        public string nombresPersonal { get; set; }
         public string cedulaIdentidad { get; set; }
         public string nombres { get; set; }
         public string alergias { get; set; }
