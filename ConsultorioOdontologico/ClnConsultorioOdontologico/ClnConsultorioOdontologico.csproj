@@ -56,10 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CitaCln.cs" />
+    <Compile Include="HorarioCln.cs" />
+    <Compile Include="InventarioCln.cs" />
     <Compile Include="MedicamentoCln.cs" />
     <Compile Include="PacienteCln.cs" />
     <Compile Include="PersonalCln.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroCln.cs" />
     <Compile Include="UsuarioCln.cs" />
   </ItemGroup>
   <ItemGroup>

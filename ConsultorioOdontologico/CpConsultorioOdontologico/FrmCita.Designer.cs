@@ -36,44 +36,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCita));
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.pnlAcciones = new System.Windows.Forms.Panel();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.pnlDatosDes = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.cbxPaciente = new System.Windows.Forms.ComboBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
             this.cbxPago = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtAcuenta = new System.Windows.Forms.TextBox();
             this.lblAcuenta = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtTratamiento = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTratamiento = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblPago = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnPersonal = new System.Windows.Forms.Button();
-            this.btnMedicamentos = new System.Windows.Forms.Button();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnPaciente = new System.Windows.Forms.Button();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.erpFecha = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpTratamiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpPago = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpAcuenta = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpHora = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnPersonal = new System.Windows.Forms.Button();
+            this.btnMedicamentos = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
+            this.btnPaciente = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.lblRegistro = new System.Windows.Forms.Label();
+            this.cbxRegistro = new System.Windows.Forms.ComboBox();
             this.pnlDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
@@ -82,12 +84,12 @@
             this.groupBox1.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTratamiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpAcuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpHora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -110,85 +112,10 @@
             this.pnlAcciones.Controls.Add(this.btnNuevo);
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Location = new System.Drawing.Point(13, 194);
-            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(592, 72);
             this.pnlAcciones.TabIndex = 36;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.EditarCitas;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(164, 5);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(138, 59);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "Re Consulta";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.EliminarCitas;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(317, 5);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(111, 59);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.NuevoCitas;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(40, 5);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(111, 59);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "Consulta";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.CerrarCitas;
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(454, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(111, 59);
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // gbxLista
             // 
@@ -196,9 +123,9 @@
             this.gbxLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.gbxLista.Location = new System.Drawing.Point(10, 61);
-            this.gbxLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxLista.Margin = new System.Windows.Forms.Padding(2);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxLista.Padding = new System.Windows.Forms.Padding(2);
             this.gbxLista.Size = new System.Drawing.Size(592, 129);
             this.gbxLista.TabIndex = 35;
             this.gbxLista.TabStop = false;
@@ -258,29 +185,11 @@
             this.dgvLista.Size = new System.Drawing.Size(582, 103);
             this.dgvLista.TabIndex = 0;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.BuscarCitas;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 5);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(111, 52);
-            this.btnBuscar.TabIndex = 33;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // txtParametro
             // 
             this.txtParametro.BackColor = System.Drawing.Color.White;
             this.txtParametro.Location = new System.Drawing.Point(6, 37);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(484, 20);
             this.txtParametro.TabIndex = 32;
@@ -310,9 +219,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.groupBox1.Controls.Add(this.cbxRegistro);
+            this.groupBox1.Controls.Add(this.lblRegistro);
+            this.groupBox1.Controls.Add(this.dtpHora);
             this.groupBox1.Controls.Add(this.lblPaciente);
             this.groupBox1.Controls.Add(this.cbxPaciente);
-            this.groupBox1.Controls.Add(this.txtHora);
             this.groupBox1.Controls.Add(this.cbxPago);
             this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.txtAcuenta);
@@ -327,9 +238,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.groupBox1.Location = new System.Drawing.Point(2, 1);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(774, 151);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
@@ -338,12 +249,12 @@
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Location = new System.Drawing.Point(433, 44);
+            this.lblPaciente.Location = new System.Drawing.Point(433, 36);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(114, 15);
+            this.lblPaciente.Size = new System.Drawing.Size(112, 15);
             this.lblPaciente.TabIndex = 33;
-            this.lblPaciente.Text = "Asignar la cita a:";
+            this.lblPaciente.Text = "Cita de para Dr.:";
             // 
             // cbxPaciente
             // 
@@ -351,20 +262,11 @@
             this.cbxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.cbxPaciente.FormattingEnabled = true;
-            this.cbxPaciente.Location = new System.Drawing.Point(551, 41);
-            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxPaciente.Location = new System.Drawing.Point(551, 35);
+            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPaciente.Name = "cbxPaciente";
             this.cbxPaciente.Size = new System.Drawing.Size(190, 23);
             this.cbxPaciente.TabIndex = 32;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(551, 15);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtHora.MaxLength = 250;
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(190, 21);
-            this.txtHora.TabIndex = 29;
             // 
             // cbxPago
             // 
@@ -376,7 +278,7 @@
             "CANCELADO",
             "PENDIENTE"});
             this.cbxPago.Location = new System.Drawing.Point(153, 42);
-            this.cbxPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxPago.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPago.Name = "cbxPago";
             this.cbxPago.Size = new System.Drawing.Size(265, 23);
             this.cbxPago.TabIndex = 27;
@@ -388,7 +290,7 @@
             this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
             this.dtpFecha.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.dtpFecha.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(153, 15);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(265, 22);
@@ -396,11 +298,11 @@
             // 
             // txtAcuenta
             // 
-            this.txtAcuenta.Location = new System.Drawing.Point(154, 68);
-            this.txtAcuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAcuenta.Location = new System.Drawing.Point(153, 68);
+            this.txtAcuenta.Margin = new System.Windows.Forms.Padding(2);
             this.txtAcuenta.MaxLength = 100;
             this.txtAcuenta.Name = "txtAcuenta";
-            this.txtAcuenta.Size = new System.Drawing.Size(264, 21);
+            this.txtAcuenta.Size = new System.Drawing.Size(265, 21);
             this.txtAcuenta.TabIndex = 25;
             // 
             // lblAcuenta
@@ -413,27 +315,10 @@
             this.lblAcuenta.TabIndex = 24;
             this.lblAcuenta.Text = "A cuenta:";
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.GuardarCitas;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(463, 68);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(132, 59);
-            this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // txtTratamiento
             // 
             this.txtTratamiento.Location = new System.Drawing.Point(153, 93);
-            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(2);
             this.txtTratamiento.MaxLength = 250;
             this.txtTratamiento.Multiline = true;
             this.txtTratamiento.Name = "txtTratamiento";
@@ -463,7 +348,7 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(433, 20);
+            this.lblHora.Location = new System.Drawing.Point(433, 14);
             this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(107, 15);
@@ -479,23 +364,6 @@
             this.lblPago.Size = new System.Drawing.Size(116, 15);
             this.lblPago.TabIndex = 8;
             this.lblPago.Text = "Estado del Pago:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.CalcelarCitas;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(621, 70);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // pnlTitulo
             // 
@@ -515,7 +383,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(591, 32);
             this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Consultorio Odontologico :::Citas::";
+            this.lblTitulo.Text = "Consultorio Odontológico :::Citas::";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlMenu
@@ -530,91 +398,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(157, 343);
             this.pnlMenu.TabIndex = 38;
-            // 
-            // btnPersonal
-            // 
-            this.btnPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnPersonal.Image = global::CpConsultorioOdontologico.Properties.Resources.personal;
-            this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonal.Location = new System.Drawing.Point(0, 275);
-            this.btnPersonal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(155, 59);
-            this.btnPersonal.TabIndex = 16;
-            this.btnPersonal.Text = "  Personal";
-            this.btnPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPersonal.UseVisualStyleBackColor = false;
-            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
-            // 
-            // btnMedicamentos
-            // 
-            this.btnMedicamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.btnMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnMedicamentos.Image = global::CpConsultorioOdontologico.Properties.Resources.medicamentos;
-            this.btnMedicamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedicamentos.Location = new System.Drawing.Point(0, 212);
-            this.btnMedicamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMedicamentos.Name = "btnMedicamentos";
-            this.btnMedicamentos.Size = new System.Drawing.Size(155, 59);
-            this.btnMedicamentos.TabIndex = 15;
-            this.btnMedicamentos.Text = "           Medicamentos";
-            this.btnMedicamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMedicamentos.UseVisualStyleBackColor = false;
-            this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
-            // 
-            // btnCitas
-            // 
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnCitas.Image = global::CpConsultorioOdontologico.Properties.Resources.citas;
-            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitas.Location = new System.Drawing.Point(0, 150);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(155, 59);
-            this.btnCitas.TabIndex = 14;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            // 
-            // btnPaciente
-            // 
-            this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.btnPaciente.Image = global::CpConsultorioOdontologico.Properties.Resources.Paciente;
-            this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaciente.Location = new System.Drawing.Point(0, 88);
-            this.btnPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPaciente.Name = "btnPaciente";
-            this.btnPaciente.Size = new System.Drawing.Size(155, 59);
-            this.btnPaciente.TabIndex = 13;
-            this.btnPaciente.Text = "Pacientes";
-            this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPaciente.UseVisualStyleBackColor = false;
-            this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbxLogo.BackgroundImage = global::CpConsultorioOdontologico.Properties.Resources.pacientes;
-            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxLogo.Image = global::CpConsultorioOdontologico.Properties.Resources.pacientes;
-            this.pbxLogo.Location = new System.Drawing.Point(42, 3);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(73, 93);
-            this.pbxLogo.TabIndex = 0;
-            this.pbxLogo.TabStop = false;
             // 
             // erpFecha
             // 
@@ -636,6 +419,251 @@
             // 
             this.erpHora.ContainerControl = this;
             // 
+            // dtpHora
+            // 
+            this.dtpHora.CustomFormat = "hh:mm:ss: tt";
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora.Location = new System.Drawing.Point(551, 12);
+            this.dtpHora.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.ShowUpDown = true;
+            this.dtpHora.Size = new System.Drawing.Size(190, 21);
+            this.dtpHora.TabIndex = 34;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.GuardarCitas;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(461, 86);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(132, 59);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.CalcelarCitas;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(609, 87);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.EditarCitas;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(164, 5);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(138, 59);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Re Consulta";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.EliminarCitas;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(317, 5);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(111, 59);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.NuevoCitas;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(40, 5);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(111, 59);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "Consulta";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.CerrarCitas;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(454, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(111, 59);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.BuscarCitas;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(494, 5);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(111, 52);
+            this.btnBuscar.TabIndex = 33;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnPersonal
+            // 
+            this.btnPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnPersonal.Image = global::CpConsultorioOdontologico.Properties.Resources.personal;
+            this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonal.Location = new System.Drawing.Point(0, 275);
+            this.btnPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(155, 59);
+            this.btnPersonal.TabIndex = 16;
+            this.btnPersonal.Text = "  Personal";
+            this.btnPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPersonal.UseVisualStyleBackColor = false;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
+            // 
+            // btnMedicamentos
+            // 
+            this.btnMedicamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.btnMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnMedicamentos.Image = global::CpConsultorioOdontologico.Properties.Resources.medicamentos;
+            this.btnMedicamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedicamentos.Location = new System.Drawing.Point(0, 212);
+            this.btnMedicamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMedicamentos.Name = "btnMedicamentos";
+            this.btnMedicamentos.Size = new System.Drawing.Size(155, 59);
+            this.btnMedicamentos.TabIndex = 15;
+            this.btnMedicamentos.Text = "           Medicamentos";
+            this.btnMedicamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMedicamentos.UseVisualStyleBackColor = false;
+            this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnCitas.Image = global::CpConsultorioOdontologico.Properties.Resources.citas;
+            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCitas.Location = new System.Drawing.Point(0, 150);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(155, 59);
+            this.btnCitas.TabIndex = 14;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            // 
+            // btnPaciente
+            // 
+            this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnPaciente.Image = global::CpConsultorioOdontologico.Properties.Resources.Paciente;
+            this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPaciente.Location = new System.Drawing.Point(0, 88);
+            this.btnPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPaciente.Name = "btnPaciente";
+            this.btnPaciente.Size = new System.Drawing.Size(155, 59);
+            this.btnPaciente.TabIndex = 13;
+            this.btnPaciente.Text = "Pacientes";
+            this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPaciente.UseVisualStyleBackColor = false;
+            this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
+            // 
+            // pbxLogo
+            // 
+            this.pbxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLogo.BackgroundImage = global::CpConsultorioOdontologico.Properties.Resources.pacientes;
+            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxLogo.Image = global::CpConsultorioOdontologico.Properties.Resources.pacientes;
+            this.pbxLogo.Location = new System.Drawing.Point(42, 3);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(73, 93);
+            this.pbxLogo.TabIndex = 0;
+            this.pbxLogo.TabStop = false;
+            // 
+            // lblRegistro
+            // 
+            this.lblRegistro.AutoSize = true;
+            this.lblRegistro.Location = new System.Drawing.Point(433, 62);
+            this.lblRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistro.Name = "lblRegistro";
+            this.lblRegistro.Size = new System.Drawing.Size(118, 15);
+            this.lblRegistro.TabIndex = 35;
+            this.lblRegistro.Text = "Estado de la cita:";
+            // 
+            // cbxRegistro
+            // 
+            this.cbxRegistro.BackColor = System.Drawing.Color.Wheat;
+            this.cbxRegistro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxRegistro.FormattingEnabled = true;
+            this.cbxRegistro.Location = new System.Drawing.Point(551, 60);
+            this.cbxRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxRegistro.Name = "cbxRegistro";
+            this.cbxRegistro.Size = new System.Drawing.Size(190, 23);
+            this.cbxRegistro.TabIndex = 36;
+            // 
             // FrmCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,7 +675,7 @@
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCita";
@@ -662,12 +690,12 @@
             this.groupBox1.PerformLayout();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTratamiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpAcuenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpHora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,8 +739,10 @@
         private System.Windows.Forms.ErrorProvider erpAcuenta;
         private System.Windows.Forms.ErrorProvider erpHora;
         private System.Windows.Forms.ComboBox cbxPago;
-        private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.ComboBox cbxPaciente;
+        private System.Windows.Forms.DateTimePicker dtpHora;
+        private System.Windows.Forms.Label lblRegistro;
+        private System.Windows.Forms.ComboBox cbxRegistro;
     }
 }

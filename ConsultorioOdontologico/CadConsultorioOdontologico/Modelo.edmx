@@ -11,11 +11,41 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idPaciente" Type="int" Nullable="false" />
+          <Property Name="idRegistro" Type="int" Nullable="false" />
           <Property Name="fecha" Type="date" Nullable="false" />
-          <Property Name="hora" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="hora" Type="time" Precision="7" Nullable="false" />
           <Property Name="tratamiento" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="pago" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="aCuenta" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idPersonal" Type="int" Nullable="false" />
+          <Property Name="lunes" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="martes" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="miercoles" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="jueves" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="viernes" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="sabado" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="mes" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="permiso" Type="date" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Inventario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="articulo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
@@ -26,9 +56,10 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idPaciente" Type="int" Nullable="false" />
-          <Property Name="articulo" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="idInventario" Type="int" Nullable="false" />
+          <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
@@ -55,11 +86,21 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cedulaIdentidad" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="nombres" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="primerApellido" Type="varchar" MaxLength="20" />
-          <Property Name="segundoApellido" Type="varchar" MaxLength="20" />
+          <Property Name="especialidad" Type="varchar" MaxLength="20" />
+          <Property Name="antiguedad" Type="varchar" MaxLength="20" />
           <Property Name="direccion" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="celular" Type="bigint" Nullable="false" />
           <Property Name="cargo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Registro">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="valor" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
@@ -85,6 +126,42 @@
             </Principal>
             <Dependent Role="Cita">
               <PropertyRef Name="idPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Cita_Registro">
+          <End Role="Registro" Type="Self.Registro" Multiplicity="1" />
+          <End Role="Cita" Type="Self.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Registro">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="idRegistro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Horario_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Horario">
+              <PropertyRef Name="idPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Medicamento_Inventario">
+          <End Role="Inventario" Type="Self.Inventario" Multiplicity="1" />
+          <End Role="Medicamento" Type="Self.Medicamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inventario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicamento">
+              <PropertyRef Name="idInventario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -127,6 +204,12 @@
         <Function Name="paCitaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro3" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="paHorarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametroHorario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paInventarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametro" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="paMedicamentoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro4" Type="varchar" Mode="In" />
         </Function>
@@ -136,18 +219,36 @@
         <Function Name="paPersonalListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro1" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="paRegistroListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametro" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="paUsuarioListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="LabSis324ModelStoreContainer">
           <EntitySet Name="Cita" EntityType="Self.Cita" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Horario" EntityType="Self.Horario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inventario" EntityType="Self.Inventario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Medicamento" EntityType="Self.Medicamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registro" EntityType="Self.Registro" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_Cita_Paciente" Association="Self.fk_Cita_Paciente">
             <End Role="Paciente" EntitySet="Paciente" />
             <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Cita_Registro" Association="Self.fk_Cita_Registro">
+            <End Role="Registro" EntitySet="Registro" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Horario_Personal" Association="Self.fk_Horario_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Horario" EntitySet="Horario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Medicamento_Inventario" Association="Self.fk_Medicamento_Inventario">
+            <End Role="Inventario" EntitySet="Inventario" />
+            <End Role="Medicamento" EntitySet="Medicamento" />
           </AssociationSet>
           <AssociationSet Name="fk_Medicamento_Paciente" Association="Self.fk_Medicamento_Paciente">
             <End Role="Paciente" EntitySet="Paciente" />
@@ -173,8 +274,9 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idPaciente" Type="Int32" Nullable="false" />
+          <Property Name="idRegistro" Type="Int32" Nullable="false" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="hora" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hora" Type="Time" Nullable="false" Precision="7" />
           <Property Name="tratamiento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="pago" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="aCuenta" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
@@ -182,6 +284,38 @@
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Paciente" Relationship="Self.fk_Cita_Paciente" FromRole="Cita" ToRole="Paciente" />
+          <NavigationProperty Name="Registro" Relationship="Self.fk_Cita_Registro" FromRole="Cita" ToRole="Registro" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPersonal" Type="Int32" Nullable="false" />
+          <Property Name="lunes" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="martes" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="miercoles" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="jueves" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="viernes" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sabado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mes" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="permiso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Personal" Relationship="Self.fk_Horario_Personal" FromRole="Horario" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Inventario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="articulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Medicamento" Relationship="Self.fk_Medicamento_Inventario" FromRole="Inventario" ToRole="Medicamento" />
         </EntityType>
         <EntityType Name="Medicamento">
           <Key>
@@ -189,12 +323,14 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idPaciente" Type="Int32" Nullable="false" />
-          <Property Name="articulo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idInventario" Type="Int32" Nullable="false" />
+          <Property Name="cantidad" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Inventario" Relationship="Self.fk_Medicamento_Inventario" FromRole="Medicamento" ToRole="Inventario" />
           <NavigationProperty Name="Paciente" Relationship="Self.fk_Medicamento_Paciente" FromRole="Medicamento" ToRole="Paciente" />
         </EntityType>
         <EntityType Name="Paciente">
@@ -222,16 +358,28 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cedulaIdentidad" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="primerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="segundoApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="especialidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="antiguedad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="celular" Type="Int64" Nullable="false" />
           <Property Name="cargo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Horario" Relationship="Self.fk_Horario_Personal" FromRole="Personal" ToRole="Horario" />
           <NavigationProperty Name="Paciente" Relationship="Self.fk_Paciente_Personal" FromRole="Personal" ToRole="Paciente" />
           <NavigationProperty Name="Usuario" Relationship="Self.fk_Usuario_Personal" FromRole="Personal" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Registro">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="valor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Cita" Relationship="Self.fk_Cita_Registro" FromRole="Registro" ToRole="Cita" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -255,6 +403,42 @@
             </Principal>
             <Dependent Role="Cita">
               <PropertyRef Name="idPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Cita_Registro">
+          <End Role="Registro" Type="Self.Registro" Multiplicity="1" />
+          <End Role="Cita" Type="Self.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Registro">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="idRegistro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Horario_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Horario">
+              <PropertyRef Name="idPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Medicamento_Inventario">
+          <End Role="Inventario" Type="Self.Inventario" Multiplicity="1" />
+          <End Role="Medicamento" Type="Self.Medicamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inventario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicamento">
+              <PropertyRef Name="idInventario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -296,13 +480,28 @@
         </Association>
         <EntityContainer Name="LabSis324Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cita" EntityType="Self.Cita" />
+          <EntitySet Name="Horario" EntityType="Self.Horario" />
+          <EntitySet Name="Inventario" EntityType="Self.Inventario" />
           <EntitySet Name="Medicamento" EntityType="Self.Medicamento" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" />
           <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="Registro" EntityType="Self.Registro" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="fk_Cita_Paciente" Association="Self.fk_Cita_Paciente">
             <End Role="Paciente" EntitySet="Paciente" />
             <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Cita_Registro" Association="Self.fk_Cita_Registro">
+            <End Role="Registro" EntitySet="Registro" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Horario_Personal" Association="Self.fk_Horario_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Horario" EntitySet="Horario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Medicamento_Inventario" Association="Self.fk_Medicamento_Inventario">
+            <End Role="Inventario" EntitySet="Inventario" />
+            <End Role="Medicamento" EntitySet="Medicamento" />
           </AssociationSet>
           <AssociationSet Name="fk_Medicamento_Paciente" Association="Self.fk_Medicamento_Paciente">
             <End Role="Paciente" EntitySet="Paciente" />
@@ -319,6 +518,12 @@
           <FunctionImport Name="paCitaListar" ReturnType="Collection(LabSis324Model.paCitaListar_Result)">
             <Parameter Name="parametro3" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="paHorarioListar" ReturnType="Collection(LabSis324Model.paHorarioListar_Result)">
+            <Parameter Name="parametroHorario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paInventarioListar" ReturnType="Collection(LabSis324Model.paInventarioListar_Result)">
+            <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="paMedicamentoListar" ReturnType="Collection(LabSis324Model.paMedicamentoListar_Result)">
             <Parameter Name="parametro4" Mode="In" Type="String" />
           </FunctionImport>
@@ -328,15 +533,20 @@
           <FunctionImport Name="paPersonalListar" ReturnType="Collection(LabSis324Model.paPersonalListar_Result)">
             <Parameter Name="parametro1" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="paRegistroListar" ReturnType="Collection(LabSis324Model.paRegistroListar_Result)">
+            <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabSis324Model.paUsuarioListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="paCitaListar_Result">
+          <Property Type="String" Name="valorRegistro" Nullable="false" MaxLength="100" />
           <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idRegistro" Nullable="false" />
           <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
           <Property Type="DateTime" Name="fecha" Nullable="false" />
-          <Property Type="String" Name="hora" Nullable="false" MaxLength="20" />
+          <Property Type="Time" Name="hora" Nullable="false" />
           <Property Type="String" Name="tratamiento" Nullable="false" MaxLength="250" />
           <Property Type="String" Name="pago" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="aCuenta" Nullable="false" MaxLength="15" />
@@ -344,13 +554,40 @@
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
         </ComplexType>
+        <ComplexType Name="paHorarioListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idPersonal" Nullable="false" />
+          <Property Type="String" Name="nombresPersonal" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="lunes" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="martes" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="miercoles" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="jueves" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="viernes" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="sabado" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="mes" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="permiso" Nullable="false" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="paInventarioListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="articulo" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="precio" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
         <ComplexType Name="paMedicamentoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idPaciente" Nullable="false" />
+          <Property Type="Int32" Name="idInventario" Nullable="false" />
           <Property Type="String" Name="nombresPaciente" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="articulo" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="articuloInventario" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="precioInventario" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="0" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
-          <Property Type="Decimal" Name="precio" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="total" Nullable="false" Precision="18" Scale="0" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
@@ -372,11 +609,18 @@
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="15" />
           <Property Type="String" Name="nombres" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="primerApellido" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="especialidad" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="antiguedad" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
           <Property Type="Int64" Name="celular" Nullable="false" />
           <Property Type="String" Name="cargo" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="paRegistroListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="valor" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
@@ -402,6 +646,7 @@
               <MappingFragment StoreEntitySet="Cita">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+                <ScalarProperty Name="idRegistro" ColumnName="idRegistro" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="hora" ColumnName="hora" />
                 <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
@@ -413,14 +658,46 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Horario">
+            <EntityTypeMapping TypeName="LabSis324Model.Horario">
+              <MappingFragment StoreEntitySet="Horario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
+                <ScalarProperty Name="lunes" ColumnName="lunes" />
+                <ScalarProperty Name="martes" ColumnName="martes" />
+                <ScalarProperty Name="miercoles" ColumnName="miercoles" />
+                <ScalarProperty Name="jueves" ColumnName="jueves" />
+                <ScalarProperty Name="viernes" ColumnName="viernes" />
+                <ScalarProperty Name="sabado" ColumnName="sabado" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="permiso" ColumnName="permiso" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inventario">
+            <EntityTypeMapping TypeName="LabSis324Model.Inventario">
+              <MappingFragment StoreEntitySet="Inventario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="articulo" ColumnName="articulo" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Medicamento">
             <EntityTypeMapping TypeName="LabSis324Model.Medicamento">
               <MappingFragment StoreEntitySet="Medicamento">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
-                <ScalarProperty Name="articulo" ColumnName="articulo" />
+                <ScalarProperty Name="idInventario" ColumnName="idInventario" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
@@ -449,11 +726,22 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
-                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
-                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+                <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+                <ScalarProperty Name="antiguedad" ColumnName="antiguedad" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
                 <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registro">
+            <EntityTypeMapping TypeName="LabSis324Model.Registro">
+              <MappingFragment StoreEntitySet="Registro">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
@@ -476,7 +764,9 @@
           <FunctionImportMapping FunctionImportName="paCitaListar" FunctionName="LabSis324Model.Store.paCitaListar">
             <ResultMapping>
               <ComplexTypeMapping TypeName="LabSis324Model.paCitaListar_Result">
+                <ScalarProperty Name="valorRegistro" ColumnName="valorRegistro" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idRegistro" ColumnName="idRegistro" />
                 <ScalarProperty Name="nombresPaciente" ColumnName="nombresPaciente" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="hora" ColumnName="hora" />
@@ -489,15 +779,50 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paHorarioListar" FunctionName="LabSis324Model.Store.paHorarioListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabSis324Model.paHorarioListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idPersonal" ColumnName="idPersonal" />
+                <ScalarProperty Name="nombresPersonal" ColumnName="nombresPersonal" />
+                <ScalarProperty Name="lunes" ColumnName="lunes" />
+                <ScalarProperty Name="martes" ColumnName="martes" />
+                <ScalarProperty Name="miercoles" ColumnName="miercoles" />
+                <ScalarProperty Name="jueves" ColumnName="jueves" />
+                <ScalarProperty Name="viernes" ColumnName="viernes" />
+                <ScalarProperty Name="sabado" ColumnName="sabado" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="permiso" ColumnName="permiso" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paInventarioListar" FunctionName="LabSis324Model.Store.paInventarioListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabSis324Model.paInventarioListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="articulo" ColumnName="articulo" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="paMedicamentoListar" FunctionName="LabSis324Model.Store.paMedicamentoListar">
             <ResultMapping>
               <ComplexTypeMapping TypeName="LabSis324Model.paMedicamentoListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+                <ScalarProperty Name="idInventario" ColumnName="idInventario" />
                 <ScalarProperty Name="nombresPaciente" ColumnName="nombresPaciente" />
-                <ScalarProperty Name="articulo" ColumnName="articulo" />
+                <ScalarProperty Name="articuloInventario" ColumnName="articuloInventario" />
+                <ScalarProperty Name="precioInventario" ColumnName="precioInventario" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
@@ -527,11 +852,22 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
-                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
-                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+                <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+                <ScalarProperty Name="antiguedad" ColumnName="antiguedad" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
                 <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paRegistroListar" FunctionName="LabSis324Model.Store.paRegistroListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabSis324Model.paRegistroListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />

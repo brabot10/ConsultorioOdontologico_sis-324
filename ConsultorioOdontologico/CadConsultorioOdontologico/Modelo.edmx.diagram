@@ -4,13 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b4b94b8838034f828e52f3cf4eaff7db" Name="Diagram1" ZoomLevel="83">
-        <EntityTypeShape EntityType="LabSis324Model.Cita" Width="1.5" PointX="7.625" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabSis324Model.Medicamento" Width="1.5" PointX="12.5" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabSis324Model.Paciente" Width="1.5" PointX="10.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabSis324Model.Personal" Width="1.5" PointX="10.375" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabSis324Model.Usuario" Width="1.5" PointX="12.5" PointY="1.875" IsExpanded="true" />
+      <Diagram DiagramId="f22d85d0fefb432e861387aa2701b671" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="LabSis324Model.Cita" Width="1.5" PointX="8.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Horario" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Inventario" Width="1.5" PointX="15.875" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Medicamento" Width="1.5" PointX="13.375" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Paciente" Width="1.5" PointX="11" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Personal" Width="1.5" PointX="11.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Registro" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSis324Model.Usuario" Width="1.5" PointX="14.5" PointY="5.25" IsExpanded="true" />
         <AssociationConnector Association="LabSis324Model.fk_Cita_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSis324Model.fk_Cita_Registro" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSis324Model.fk_Horario_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSis324Model.fk_Medicamento_Inventario" ManuallyRouted="false" />
         <AssociationConnector Association="LabSis324Model.fk_Medicamento_Paciente" ManuallyRouted="false" />
         <AssociationConnector Association="LabSis324Model.fk_Paciente_Personal" ManuallyRouted="false" />
         <AssociationConnector Association="LabSis324Model.fk_Usuario_Personal" ManuallyRouted="false" />

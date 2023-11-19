@@ -26,8 +26,8 @@ namespace ClnConsultorioOdontologico
                 var existente = context.Personal.Find(personal.id);
                 existente.cedulaIdentidad = personal.cedulaIdentidad;
                 existente.nombres = personal.nombres;
-                existente.primerApellido = personal.primerApellido;
-                existente.segundoApellido = personal.segundoApellido;
+                existente.especialidad = personal.especialidad;
+                existente.antiguedad = personal.antiguedad;
                 existente.direccion = personal.direccion;
                 existente.celular = personal.celular;
                 existente.cargo = personal.cargo;

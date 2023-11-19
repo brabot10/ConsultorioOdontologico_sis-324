@@ -44,27 +44,27 @@
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.txtCedulaIdentidad = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtSegundoApellido = new System.Windows.Forms.TextBox();
-            this.lblSegundoApellido = new System.Windows.Forms.Label();
+            this.txtAntiguedad = new System.Windows.Forms.TextBox();
+            this.lblAntiguedad = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCedulaIdentidad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCelular = new System.Windows.Forms.Label();
-            this.lblPrimerApellido = new System.Windows.Forms.Label();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
             this.erpCedulaIdentidad = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpPrimerApellido = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpEspecialidad = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpSegundoApellido = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDireccion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCelular = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCargo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnHorario = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -78,6 +78,7 @@
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cbxCargo = new System.Windows.Forms.ComboBox();
             this.pnlTitulo.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
@@ -87,7 +88,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpCedulaIdentidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpPrimerApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEspecialidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpSegundoApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCelular)).BeginInit();
@@ -113,12 +114,13 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(591, 32);
             this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Consultorio Odontologico :::Personal::";
+            this.lblTitulo.Text = "Consultorio Odontológico :::Personal::";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlDatos
             // 
             this.pnlDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.pnlDatos.Controls.Add(this.btnHorario);
             this.pnlDatos.Controls.Add(this.pnlAcciones);
             this.pnlDatos.Controls.Add(this.gbxLista);
             this.pnlDatos.Controls.Add(this.btnBuscar);
@@ -216,7 +218,7 @@
             this.txtParametro.Location = new System.Drawing.Point(6, 37);
             this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(484, 20);
+            this.txtParametro.Size = new System.Drawing.Size(372, 20);
             this.txtParametro.TabIndex = 32;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
@@ -248,21 +250,21 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.groupBox1.Controls.Add(this.txtCargo);
+            this.groupBox1.Controls.Add(this.cbxCargo);
             this.groupBox1.Controls.Add(this.lblDireccion);
             this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.lblCargo);
-            this.groupBox1.Controls.Add(this.txtPrimerApellido);
+            this.groupBox1.Controls.Add(this.txtEspecialidad);
             this.groupBox1.Controls.Add(this.txtCedulaIdentidad);
             this.groupBox1.Controls.Add(this.txtCelular);
-            this.groupBox1.Controls.Add(this.txtSegundoApellido);
-            this.groupBox1.Controls.Add(this.lblSegundoApellido);
+            this.groupBox1.Controls.Add(this.txtAntiguedad);
+            this.groupBox1.Controls.Add(this.lblAntiguedad);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.lblCedulaIdentidad);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.lblCelular);
-            this.groupBox1.Controls.Add(this.lblPrimerApellido);
+            this.groupBox1.Controls.Add(this.lblEspecialidad);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
@@ -274,15 +276,6 @@
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Personal:";
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.Location = new System.Drawing.Point(501, 44);
-            this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCargo.MaxLength = 250;
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(240, 21);
-            this.txtCargo.TabIndex = 35;
             // 
             // lblDireccion
             // 
@@ -313,14 +306,14 @@
             this.lblCargo.TabIndex = 32;
             this.lblCargo.Text = "Cargo:";
             // 
-            // txtPrimerApellido
+            // txtEspecialidad
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(152, 65);
-            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrimerApellido.MaxLength = 250;
-            this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(265, 21);
-            this.txtPrimerApellido.TabIndex = 31;
+            this.txtEspecialidad.Location = new System.Drawing.Point(152, 65);
+            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEspecialidad.MaxLength = 250;
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.Size = new System.Drawing.Size(265, 21);
+            this.txtEspecialidad.TabIndex = 31;
             // 
             // txtCedulaIdentidad
             // 
@@ -340,24 +333,24 @@
             this.txtCelular.Size = new System.Drawing.Size(240, 21);
             this.txtCelular.TabIndex = 29;
             // 
-            // txtSegundoApellido
+            // txtAntiguedad
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(152, 93);
-            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSegundoApellido.MaxLength = 100;
-            this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(264, 21);
-            this.txtSegundoApellido.TabIndex = 25;
+            this.txtAntiguedad.Location = new System.Drawing.Point(152, 93);
+            this.txtAntiguedad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAntiguedad.MaxLength = 100;
+            this.txtAntiguedad.Name = "txtAntiguedad";
+            this.txtAntiguedad.Size = new System.Drawing.Size(264, 21);
+            this.txtAntiguedad.TabIndex = 25;
             // 
-            // lblSegundoApellido
+            // lblAntiguedad
             // 
-            this.lblSegundoApellido.AutoSize = true;
-            this.lblSegundoApellido.Location = new System.Drawing.Point(8, 97);
-            this.lblSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(124, 15);
-            this.lblSegundoApellido.TabIndex = 24;
-            this.lblSegundoApellido.Text = "Segundo Apellido:";
+            this.lblAntiguedad.AutoSize = true;
+            this.lblAntiguedad.Location = new System.Drawing.Point(8, 97);
+            this.lblAntiguedad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAntiguedad.Name = "lblAntiguedad";
+            this.lblAntiguedad.Size = new System.Drawing.Size(83, 15);
+            this.lblAntiguedad.TabIndex = 24;
+            this.lblAntiguedad.Text = "Antiguedad:";
             // 
             // txtNombre
             // 
@@ -376,7 +369,7 @@
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
             this.lblCedulaIdentidad.Size = new System.Drawing.Size(140, 15);
             this.lblCedulaIdentidad.TabIndex = 18;
-            this.lblCedulaIdentidad.Text = "Cedula de Identidad:";
+            this.lblCedulaIdentidad.Text = "Cédula de Identidad:";
             // 
             // lblNombre
             // 
@@ -384,9 +377,9 @@
             this.lblNombre.Location = new System.Drawing.Point(9, 44);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 15);
+            this.lblNombre.Size = new System.Drawing.Size(127, 15);
             this.lblNombre.TabIndex = 16;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "Nombre Completo:";
             // 
             // lblCelular
             // 
@@ -398,15 +391,15 @@
             this.lblCelular.TabIndex = 14;
             this.lblCelular.Text = "Celular:";
             // 
-            // lblPrimerApellido
+            // lblEspecialidad
             // 
-            this.lblPrimerApellido.AutoSize = true;
-            this.lblPrimerApellido.Location = new System.Drawing.Point(7, 70);
-            this.lblPrimerApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(110, 15);
-            this.lblPrimerApellido.TabIndex = 8;
-            this.lblPrimerApellido.Text = "Primer Apellido:";
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Location = new System.Drawing.Point(7, 70);
+            this.lblEspecialidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(94, 15);
+            this.lblEspecialidad.TabIndex = 8;
+            this.lblEspecialidad.Text = "Especialidad:";
             // 
             // erpCedulaIdentidad
             // 
@@ -416,9 +409,9 @@
             // 
             this.erpNombre.ContainerControl = this;
             // 
-            // erpPrimerApellido
+            // erpEspecialidad
             // 
-            this.erpPrimerApellido.ContainerControl = this;
+            this.erpEspecialidad.ContainerControl = this;
             // 
             // erpSegundoApellido
             // 
@@ -436,6 +429,25 @@
             // 
             this.erpCargo.ContainerControl = this;
             // 
+            // btnHorario
+            // 
+            this.btnHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnHorario.FlatAppearance.BorderSize = 2;
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorario.ForeColor = System.Drawing.Color.White;
+            this.btnHorario.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_agregar;
+            this.btnHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorario.Location = new System.Drawing.Point(496, 5);
+            this.btnHorario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(102, 52);
+            this.btnHorario.TabIndex = 37;
+            this.btnHorario.Text = "Horario";
+            this.btnHorario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHorario.UseVisualStyleBackColor = false;
+            this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
+            // 
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
@@ -445,7 +457,7 @@
             this.btnUsuario.ForeColor = System.Drawing.Color.White;
             this.btnUsuario.Image = global::CpConsultorioOdontologico.Properties.Resources.per_login;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(472, 5);
+            this.btnUsuario.Location = new System.Drawing.Point(479, 5);
             this.btnUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(111, 59);
@@ -465,7 +477,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.per_editar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(122, 5);
+            this.btnEditar.Location = new System.Drawing.Point(119, 5);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(111, 59);
@@ -504,7 +516,7 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.per_agregar;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(7, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(3, 5);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(111, 59);
@@ -523,10 +535,10 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.per_cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(352, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(354, 5);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(111, 59);
+            this.btnCerrar.Size = new System.Drawing.Size(120, 59);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -542,10 +554,10 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.per_buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(390, 5);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(111, 52);
+            this.btnBuscar.Size = new System.Drawing.Size(102, 52);
             this.btnBuscar.TabIndex = 33;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -647,7 +659,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(443, 77);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(132, 59);
+            this.btnGuardar.Size = new System.Drawing.Size(123, 59);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -665,12 +677,28 @@
             this.btnCancelar.Location = new System.Drawing.Point(606, 77);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
+            this.btnCancelar.Size = new System.Drawing.Size(121, 57);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // cbxCargo
+            // 
+            this.cbxCargo.BackColor = System.Drawing.Color.Wheat;
+            this.cbxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxCargo.FormattingEnabled = true;
+            this.cbxCargo.Items.AddRange(new object[] {
+            "Doctor",
+            "Doctora",
+            "Administrador"});
+            this.cbxCargo.Location = new System.Drawing.Point(501, 47);
+            this.cbxCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCargo.Name = "cbxCargo";
+            this.cbxCargo.Size = new System.Drawing.Size(240, 23);
+            this.cbxCargo.TabIndex = 35;
             // 
             // FrmPersonal
             // 
@@ -698,7 +726,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpCedulaIdentidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpPrimerApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEspecialidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpSegundoApellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCelular)).EndInit();
@@ -731,28 +759,29 @@
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtSegundoApellido;
-        private System.Windows.Forms.Label lblSegundoApellido;
+        private System.Windows.Forms.TextBox txtAntiguedad;
+        private System.Windows.Forms.Label lblAntiguedad;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblCedulaIdentidad;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCelular;
-        private System.Windows.Forms.Label lblPrimerApellido;
+        private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtCedulaIdentidad;
-        private System.Windows.Forms.TextBox txtPrimerApellido;
+        private System.Windows.Forms.TextBox txtEspecialidad;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.ErrorProvider erpCedulaIdentidad;
         private System.Windows.Forms.ErrorProvider erpNombre;
-        private System.Windows.Forms.ErrorProvider erpPrimerApellido;
+        private System.Windows.Forms.ErrorProvider erpEspecialidad;
         private System.Windows.Forms.ErrorProvider erpSegundoApellido;
         private System.Windows.Forms.ErrorProvider erpDireccion;
         private System.Windows.Forms.ErrorProvider erpCelular;
         private System.Windows.Forms.ErrorProvider erpCargo;
         private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Button btnHorario;
+        private System.Windows.Forms.ComboBox cbxCargo;
     }
 }

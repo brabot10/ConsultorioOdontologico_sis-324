@@ -40,11 +40,13 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblAutor = new System.Windows.Forms.Label();
             this.erpUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpClave = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtClave = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pbxOcultar = new System.Windows.Forms.PictureBox();
+            this.pbxVer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsUsuario)).BeginInit();
@@ -52,6 +54,8 @@
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVer)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxLogo
@@ -173,6 +177,31 @@
             this.pnlDatos.Size = new System.Drawing.Size(274, 283);
             this.pnlDatos.TabIndex = 0;
             // 
+            // txtClave
+            // 
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.ForeColor = System.Drawing.Color.White;
+            this.txtClave.Location = new System.Drawing.Point(8, 168);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(249, 17);
+            this.txtClave.TabIndex = 3;
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(8, 76);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(249, 17);
+            this.txtUsuario.TabIndex = 1;
+            // 
             // lblAutor
             // 
             this.lblAutor.BackColor = System.Drawing.Color.Transparent;
@@ -192,31 +221,29 @@
             // 
             this.erpClave.ContainerControl = this;
             // 
-            // txtClave
+            // pbxOcultar
             // 
-            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.ForeColor = System.Drawing.Color.White;
-            this.txtClave.Location = new System.Drawing.Point(8, 168);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(249, 17);
-            this.txtClave.TabIndex = 3;
-            this.txtClave.UseSystemPasswordChar = true;
-            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
+            this.pbxOcultar.BackColor = System.Drawing.Color.Transparent;
+            this.pbxOcultar.Image = global::CpConsultorioOdontologico.Properties.Resources.pri_ocultar;
+            this.pbxOcultar.Location = new System.Drawing.Point(526, 299);
+            this.pbxOcultar.Name = "pbxOcultar";
+            this.pbxOcultar.Size = new System.Drawing.Size(25, 25);
+            this.pbxOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxOcultar.TabIndex = 9;
+            this.pbxOcultar.TabStop = false;
+            this.pbxOcultar.Click += new System.EventHandler(this.pbxOcultar_Click);
             // 
-            // txtUsuario
+            // pbxVer
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(8, 76);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(249, 17);
-            this.txtUsuario.TabIndex = 1;
+            this.pbxVer.BackColor = System.Drawing.Color.Transparent;
+            this.pbxVer.Image = global::CpConsultorioOdontologico.Properties.Resources.pri_ver;
+            this.pbxVer.Location = new System.Drawing.Point(526, 299);
+            this.pbxVer.Name = "pbxVer";
+            this.pbxVer.Size = new System.Drawing.Size(25, 25);
+            this.pbxVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxVer.TabIndex = 10;
+            this.pbxVer.TabStop = false;
+            this.pbxVer.Click += new System.EventHandler(this.pbxVer_Click);
             // 
             // FrmPrincipal
             // 
@@ -226,6 +253,8 @@
             this.BackgroundImage = global::CpConsultorioOdontologico.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(776, 493);
+            this.Controls.Add(this.pbxVer);
+            this.Controls.Add(this.pbxOcultar);
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.pnlCabeza);
             this.Controls.Add(this.pnlDatos);
@@ -244,6 +273,8 @@
             this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,6 +295,8 @@
         private System.Windows.Forms.ErrorProvider erpClave;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox pbxOcultar;
+        private System.Windows.Forms.PictureBox pbxVer;
     }
 }
 

@@ -60,7 +60,7 @@ namespace CpConsultorioOdontologico
                 else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrectos",
-                    "::: Minerva - Mensaje :::", MessageBoxButtons.OK,
+                    "::: Consultorio Odontológico - Mensaje :::", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 }
             }
@@ -98,6 +98,20 @@ namespace CpConsultorioOdontologico
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
             }
+        }
+
+        private void pbxVer_Click(object sender, EventArgs e)
+        {
+           pbxOcultar.BringToFront();
+           txtClave.PasswordChar = '\0';
+            //pbxOcultar.BringToFront();
+            //txtClave.PasswordChar = ' ';
+        }
+
+        private void pbxOcultar_Click(object sender, EventArgs e)
+        {
+            pbxVer.BringToFront();
+            txtClave.PasswordChar = '*';
         }
     }
 }

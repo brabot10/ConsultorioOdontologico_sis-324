@@ -75,7 +75,7 @@ namespace CpConsultorioOdontologico
             var paciente = PacienteCln.get(id);
             txtNombre.Text = paciente.nombres;
             txtCedulaIdentidad.Text = paciente.cedulaIdentidad;
-            txtAlergias.Text = paciente.alergias;
+            cbxAlergias.Text = paciente.alergias;
             dtpFechaNacimiento.Value = paciente.fechaNacimiento;
             txtCelular.Text = paciente.celular.ToString();
             cbxPersonal.Visible = false;
@@ -114,7 +114,7 @@ namespace CpConsultorioOdontologico
             bool esValido = true;
             erpNombre.SetError(txtNombre, "");
             erpCedulaIdentidad.SetError(txtCedulaIdentidad, "");
-            erpAlergias.SetError(txtAlergias, "");
+            erpAlergias.SetError(cbxAlergias, "");
             erpFechaNacimiento.SetError(dtpFechaNacimiento, "");
             erpCelular.SetError(txtCelular, "");
             if (string.IsNullOrEmpty(txtNombre.Text))
@@ -127,15 +127,15 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpCedulaIdentidad.SetError(txtCedulaIdentidad, "El campo Cedula de Identidad es obligatorio");
             }
-            if (string.IsNullOrEmpty(txtAlergias.Text))
+            if (string.IsNullOrEmpty(cbxAlergias.Text))
             {
                 esValido = false;
-                erpAlergias.SetError(txtAlergias, "El campo Alergias es obligatorio");
+                erpAlergias.SetError(cbxAlergias, "El campo Alergias es obligatorio");
             }
-            else if (!Regex.IsMatch(txtAlergias.Text, "^[a-zA-Z\\s]+$"))
+            else if (!Regex.IsMatch(cbxAlergias.Text, "^[a-zA-Z\\s]+$"))
             {
                 esValido = false;
-                erpAlergias.SetError(txtAlergias, "El campo Alergias debe contener solo letras y espacios");
+                erpAlergias.SetError(cbxAlergias, "El campo Alergias debe contener solo letras y espacios");
             }
             if (string.IsNullOrEmpty(dtpFechaNacimiento.Text))
             {
@@ -174,7 +174,7 @@ namespace CpConsultorioOdontologico
                     var paciente = new Paciente();
                     paciente.nombres = txtNombre.Text.Trim();
                     paciente.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
-                    paciente.alergias = txtAlergias.Text;
+                    paciente.alergias = cbxAlergias.Text;
                     paciente.fechaNacimiento = dtpFechaNacimiento.Value;
                     paciente.celular = int.Parse(txtCelular.Text);
                     paciente.usuarioRegistro = "SIS324";
@@ -222,7 +222,7 @@ namespace CpConsultorioOdontologico
                     var paciente = new Paciente();
                     paciente.nombres = txtNombre.Text.Trim();
                     paciente.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
-                    paciente.alergias = txtAlergias.Text;
+                    paciente.alergias = cbxAlergias.Text;
                     paciente.fechaNacimiento = dtpFechaNacimiento.Value;
                     paciente.celular = int.Parse(txtCelular.Text);
                     paciente.usuarioRegistro = "SIS324";
@@ -252,7 +252,7 @@ namespace CpConsultorioOdontologico
         {
             txtCelular.Text = string.Empty;
             txtCedulaIdentidad.Text = string.Empty;
-            txtAlergias.Text = string.Empty;
+            cbxAlergias.Text = string.Empty;
             dtpFechaNacimiento.Value = DateTime.Now;
             txtCelular.Text = string.Empty;
         }

@@ -28,9 +28,12 @@ namespace CadConsultorioOdontologico
         }
     
         public virtual DbSet<Cita> Cita { get; set; }
+        public virtual DbSet<Horario> Horario { get; set; }
+        public virtual DbSet<Inventario> Inventario { get; set; }
         public virtual DbSet<Medicamento> Medicamento { get; set; }
         public virtual DbSet<Paciente> Paciente { get; set; }
         public virtual DbSet<Personal> Personal { get; set; }
+        public virtual DbSet<Registro> Registro { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
         public virtual ObjectResult<paCitaListar_Result> paCitaListar(string parametro3)
@@ -40,6 +43,24 @@ namespace CadConsultorioOdontologico
                 new ObjectParameter("parametro3", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCitaListar_Result>("paCitaListar", parametro3Parameter);
+        }
+    
+        public virtual ObjectResult<paHorarioListar_Result> paHorarioListar(string parametroHorario)
+        {
+            var parametroHorarioParameter = parametroHorario != null ?
+                new ObjectParameter("parametroHorario", parametroHorario) :
+                new ObjectParameter("parametroHorario", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paHorarioListar_Result>("paHorarioListar", parametroHorarioParameter);
+        }
+    
+        public virtual ObjectResult<paInventarioListar_Result> paInventarioListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paInventarioListar_Result>("paInventarioListar", parametroParameter);
         }
     
         public virtual ObjectResult<paMedicamentoListar_Result> paMedicamentoListar(string parametro4)
@@ -67,6 +88,15 @@ namespace CadConsultorioOdontologico
                 new ObjectParameter("parametro1", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paPersonalListar_Result>("paPersonalListar", parametro1Parameter);
+        }
+    
+        public virtual ObjectResult<paRegistroListar_Result> paRegistroListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paRegistroListar_Result>("paRegistroListar", parametroParameter);
         }
     
         public virtual ObjectResult<paUsuarioListar_Result> paUsuarioListar(string parametro)

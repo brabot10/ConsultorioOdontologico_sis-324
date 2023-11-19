@@ -27,10 +27,13 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["idPaciente"].Visible = false;
+            dgvLista.Columns["idInventario"].Visible = false;
             dgvLista.Columns["nombresPaciente"].HeaderText = "Nombre del Paciente";
-            dgvLista.Columns["articulo"].HeaderText = "Nombre del Medicamento";
+            dgvLista.Columns["articuloInventario"].HeaderText = "Nombre del Artículo";
+            dgvLista.Columns["precioInventario"].HeaderText = "Precio del Artículo";
+            dgvLista.Columns["cantidad"].HeaderText = "Cantidad del Medicamento";
             dgvLista.Columns["descripcion"].HeaderText = "Descripcion del Medicamento";
-            dgvLista.Columns["precio"].HeaderText = "Precio del Medicamento en Bs";
+            dgvLista.Columns["total"].HeaderText = "total del Medicamento en Bs";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha del Registro";
             btnEditar.Enabled = medicamento.Count > 0;
@@ -44,18 +47,26 @@ namespace CpConsultorioOdontologico
             cbxPaciente.DisplayMember = "nombres";
             cbxPaciente.ValueMember = "id";
         }
+
+        private void cargarInventario()
+        {
+            cbxInventario.DataSource = InventarioCln.Listar();
+            cbxInventario.DisplayMember = "articulo";
+            cbxInventario.ValueMember = "id";
+        }
         private void FrmMedicamento_Load(object sender, EventArgs e)
         {
             Size = new Size(776, 344);
             listar();
             cargarPaciente();
+            cargarInventario();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Size = new Size(776, 493);
             esNuevo = true;
-            txtArticulo.Focus();
+            txtTotal.Focus();
             cbxPaciente.Visible = true;
             lblPaciente.Visible = true;
         }
@@ -68,9 +79,9 @@ namespace CpConsultorioOdontologico
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             var medicamento = MedicamentoCln.get(id);
-            txtArticulo.Text = medicamento.articulo;
+            nudCantidad.Value = medicamento.cantidad;
             txtDescripcion.Text = medicamento.descripcion;
-            txtPrecio.Text = medicamento.precio.ToString();
+            txtTotal.Text = medicamento.total.ToString();
             cbxPaciente.Visible = false;
             lblPaciente.Visible = false;
         }
@@ -105,28 +116,28 @@ namespace CpConsultorioOdontologico
         private bool validar()
         {
             bool esValido = true;
-            erpArticulo.SetError(txtArticulo, "");
+            erpCantidad.SetError(nudCantidad, "");
             erpDescripcion.SetError(txtDescripcion, "");
-            erpPrecio.SetError(txtPrecio, "");
-            if (string.IsNullOrEmpty(txtArticulo.Text))
+            erpTotal.SetError(txtTotal, "");
+            if (string.IsNullOrEmpty(nudCantidad.Text))
             {
                 esValido = false;
-                erpArticulo.SetError(txtArticulo, "El campo Artículo es obligatorio");
+                erpCantidad.SetError(nudCantidad, "El campo Cantidad es obligatorio");
             }
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
                 esValido = false;
                 erpDescripcion.SetError(txtDescripcion, "El campo Descripción  es obligatorio");
             }
-            if (string.IsNullOrEmpty(txtPrecio.Text))
+            if (string.IsNullOrEmpty(txtTotal.Text))
             {
                 esValido = false;
-                erpPrecio.SetError(txtPrecio, "El campo Precio es obligatorio");
+                erpTotal.SetError(txtTotal, "El campo Total es obligatorio");
             }
-            else if (!Regex.IsMatch(txtPrecio.Text, "^\\d+$"))
+            else if (!Regex.IsMatch(txtTotal.Text, "^\\d+$"))
             {
                 esValido = false;
-                erpPrecio.SetError(txtPrecio, "El campo Precio debe contener solo números");
+                erpTotal.SetError(txtTotal, "El campo Total debe contener solo números");
             }
             return esValido;
         }
@@ -136,15 +147,16 @@ namespace CpConsultorioOdontologico
             if (validar())
             {
                 var medicamento = new Medicamento();
-                medicamento.articulo = txtArticulo.Text.Trim();
+                medicamento.cantidad = nudCantidad.Value;
                 medicamento.descripcion = txtDescripcion.Text.Trim();
-                medicamento.precio = int.Parse(txtPrecio.Text);
+                medicamento.total = int.Parse(txtTotal.Text);
                 medicamento.usuarioRegistro = "SIS324";
                 if (esNuevo)
                 {
                     medicamento.fechaRegistro = DateTime.Now;
                     medicamento.estado = 1;
                     medicamento.idPaciente = Convert.ToInt32(cbxPaciente.SelectedValue);
+                    medicamento.idInventario = Convert.ToInt32(cbxInventario.SelectedValue);
                     MedicamentoCln.insertar(medicamento);
                 }
                 else
@@ -161,9 +173,9 @@ namespace CpConsultorioOdontologico
         }
         private void limpiar()
         {
-            txtArticulo.Text = string.Empty;
+            nudCantidad.Value = 0;
             txtDescripcion.Text = string.Empty;
-            txtPrecio.Text = string.Empty;
+            txtTotal.Text = string.Empty;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

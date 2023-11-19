@@ -27,6 +27,8 @@ namespace CpConsultorioOdontologico
             dgvLista.DataSource = cita;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["idRegistro"].Visible = false;
+            dgvLista.Columns["valorRegistro"].HeaderText = "Estado de la cita";
             //dgvLista.Columns["idPaciente"].Visible = false;
             dgvLista.Columns["nombresPaciente"].HeaderText = "Nombre del paciente";
             dgvLista.Columns["fecha"].HeaderText = "Fecha de la Consulta";
@@ -46,11 +48,18 @@ namespace CpConsultorioOdontologico
             cbxPaciente.DisplayMember = "nombres";
             cbxPaciente.ValueMember = "id";
         }
+        private void cargarRegistro()
+        {
+            cbxRegistro.DataSource = RegistroCln.listar();
+            cbxRegistro.DisplayMember = "valor";
+            cbxRegistro.ValueMember = "id";
+        }
         private void FrmCita_Load(object sender, EventArgs e)
         {
             Size = new Size(776, 344);
             listar();
             cargarPaciente();
+            cargarRegistro();
 
         }
 
@@ -61,6 +70,8 @@ namespace CpConsultorioOdontologico
             txtTratamiento.Focus();
             cbxPaciente.Visible = true;
             lblPaciente.Visible = true;
+            cbxRegistro.Visible = true;
+            lblRegistro.Visible = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -75,9 +86,11 @@ namespace CpConsultorioOdontologico
             txtTratamiento.Text = cita.tratamiento;
             cbxPago.Text = cita.pago;
             txtAcuenta.Text = cita.aCuenta;
-            txtHora.Text = cita.hora;
+            dtpHora.Value = Convert.ToDateTime(cita.hora);
             cbxPaciente.Visible = false;
             lblPaciente.Visible = false;
+            cbxRegistro.Visible = false;
+            lblRegistro.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)//Cancelar
@@ -113,7 +126,7 @@ namespace CpConsultorioOdontologico
             erpTratamiento.SetError(txtTratamiento, "");
             erpPago.SetError(cbxPago, "");
             erpAcuenta.SetError(txtAcuenta, "");
-            erpHora.SetError(txtHora, "");
+            erpHora.SetError(dtpHora, "");
             if (string.IsNullOrEmpty(dtpFecha.Text))
             {
                 esValido = false;
@@ -144,10 +157,10 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpAcuenta.SetError(txtAcuenta, "El campo a Cuenta es obligatorio");
             }
-            if (string.IsNullOrEmpty(txtHora.Text))
+            if (string.IsNullOrEmpty(dtpHora.Text))
             {
                 esValido = false;
-                erpHora.SetError(txtHora, "El campo Hora es obligatorio");
+                erpHora.SetError(dtpHora, "El campo Hora es obligatorio");
             }
             return esValido;
         }
@@ -161,7 +174,7 @@ namespace CpConsultorioOdontologico
                 cita.tratamiento = txtTratamiento.Text.Trim();
                 cita.pago = cbxPago.Text;
                 cita.aCuenta = txtAcuenta.Text.Trim();
-                cita.hora = txtHora.Text.Trim();
+                cita.hora = dtpHora.Value.TimeOfDay;
                 cita.usuarioRegistro = "SIS324";
 
                 var existeCitas = CitaCln.Listar();
@@ -187,6 +200,7 @@ namespace CpConsultorioOdontologico
                     cita.fechaRegistro = DateTime.Now;
                     cita.estado = 1;
                     cita.idPaciente = Convert.ToInt32(cbxPaciente.SelectedValue);
+                    cita.idRegistro = Convert.ToInt32(cbxRegistro.SelectedValue);
                     CitaCln.insertar(cita);
                 }
                 else
@@ -207,7 +221,7 @@ namespace CpConsultorioOdontologico
             txtTratamiento.Text = string.Empty;
             cbxPago.SelectedIndex = -1;
             txtAcuenta.Text = string.Empty;
-            txtHora.Text = string.Empty;
+            dtpHora.Text = string.Empty;
 
         }
 

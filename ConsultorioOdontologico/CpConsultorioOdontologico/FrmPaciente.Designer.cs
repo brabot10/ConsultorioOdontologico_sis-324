@@ -61,7 +61,6 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.lblCelular = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtAlergias = new System.Windows.Forms.TextBox();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.lblAlergias = new System.Windows.Forms.Label();
             this.txtCedulaIdentidad = new System.Windows.Forms.TextBox();
@@ -74,6 +73,7 @@
             this.erpAlergias = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpFechaNacimiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCelular = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxAlergias = new System.Windows.Forms.ComboBox();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
@@ -206,7 +206,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(591, 32);
             this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Consultorio Odontologico :::Pacientes:::";
+            this.lblTitulo.Text = "Consultorio Odontológico :::Pacientes:::";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBusqueda
@@ -426,13 +426,13 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.cbxAlergias);
             this.gbxDatos.Controls.Add(this.lblPersonal);
             this.gbxDatos.Controls.Add(this.cbxPersonal);
             this.gbxDatos.Controls.Add(this.dtpFechaNacimiento);
             this.gbxDatos.Controls.Add(this.txtCelular);
             this.gbxDatos.Controls.Add(this.lblCelular);
             this.gbxDatos.Controls.Add(this.btnGuardar);
-            this.gbxDatos.Controls.Add(this.txtAlergias);
             this.gbxDatos.Controls.Add(this.lblFechaNacimiento);
             this.gbxDatos.Controls.Add(this.lblAlergias);
             this.gbxDatos.Controls.Add(this.txtCedulaIdentidad);
@@ -525,15 +525,6 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtAlergias
-            // 
-            this.txtAlergias.Location = new System.Drawing.Point(154, 78);
-            this.txtAlergias.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAlergias.MaxLength = 250;
-            this.txtAlergias.Name = "txtAlergias";
-            this.txtAlergias.Size = new System.Drawing.Size(265, 21);
-            this.txtAlergias.TabIndex = 21;
-            // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
@@ -571,7 +562,7 @@
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
             this.lblCedulaIdentidad.Size = new System.Drawing.Size(140, 15);
             this.lblCedulaIdentidad.TabIndex = 14;
-            this.lblCedulaIdentidad.Text = "Cedula de Identidad:";
+            this.lblCedulaIdentidad.Text = "Cédula de Identidad:";
             // 
             // txtNombre
             // 
@@ -588,9 +579,9 @@
             this.lblNombre.Location = new System.Drawing.Point(8, 23);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 15);
+            this.lblNombre.Size = new System.Drawing.Size(127, 15);
             this.lblNombre.TabIndex = 8;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "Nombre Completo:";
             // 
             // btnCancelar
             // 
@@ -628,6 +619,29 @@
             // erpCelular
             // 
             this.erpCelular.ContainerControl = this;
+            // 
+            // cbxAlergias
+            // 
+            this.cbxAlergias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.cbxAlergias.FormattingEnabled = true;
+            this.cbxAlergias.Items.AddRange(new object[] {
+            "Guantes de Látex",
+            "Metales (Cromo)",
+            "Metales (Niquel)",
+            "Metales (Cobalto)",
+            "Metales (Titanio)",
+            "Metales (Platino)",
+            "Monómero Acrílico",
+            "Menta y Pino",
+            "Anestesia Local",
+            "Resinas",
+            "Materiales de Impresión",
+            "Productos  que contienen Eugenol"});
+            this.cbxAlergias.Location = new System.Drawing.Point(154, 73);
+            this.cbxAlergias.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxAlergias.Name = "cbxAlergias";
+            this.cbxAlergias.Size = new System.Drawing.Size(265, 23);
+            this.cbxAlergias.TabIndex = 36;
             // 
             // FrmPaciente
             // 
@@ -686,7 +700,6 @@
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblAlergias;
         private System.Windows.Forms.TextBox txtCedulaIdentidad;
@@ -706,5 +719,6 @@
         private System.Windows.Forms.ErrorProvider erpCelular;
         private System.Windows.Forms.Label lblPersonal;
         private System.Windows.Forms.ComboBox cbxPersonal;
+        private System.Windows.Forms.ComboBox cbxAlergias;
     }
 }

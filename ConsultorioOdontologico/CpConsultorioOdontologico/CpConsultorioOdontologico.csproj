@@ -70,6 +70,12 @@
     <Compile Include="FrmCita.Designer.cs">
       <DependentUpon>FrmCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHorario.Designer.cs">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="FrmCita.resx">
       <DependentUpon>FrmCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHorario.resx">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMedicamento.resx">
       <DependentUpon>FrmMedicamento.cs</DependentUpon>
@@ -287,6 +296,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ho_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hor_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal_ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pri_ocultar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pri_ver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

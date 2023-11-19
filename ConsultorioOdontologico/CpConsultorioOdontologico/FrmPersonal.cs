@@ -29,8 +29,8 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["cedulaIdentidad"].HeaderText = "Cedula de Identidad";
             dgvLista.Columns["nombres"].HeaderText = "Nombre";
-            dgvLista.Columns["primerApellido"].HeaderText = "Primer Apellido";
-            dgvLista.Columns["segundoApellido"].HeaderText = "Segundo Apellido";
+            dgvLista.Columns["especialidad"].HeaderText = "Especialidad";
+            dgvLista.Columns["antiguedad"].HeaderText = "Antiguedad";
             dgvLista.Columns["direccion"].HeaderText = "Dirección";
             dgvLista.Columns["celular"].HeaderText = "Celular";
             dgvLista.Columns["cargo"].HeaderText = "Cargo";
@@ -66,11 +66,11 @@ namespace CpConsultorioOdontologico
             var personal = PersonalCln.get(id);
             txtCedulaIdentidad.Text = personal.cedulaIdentidad;
             txtNombre.Text = personal.nombres;
-            txtPrimerApellido.Text = personal.primerApellido;
-            txtSegundoApellido.Text = personal.segundoApellido;
+            txtEspecialidad.Text = personal.especialidad;
+            txtAntiguedad.Text = personal.antiguedad;
             txtDireccion.Text = personal.direccion;
             txtCelular.Text = personal.celular.ToString();
-            txtCargo.Text = personal.cargo;
+            cbxCargo.Text = personal.cargo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -105,11 +105,11 @@ namespace CpConsultorioOdontologico
             bool esValido = true;
             erpCedulaIdentidad.SetError(txtCedulaIdentidad, "");
             erpNombre.SetError(txtNombre, "");
-            erpPrimerApellido.SetError(txtPrimerApellido, "");
-            erpSegundoApellido.SetError(txtSegundoApellido, "");
+            erpEspecialidad.SetError(txtEspecialidad, "");
+            erpSegundoApellido.SetError(txtAntiguedad, "");
             erpDireccion.SetError(txtDireccion, "");
             erpCelular.SetError(txtCelular, "");
-            erpCargo.SetError(txtCargo, "");
+            erpCargo.SetError(cbxCargo, "");
             if (string.IsNullOrEmpty(txtCedulaIdentidad.Text))
             {
                 esValido = false;
@@ -125,25 +125,25 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpNombre.SetError(txtNombre, "El campo Nombre debe contener solo letras y espacios");
             }
-            if (string.IsNullOrEmpty(txtPrimerApellido.Text))
+            if (string.IsNullOrEmpty(txtEspecialidad.Text))
             {
                 esValido = false;
-                erpPrimerApellido.SetError(txtPrimerApellido, "El campo Primer Apellido es obligatorio");
+                erpEspecialidad.SetError(txtEspecialidad, "El campo Especialidad es obligatorio");
             }
-            else if (!Regex.IsMatch(txtPrimerApellido.Text, "^[a-zA-Z\\s]+$"))
+            else if (!Regex.IsMatch(txtEspecialidad.Text, "^[a-zA-Z\\s]+$"))
             {
                 esValido = false;
-                erpPrimerApellido.SetError(txtPrimerApellido, "El campo Primer Apellido debe contener solo letras y espacios");
+                erpEspecialidad.SetError(txtEspecialidad, "El campo Especialidad debe contener solo letras y espacios");
             }
-            if (string.IsNullOrEmpty(txtSegundoApellido.Text))
+            if (string.IsNullOrEmpty(txtAntiguedad.Text))
             {
                 esValido = false;
-                erpSegundoApellido.SetError(txtSegundoApellido, "El campo Segundo Apellido es obligatorio");
+                erpSegundoApellido.SetError(txtAntiguedad, "El campo Antiguedad es obligatorio");
             }
-            else if (!Regex.IsMatch(txtSegundoApellido.Text, "^[a-zA-Z\\s]+$"))
+            else if (!Regex.IsMatch(txtAntiguedad.Text, "^[a-zA-Z\\s]+$"))
             {
                 esValido = false;
-                erpSegundoApellido.SetError(txtSegundoApellido, "El campo Segundo Apellido debe contener solo letras y espacios");
+                erpSegundoApellido.SetError(txtAntiguedad, "El campo Antiguedad debe contener solo letras y espacios");
             }
             if (string.IsNullOrEmpty(txtDireccion.Text))
             {
@@ -160,10 +160,10 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpCelular.SetError(txtCelular, "El campo Celular debe contener solo números");
             }
-            if (string.IsNullOrEmpty(txtCargo.Text))
+            if (string.IsNullOrEmpty(cbxCargo.Text))
             {
                 esValido = false;
-                erpCargo.SetError(txtCargo, "El campo Cargo es obligatorio");
+                erpCargo.SetError(cbxCargo, "El campo Cargo es obligatorio");
             }
             return esValido;
         }
@@ -177,11 +177,11 @@ namespace CpConsultorioOdontologico
                     var personal = new Personal();
                     personal.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
                     personal.nombres = txtNombre.Text.Trim();
-                    personal.primerApellido = txtPrimerApellido.Text;
-                    personal.segundoApellido = txtSegundoApellido.Text;
+                    personal.especialidad = txtEspecialidad.Text;
+                    personal.antiguedad = txtAntiguedad.Text;
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
-                    personal.cargo = txtCargo.Text;
+                    personal.cargo = cbxCargo.Text;
                     personal.usuarioRegistro = "SIS324";
                     var existePersonales = PersonalCln.listar();
                     bool personalExiste = false;
@@ -227,11 +227,11 @@ namespace CpConsultorioOdontologico
                     var personal = new Personal();
                     personal.cedulaIdentidad = txtCedulaIdentidad.Text.Trim();
                     personal.nombres = txtNombre.Text.Trim();
-                    personal.primerApellido = txtPrimerApellido.Text;
-                    personal.segundoApellido = txtSegundoApellido.Text;
+                    personal.especialidad = txtEspecialidad.Text;
+                    personal.antiguedad = txtAntiguedad.Text;
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
-                    personal.cargo = txtCargo.Text;
+                    personal.cargo = cbxCargo.Text;
                     personal.usuarioRegistro = "SIS324";
                     if (esNuevo)
                     {
@@ -258,11 +258,11 @@ namespace CpConsultorioOdontologico
         {
             txtCedulaIdentidad.Text = string.Empty;
             txtCelular.Text = string.Empty;
-            txtPrimerApellido.Text = string.Empty;
-            txtSegundoApellido.Text = string.Empty;
-            txtSegundoApellido.Text = string.Empty;
+            txtEspecialidad.Text = string.Empty;
+            txtAntiguedad.Text = string.Empty;
+            txtAntiguedad.Text = string.Empty;
             txtCelular.Text = string.Empty;
-            txtCargo.Text = string.Empty;
+            cbxCargo.Text = string.Empty;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -354,6 +354,32 @@ namespace CpConsultorioOdontologico
 
             // Creamos el formulario usuario
             FrmUsuario frmUsuario = new FrmUsuario();
+
+            // Mostramos el formulario usuario de manera modal
+            DialogResult result = frmUsuario.ShowDialog();
+
+            // Limpia el diccionario de colores originales
+            //coloresOriginales.Clear();
+
+            // Verificamos si el formulario de usuario se cerró correctamente
+            if (result == DialogResult.OK)
+            {
+                // El código aquí se ejecutará después de que FrmUsuario se cierre
+                // Desbloqueamos el funcionamiento del formulario personal
+                RecargarFormularioPersonal();
+                this.Enabled = true;
+            }
+        }
+
+        private void btnHorario_Click(object sender, EventArgs e)
+        {
+            var colorOriginal = this.BackColor;
+
+            // Cambia el color de fondo de todos los controles a gris y guarda los colores originales
+            CambiarColorControles(this.Controls, SystemColors.ControlDark);
+
+            // Creamos el formulario usuario
+            FrmHorario frmUsuario = new FrmHorario();
 
             // Mostramos el formulario usuario de manera modal
             DialogResult result = frmUsuario.ShowDialog();

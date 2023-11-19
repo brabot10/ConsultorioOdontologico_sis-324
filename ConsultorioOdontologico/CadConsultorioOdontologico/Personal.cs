@@ -17,6 +17,7 @@ namespace CadConsultorioOdontologico
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Personal()
         {
+            this.Horario = new HashSet<Horario>();
             this.Paciente = new HashSet<Paciente>();
             this.Usuario = new HashSet<Usuario>();
         }
@@ -24,8 +25,8 @@ namespace CadConsultorioOdontologico
         public int id { get; set; }
         public string cedulaIdentidad { get; set; }
         public string nombres { get; set; }
-        public string primerApellido { get; set; }
-        public string segundoApellido { get; set; }
+        public string especialidad { get; set; }
+        public string antiguedad { get; set; }
         public string direccion { get; set; }
         public long celular { get; set; }
         public string cargo { get; set; }
@@ -33,6 +34,8 @@ namespace CadConsultorioOdontologico
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Horario> Horario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Paciente> Paciente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

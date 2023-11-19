@@ -24,9 +24,9 @@ namespace ClnConsultorioOdontologico
             using (var context = new LabSis324Entities())
             {
                 var existente = context.Medicamento.Find(medicamento.id);
-                existente.articulo = medicamento.articulo;
+                existente.cantidad = medicamento.cantidad;
                 existente.descripcion = medicamento.descripcion;
-                existente.precio = medicamento.precio;
+                existente.total = medicamento.total;
                 existente.estado = medicamento.estado;
                 existente.usuarioRegistro = medicamento.usuarioRegistro;
                 return context.SaveChanges();
