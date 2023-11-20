@@ -38,9 +38,21 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["aCuenta"].HeaderText = "A Cuenta";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha del Registro";
-            btnEditar.Enabled = cita.Count > 0;
+            btnEditar.Enabled = cita.Count > 0 ;
             btnEliminar.Enabled = cita.Count > 0;
             if (cita.Count > 0) dgvLista.Rows[0].Cells["tratamiento"].Selected = true;
+            //int valorRegistroSeleccionado = ObtenerValorRegistroSeleccionado();
+            //btnEditar.Enabled = cita.Count > 0 && ObtenerValorRegistroSeleccionado() == 2;
+           // btnEliminar.Enabled = cita.Count > 0 && ObtenerValorRegistroSeleccionado() == 2;
+        }
+        private int ObtenerValorRegistroSeleccionado()
+        {
+            if (cbxRegistro.SelectedValue != null)
+            {
+                return (int)cbxRegistro.SelectedValue;
+            }
+
+            return 0; // Devuelve 0 si no hay valor seleccionado
         }
         private void cargarPaciente()
         {
@@ -86,7 +98,8 @@ namespace CpConsultorioOdontologico
             txtTratamiento.Text = cita.tratamiento;
             cbxPago.Text = cita.pago;
             txtAcuenta.Text = cita.aCuenta;
-            dtpHora.Value = Convert.ToDateTime(cita.hora);
+            dtpHora.Value = DateTime.Today.Add(cita.hora);
+            //dtpHora.Value = Convert.ToDateTime(cita.hora);
             cbxPaciente.Visible = false;
             lblPaciente.Visible = false;
             cbxRegistro.Visible = false;
@@ -175,7 +188,7 @@ namespace CpConsultorioOdontologico
                 cita.pago = cbxPago.Text;
                 cita.aCuenta = txtAcuenta.Text.Trim();
                 cita.hora = dtpHora.Value.TimeOfDay;
-                cita.usuarioRegistro = "SIS324";
+                cita.usuarioRegistro = Util.usuario.usuario1;
 
                 var existeCitas = CitaCln.Listar();
                 bool citaExiste = false;

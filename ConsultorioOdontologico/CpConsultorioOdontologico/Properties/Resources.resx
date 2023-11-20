@@ -121,11 +121,17 @@
   <data name="pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="medicamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medicamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GuardarCitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GuardarCitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditarCitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EditarCitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pri_ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pri_ver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="med_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\med_buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,9 +151,6 @@
   <data name="citas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\citas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnCliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="med_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\med_eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,17 +160,17 @@
   <data name="hor_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hor_editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pri_ocultar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pri_ocultar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1891021_approved_check_checkbox_checkmark_confirm_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1891021_approved_check_checkbox_checkmark_confirm_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hor_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hor_eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pri_ocultar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pri_ocultar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="med_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\med_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,20 +193,29 @@
   <data name="per_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\per_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hor_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hor_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="per_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\per_eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="per_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\per_agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="med_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\med_agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="in_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3017912_annul_cancel_clean_delete_eliminate_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3017912_annul_cancel_clean_delete_eliminate_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="in_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="per_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\per_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +226,14 @@
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="in_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="in_nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="principal_ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\principal_ver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +250,8 @@
   <data name="user_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hor_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hor_agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="in_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,32 +259,35 @@
   <data name="1891023_cancel_cercle_close_delete_dismiss_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1891023_cancel_cercle_close_delete_dismiss_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hor_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hor_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="med_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\med_agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="med_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\med_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="medicamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hor_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hor_agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="med_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\med_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hor_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hor_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="med_buscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\med_buscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hor_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hor_buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hor_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hor_buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="per_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\per_editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hor_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hor_eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnCliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="med_buscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\med_buscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EliminarCitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EliminarCitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,13 +298,13 @@
   <data name="hor_nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hor_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="per_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\per_editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hor_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hor_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="in_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pri_ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pri_ver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="in_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\in_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

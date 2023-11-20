@@ -140,11 +140,6 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpSegundoApellido.SetError(txtAntiguedad, "El campo Antiguedad es obligatorio");
             }
-            else if (!Regex.IsMatch(txtAntiguedad.Text, "^[a-zA-Z\\s]+$"))
-            {
-                esValido = false;
-                erpSegundoApellido.SetError(txtAntiguedad, "El campo Antiguedad debe contener solo letras y espacios");
-            }
             if (string.IsNullOrEmpty(txtDireccion.Text))
             {
                 esValido = false;
@@ -182,7 +177,7 @@ namespace CpConsultorioOdontologico
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
                     personal.cargo = cbxCargo.Text;
-                    personal.usuarioRegistro = "SIS324";
+                    personal.usuarioRegistro = Util.usuario.usuario1;
                     var existePersonales = PersonalCln.listar();
                     bool personalExiste = false;
 
@@ -232,7 +227,7 @@ namespace CpConsultorioOdontologico
                     personal.direccion = txtDireccion.Text;
                     personal.celular = int.Parse(txtCelular.Text);
                     personal.cargo = cbxCargo.Text;
-                    personal.usuarioRegistro = "SIS324";
+                    personal.usuarioRegistro = Util.usuario.usuario1;
                     if (esNuevo)
                     {
                         personal.fechaRegistro = DateTime.Now;

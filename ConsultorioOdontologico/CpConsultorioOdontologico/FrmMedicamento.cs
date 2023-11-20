@@ -30,7 +30,7 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["idInventario"].Visible = false;
             dgvLista.Columns["nombresPaciente"].HeaderText = "Nombre del Paciente";
             dgvLista.Columns["articuloInventario"].HeaderText = "Nombre del Artículo";
-            dgvLista.Columns["precioInventario"].HeaderText = "Precio del Artículo";
+            dgvLista.Columns["precioInventario"].HeaderText = "Precio del Artículo en Bs";
             dgvLista.Columns["cantidad"].HeaderText = "Cantidad del Medicamento";
             dgvLista.Columns["descripcion"].HeaderText = "Descripcion del Medicamento";
             dgvLista.Columns["total"].HeaderText = "total del Medicamento en Bs";
@@ -38,7 +38,7 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha del Registro";
             btnEditar.Enabled = medicamento.Count > 0;
             btnEliminar.Enabled = medicamento.Count > 0;
-            if (medicamento.Count > 0) dgvLista.Rows[0].Cells["articulo"].Selected = true;
+            if (medicamento.Count > 0) dgvLista.Rows[0].Cells["cantidad"].Selected = true;
 
         }
         private void cargarPaciente()
@@ -50,7 +50,7 @@ namespace CpConsultorioOdontologico
 
         private void cargarInventario()
         {
-            cbxInventario.DataSource = InventarioCln.Listar();
+            cbxInventario.DataSource = InventarioCln.listar();
             cbxInventario.DisplayMember = "articulo";
             cbxInventario.ValueMember = "id";
         }
@@ -150,7 +150,7 @@ namespace CpConsultorioOdontologico
                 medicamento.cantidad = nudCantidad.Value;
                 medicamento.descripcion = txtDescripcion.Text.Trim();
                 medicamento.total = int.Parse(txtTotal.Text);
-                medicamento.usuarioRegistro = "SIS324";
+                medicamento.usuarioRegistro = Util.usuario.usuario1;
                 if (esNuevo)
                 {
                     medicamento.fechaRegistro = DateTime.Now;
@@ -235,6 +235,54 @@ namespace CpConsultorioOdontologico
             {
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
+            }
+        }
+        private Dictionary<Control, Color> coloresOriginales = new Dictionary<Control, Color>();
+        private void CambiarColorControles(Control.ControlCollection controles, Color nuevoColor)
+        {
+            foreach (Control control in controles)
+            {
+                coloresOriginales[control] = control.BackColor;
+
+                control.BackColor = nuevoColor;
+
+                if (control.HasChildren)
+                {
+                    CambiarColorControles(control.Controls, nuevoColor);
+                }
+            }
+        }
+        private void RecargarFormularioMedicamentos()
+        {
+            // Coloca aquí cualquier código adicional necesario antes de recargar el formulario
+            FrmMedicamento nuevoFormulario = new FrmMedicamento();
+            nuevoFormulario.Show();
+            this.Close();  // Cierra el formulario actual
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            var colorOriginal = this.BackColor;
+
+            // Cambia el color de fondo de todos los controles a gris y guarda los colores originales
+            CambiarColorControles(this.Controls, SystemColors.ControlDark);
+
+            // Creamos el formulario usuario
+            FrmInventario frminventraio = new FrmInventario();
+
+            // Mostramos el formulario usuario de manera modal
+            DialogResult result = frminventraio.ShowDialog();
+
+            // Limpia el diccionario de colores originales
+            //coloresOriginales.Clear();
+
+            // Verificamos si el formulario de usuario se cerró correctamente
+            if (result == DialogResult.OK)
+            {
+                // El código aquí se ejecutará después de que FrmUsuario se cierre
+                // Desbloqueamos el funcionamiento del formulario personal
+                RecargarFormularioMedicamentos();
+                this.Enabled = true;
             }
         }
     }

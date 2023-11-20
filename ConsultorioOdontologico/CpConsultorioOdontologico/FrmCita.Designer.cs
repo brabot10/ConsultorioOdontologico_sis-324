@@ -36,46 +36,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCita));
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.pnlDatosDes = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxRegistro = new System.Windows.Forms.ComboBox();
+            this.lblRegistro = new System.Windows.Forms.Label();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.cbxPaciente = new System.Windows.Forms.ComboBox();
             this.cbxPago = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtAcuenta = new System.Windows.Forms.TextBox();
             this.lblAcuenta = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtTratamiento = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTratamiento = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblPago = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.erpFecha = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpTratamiento = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpPago = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpAcuenta = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpHora = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dtpHora = new System.Windows.Forms.DateTimePicker();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnMedicamentos = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.btnPaciente = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.lblRegistro = new System.Windows.Forms.Label();
-            this.cbxRegistro = new System.Windows.Forms.ComboBox();
+            this.erpFecha = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpTratamiento = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpPago = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpAcuenta = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpHora = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
@@ -84,12 +84,12 @@
             this.groupBox1.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTratamiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpAcuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpHora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -116,353 +116,6 @@
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(592, 72);
             this.pnlAcciones.TabIndex = 36;
-            // 
-            // gbxLista
-            // 
-            this.gbxLista.Controls.Add(this.dgvLista);
-            this.gbxLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.gbxLista.Location = new System.Drawing.Point(10, 61);
-            this.gbxLista.Margin = new System.Windows.Forms.Padding(2);
-            this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxLista.Size = new System.Drawing.Size(592, 129);
-            this.gbxLista.TabIndex = 35;
-            this.gbxLista.TabStop = false;
-            this.gbxLista.Text = "Lista de Citas:";
-            // 
-            // dgvLista
-            // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.AllowUserToDeleteRows = false;
-            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvLista.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.dgvLista.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvLista.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvLista.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLista.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLista.EnableHeadersVisualStyles = false;
-            this.dgvLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
-            this.dgvLista.Location = new System.Drawing.Point(5, 21);
-            this.dgvLista.MultiSelect = false;
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.ReadOnly = true;
-            this.dgvLista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLista.RowHeadersVisible = false;
-            this.dgvLista.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.dgvLista.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(582, 103);
-            this.dgvLista.TabIndex = 0;
-            // 
-            // txtParametro
-            // 
-            this.txtParametro.BackColor = System.Drawing.Color.White;
-            this.txtParametro.Location = new System.Drawing.Point(6, 37);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
-            this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(484, 20);
-            this.txtParametro.TabIndex = 32;
-            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
-            // 
-            // lblBusqueda
-            // 
-            this.lblBusqueda.AutoSize = true;
-            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.lblBusqueda.Location = new System.Drawing.Point(7, 11);
-            this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(206, 16);
-            this.lblBusqueda.TabIndex = 31;
-            this.lblBusqueda.Text = "Buscar nombre del Paciente:";
-            // 
-            // pnlDatosDes
-            // 
-            this.pnlDatosDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.pnlDatosDes.Controls.Add(this.groupBox1);
-            this.pnlDatosDes.Location = new System.Drawing.Point(0, 342);
-            this.pnlDatosDes.Name = "pnlDatosDes";
-            this.pnlDatosDes.Size = new System.Drawing.Size(776, 152);
-            this.pnlDatosDes.TabIndex = 42;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.groupBox1.Controls.Add(this.cbxRegistro);
-            this.groupBox1.Controls.Add(this.lblRegistro);
-            this.groupBox1.Controls.Add(this.dtpHora);
-            this.groupBox1.Controls.Add(this.lblPaciente);
-            this.groupBox1.Controls.Add(this.cbxPaciente);
-            this.groupBox1.Controls.Add(this.cbxPago);
-            this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.txtAcuenta);
-            this.groupBox1.Controls.Add(this.lblAcuenta);
-            this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Controls.Add(this.txtTratamiento);
-            this.groupBox1.Controls.Add(this.lblFecha);
-            this.groupBox1.Controls.Add(this.lblTratamiento);
-            this.groupBox1.Controls.Add(this.lblHora);
-            this.groupBox1.Controls.Add(this.lblPago);
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.groupBox1.Location = new System.Drawing.Point(2, 1);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(774, 151);
-            this.groupBox1.TabIndex = 37;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de la Cita:";
-            // 
-            // lblPaciente
-            // 
-            this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Location = new System.Drawing.Point(433, 36);
-            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(112, 15);
-            this.lblPaciente.TabIndex = 33;
-            this.lblPaciente.Text = "Cita de para Dr.:";
-            // 
-            // cbxPaciente
-            // 
-            this.cbxPaciente.BackColor = System.Drawing.Color.Wheat;
-            this.cbxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxPaciente.FormattingEnabled = true;
-            this.cbxPaciente.Location = new System.Drawing.Point(551, 35);
-            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxPaciente.Name = "cbxPaciente";
-            this.cbxPaciente.Size = new System.Drawing.Size(190, 23);
-            this.cbxPaciente.TabIndex = 32;
-            // 
-            // cbxPago
-            // 
-            this.cbxPago.BackColor = System.Drawing.Color.Wheat;
-            this.cbxPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxPago.FormattingEnabled = true;
-            this.cbxPago.Items.AddRange(new object[] {
-            "CANCELADO",
-            "PENDIENTE"});
-            this.cbxPago.Location = new System.Drawing.Point(153, 42);
-            this.cbxPago.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxPago.Name = "cbxPago";
-            this.cbxPago.Size = new System.Drawing.Size(265, 23);
-            this.cbxPago.TabIndex = 27;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
-            this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.dtpFecha.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.dtpFecha.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(153, 15);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(265, 22);
-            this.dtpFecha.TabIndex = 26;
-            // 
-            // txtAcuenta
-            // 
-            this.txtAcuenta.Location = new System.Drawing.Point(153, 68);
-            this.txtAcuenta.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAcuenta.MaxLength = 100;
-            this.txtAcuenta.Name = "txtAcuenta";
-            this.txtAcuenta.Size = new System.Drawing.Size(265, 21);
-            this.txtAcuenta.TabIndex = 25;
-            // 
-            // lblAcuenta
-            // 
-            this.lblAcuenta.AutoSize = true;
-            this.lblAcuenta.Location = new System.Drawing.Point(12, 70);
-            this.lblAcuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAcuenta.Name = "lblAcuenta";
-            this.lblAcuenta.Size = new System.Drawing.Size(66, 15);
-            this.lblAcuenta.TabIndex = 24;
-            this.lblAcuenta.Text = "A cuenta:";
-            // 
-            // txtTratamiento
-            // 
-            this.txtTratamiento.Location = new System.Drawing.Point(153, 93);
-            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTratamiento.MaxLength = 250;
-            this.txtTratamiento.Multiline = true;
-            this.txtTratamiento.Name = "txtTratamiento";
-            this.txtTratamiento.Size = new System.Drawing.Size(265, 46);
-            this.txtTratamiento.TabIndex = 21;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(8, 23);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(115, 15);
-            this.lblFecha.TabIndex = 18;
-            this.lblFecha.Text = "Fecha de la Cita:";
-            // 
-            // lblTratamiento
-            // 
-            this.lblTratamiento.AutoSize = true;
-            this.lblTratamiento.Location = new System.Drawing.Point(12, 96);
-            this.lblTratamiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTratamiento.Name = "lblTratamiento";
-            this.lblTratamiento.Size = new System.Drawing.Size(88, 15);
-            this.lblTratamiento.TabIndex = 16;
-            this.lblTratamiento.Text = "Tratamiento:";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(433, 14);
-            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(107, 15);
-            this.lblHora.TabIndex = 14;
-            this.lblHora.Text = "Hora de la Cita:";
-            // 
-            // lblPago
-            // 
-            this.lblPago.AutoSize = true;
-            this.lblPago.Location = new System.Drawing.Point(8, 44);
-            this.lblPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPago.Name = "lblPago";
-            this.lblPago.Size = new System.Drawing.Size(116, 15);
-            this.lblPago.TabIndex = 8;
-            this.lblPago.Text = "Estado del Pago:";
-            // 
-            // pnlTitulo
-            // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.pnlTitulo.Controls.Add(this.lblTitulo);
-            this.pnlTitulo.Location = new System.Drawing.Point(155, -1);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(621, 72);
-            this.pnlTitulo.TabIndex = 39;
-            this.pnlTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseMove);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(14, 20);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(591, 32);
-            this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Consultorio Odontológico :::Citas::";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlMenu
-            // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.pnlMenu.Controls.Add(this.btnPersonal);
-            this.pnlMenu.Controls.Add(this.btnMedicamentos);
-            this.pnlMenu.Controls.Add(this.btnCitas);
-            this.pnlMenu.Controls.Add(this.btnPaciente);
-            this.pnlMenu.Controls.Add(this.pbxLogo);
-            this.pnlMenu.Location = new System.Drawing.Point(-1, -1);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(157, 343);
-            this.pnlMenu.TabIndex = 38;
-            // 
-            // erpFecha
-            // 
-            this.erpFecha.ContainerControl = this;
-            // 
-            // erpTratamiento
-            // 
-            this.erpTratamiento.ContainerControl = this;
-            // 
-            // erpPago
-            // 
-            this.erpPago.ContainerControl = this;
-            // 
-            // erpAcuenta
-            // 
-            this.erpAcuenta.ContainerControl = this;
-            // 
-            // erpHora
-            // 
-            this.erpHora.ContainerControl = this;
-            // 
-            // dtpHora
-            // 
-            this.dtpHora.CustomFormat = "hh:mm:ss: tt";
-            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHora.Location = new System.Drawing.Point(551, 12);
-            this.dtpHora.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpHora.Name = "dtpHora";
-            this.dtpHora.ShowUpDown = true;
-            this.dtpHora.Size = new System.Drawing.Size(190, 21);
-            this.dtpHora.TabIndex = 34;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.GuardarCitas;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(461, 86);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(132, 59);
-            this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.CalcelarCitas;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(609, 87);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEditar
             // 
@@ -539,6 +192,74 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // gbxLista
+            // 
+            this.gbxLista.Controls.Add(this.dgvLista);
+            this.gbxLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.gbxLista.Location = new System.Drawing.Point(10, 61);
+            this.gbxLista.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxLista.Name = "gbxLista";
+            this.gbxLista.Padding = new System.Windows.Forms.Padding(2);
+            this.gbxLista.Size = new System.Drawing.Size(592, 129);
+            this.gbxLista.TabIndex = 35;
+            this.gbxLista.TabStop = false;
+            this.gbxLista.Text = "Lista de Citas:";
+            // 
+            // dgvLista
+            // 
+            this.dgvLista.AllowUserToAddRows = false;
+            this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvLista.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvLista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.dgvLista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLista.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvLista.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLista.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLista.EnableHeadersVisualStyles = false;
+            this.dgvLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
+            this.dgvLista.Location = new System.Drawing.Point(5, 21);
+            this.dgvLista.MultiSelect = false;
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.ReadOnly = true;
+            this.dgvLista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLista.RowHeadersVisible = false;
+            this.dgvLista.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.dgvLista.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLista.Size = new System.Drawing.Size(582, 103);
+            this.dgvLista.TabIndex = 0;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
@@ -556,6 +277,287 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtParametro
+            // 
+            this.txtParametro.BackColor = System.Drawing.Color.White;
+            this.txtParametro.Location = new System.Drawing.Point(6, 37);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtParametro.Name = "txtParametro";
+            this.txtParametro.Size = new System.Drawing.Size(484, 20);
+            this.txtParametro.TabIndex = 32;
+            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
+            // 
+            // lblBusqueda
+            // 
+            this.lblBusqueda.AutoSize = true;
+            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.lblBusqueda.Location = new System.Drawing.Point(7, 11);
+            this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBusqueda.Name = "lblBusqueda";
+            this.lblBusqueda.Size = new System.Drawing.Size(206, 16);
+            this.lblBusqueda.TabIndex = 31;
+            this.lblBusqueda.Text = "Buscar nombre del Paciente:";
+            // 
+            // pnlDatosDes
+            // 
+            this.pnlDatosDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.pnlDatosDes.Controls.Add(this.groupBox1);
+            this.pnlDatosDes.Location = new System.Drawing.Point(0, 342);
+            this.pnlDatosDes.Name = "pnlDatosDes";
+            this.pnlDatosDes.Size = new System.Drawing.Size(776, 152);
+            this.pnlDatosDes.TabIndex = 42;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.groupBox1.Controls.Add(this.cbxRegistro);
+            this.groupBox1.Controls.Add(this.lblRegistro);
+            this.groupBox1.Controls.Add(this.dtpHora);
+            this.groupBox1.Controls.Add(this.lblPaciente);
+            this.groupBox1.Controls.Add(this.cbxPaciente);
+            this.groupBox1.Controls.Add(this.cbxPago);
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.txtAcuenta);
+            this.groupBox1.Controls.Add(this.lblAcuenta);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.txtTratamiento);
+            this.groupBox1.Controls.Add(this.lblFecha);
+            this.groupBox1.Controls.Add(this.lblTratamiento);
+            this.groupBox1.Controls.Add(this.lblHora);
+            this.groupBox1.Controls.Add(this.lblPago);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.groupBox1.Location = new System.Drawing.Point(2, 1);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(774, 151);
+            this.groupBox1.TabIndex = 37;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de la Cita:";
+            // 
+            // cbxRegistro
+            // 
+            this.cbxRegistro.BackColor = System.Drawing.Color.Wheat;
+            this.cbxRegistro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxRegistro.FormattingEnabled = true;
+            this.cbxRegistro.Location = new System.Drawing.Point(551, 60);
+            this.cbxRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxRegistro.Name = "cbxRegistro";
+            this.cbxRegistro.Size = new System.Drawing.Size(190, 23);
+            this.cbxRegistro.TabIndex = 36;
+            // 
+            // lblRegistro
+            // 
+            this.lblRegistro.AutoSize = true;
+            this.lblRegistro.Location = new System.Drawing.Point(433, 62);
+            this.lblRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistro.Name = "lblRegistro";
+            this.lblRegistro.Size = new System.Drawing.Size(118, 15);
+            this.lblRegistro.TabIndex = 35;
+            this.lblRegistro.Text = "Estado de la cita:";
+            // 
+            // dtpHora
+            // 
+            this.dtpHora.CustomFormat = "hh:mm:ss";
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora.Location = new System.Drawing.Point(551, 12);
+            this.dtpHora.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.ShowUpDown = true;
+            this.dtpHora.Size = new System.Drawing.Size(190, 21);
+            this.dtpHora.TabIndex = 34;
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Location = new System.Drawing.Point(433, 36);
+            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.Size = new System.Drawing.Size(112, 15);
+            this.lblPaciente.TabIndex = 33;
+            this.lblPaciente.Text = "Cita de para Dr.:";
+            // 
+            // cbxPaciente
+            // 
+            this.cbxPaciente.BackColor = System.Drawing.Color.Wheat;
+            this.cbxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxPaciente.FormattingEnabled = true;
+            this.cbxPaciente.Location = new System.Drawing.Point(551, 35);
+            this.cbxPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPaciente.Name = "cbxPaciente";
+            this.cbxPaciente.Size = new System.Drawing.Size(190, 23);
+            this.cbxPaciente.TabIndex = 32;
+            // 
+            // cbxPago
+            // 
+            this.cbxPago.BackColor = System.Drawing.Color.Wheat;
+            this.cbxPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxPago.FormattingEnabled = true;
+            this.cbxPago.Items.AddRange(new object[] {
+            "CANCELADO",
+            "PENDIENTE"});
+            this.cbxPago.Location = new System.Drawing.Point(153, 42);
+            this.cbxPago.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPago.Name = "cbxPago";
+            this.cbxPago.Size = new System.Drawing.Size(265, 23);
+            this.cbxPago.TabIndex = 27;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(203)))), ((int)(((byte)(209)))));
+            this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.dtpFecha.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.dtpFecha.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(153, 15);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(265, 22);
+            this.dtpFecha.TabIndex = 26;
+            // 
+            // txtAcuenta
+            // 
+            this.txtAcuenta.Location = new System.Drawing.Point(153, 68);
+            this.txtAcuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAcuenta.MaxLength = 100;
+            this.txtAcuenta.Name = "txtAcuenta";
+            this.txtAcuenta.Size = new System.Drawing.Size(265, 21);
+            this.txtAcuenta.TabIndex = 25;
+            // 
+            // lblAcuenta
+            // 
+            this.lblAcuenta.AutoSize = true;
+            this.lblAcuenta.Location = new System.Drawing.Point(12, 70);
+            this.lblAcuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAcuenta.Name = "lblAcuenta";
+            this.lblAcuenta.Size = new System.Drawing.Size(66, 15);
+            this.lblAcuenta.TabIndex = 24;
+            this.lblAcuenta.Text = "A cuenta:";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.GuardarCitas;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(461, 86);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(132, 59);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtTratamiento
+            // 
+            this.txtTratamiento.Location = new System.Drawing.Point(153, 93);
+            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTratamiento.MaxLength = 250;
+            this.txtTratamiento.Multiline = true;
+            this.txtTratamiento.Name = "txtTratamiento";
+            this.txtTratamiento.Size = new System.Drawing.Size(265, 46);
+            this.txtTratamiento.TabIndex = 21;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(8, 23);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(115, 15);
+            this.lblFecha.TabIndex = 18;
+            this.lblFecha.Text = "Fecha de la Cita:";
+            // 
+            // lblTratamiento
+            // 
+            this.lblTratamiento.AutoSize = true;
+            this.lblTratamiento.Location = new System.Drawing.Point(12, 96);
+            this.lblTratamiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTratamiento.Name = "lblTratamiento";
+            this.lblTratamiento.Size = new System.Drawing.Size(88, 15);
+            this.lblTratamiento.TabIndex = 16;
+            this.lblTratamiento.Text = "Tratamiento:";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Location = new System.Drawing.Point(433, 14);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(107, 15);
+            this.lblHora.TabIndex = 14;
+            this.lblHora.Text = "Hora de la Cita:";
+            // 
+            // lblPago
+            // 
+            this.lblPago.AutoSize = true;
+            this.lblPago.Location = new System.Drawing.Point(8, 44);
+            this.lblPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPago.Name = "lblPago";
+            this.lblPago.Size = new System.Drawing.Size(116, 15);
+            this.lblPago.TabIndex = 8;
+            this.lblPago.Text = "Estado del Pago:";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.CalcelarCitas;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(609, 87);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(130, 57);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.pnlTitulo.Controls.Add(this.lblTitulo);
+            this.pnlTitulo.Location = new System.Drawing.Point(155, -1);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(621, 72);
+            this.pnlTitulo.TabIndex = 39;
+            this.pnlTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseMove);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(14, 20);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(591, 32);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "Consultorio Odontológico :::Citas::";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.pnlMenu.Controls.Add(this.btnPersonal);
+            this.pnlMenu.Controls.Add(this.btnMedicamentos);
+            this.pnlMenu.Controls.Add(this.btnCitas);
+            this.pnlMenu.Controls.Add(this.btnPaciente);
+            this.pnlMenu.Controls.Add(this.pbxLogo);
+            this.pnlMenu.Location = new System.Drawing.Point(-1, -1);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(157, 343);
+            this.pnlMenu.TabIndex = 38;
             // 
             // btnPersonal
             // 
@@ -642,27 +644,25 @@
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
             // 
-            // lblRegistro
+            // erpFecha
             // 
-            this.lblRegistro.AutoSize = true;
-            this.lblRegistro.Location = new System.Drawing.Point(433, 62);
-            this.lblRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(118, 15);
-            this.lblRegistro.TabIndex = 35;
-            this.lblRegistro.Text = "Estado de la cita:";
+            this.erpFecha.ContainerControl = this;
             // 
-            // cbxRegistro
+            // erpTratamiento
             // 
-            this.cbxRegistro.BackColor = System.Drawing.Color.Wheat;
-            this.cbxRegistro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxRegistro.FormattingEnabled = true;
-            this.cbxRegistro.Location = new System.Drawing.Point(551, 60);
-            this.cbxRegistro.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxRegistro.Name = "cbxRegistro";
-            this.cbxRegistro.Size = new System.Drawing.Size(190, 23);
-            this.cbxRegistro.TabIndex = 36;
+            this.erpTratamiento.ContainerControl = this;
+            // 
+            // erpPago
+            // 
+            this.erpPago.ContainerControl = this;
+            // 
+            // erpAcuenta
+            // 
+            this.erpAcuenta.ContainerControl = this;
+            // 
+            // erpHora
+            // 
+            this.erpHora.ContainerControl = this;
             // 
             // FrmCita
             // 
@@ -690,12 +690,12 @@
             this.groupBox1.PerformLayout();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTratamiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpAcuenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpHora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHorario));
             this.pnlMovimiento = new System.Windows.Forms.Panel();
-            this.lblMartes = new System.Windows.Forms.Label();
-            this.lblPersonal = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
-            this.cbxPersonal = new System.Windows.Forms.ComboBox();
             this.lblBusqueda = new System.Windows.Forms.Label();
-            this.lblLunes = new System.Windows.Forms.Label();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.lblMartes = new System.Windows.Forms.Label();
+            this.lblPersonal = new System.Windows.Forms.Label();
+            this.cbxPersonal = new System.Windows.Forms.ComboBox();
+            this.lblLunes = new System.Windows.Forms.Label();
             this.lblMiercoles = new System.Windows.Forms.Label();
             this.lblViernes = new System.Windows.Forms.Label();
             this.lblJueves = new System.Windows.Forms.Label();
@@ -56,16 +62,29 @@
             this.dtpPermiso = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.erpLunes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpMartes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpMiercoles = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpJueves = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpViernes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpSabado = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpPermiso = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblMes = new System.Windows.Forms.Label();
+            this.txtMes = new System.Windows.Forms.TextBox();
             this.pnlMovimiento.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpLunes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMartes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMiercoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpJueves)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpViernes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSabado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPermiso)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMovimiento
@@ -86,29 +105,96 @@
             this.pnlMovimiento.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMovimiento_Paint);
             this.pnlMovimiento.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlMovimiento_MouseMove);
             // 
-            // lblMartes
+            // btnCerrar
             // 
-            this.lblMartes.AutoSize = true;
-            this.lblMartes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMartes.ForeColor = System.Drawing.Color.White;
-            this.lblMartes.Location = new System.Drawing.Point(411, 88);
-            this.lblMartes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMartes.Name = "lblMartes";
-            this.lblMartes.Size = new System.Drawing.Size(58, 16);
-            this.lblMartes.TabIndex = 43;
-            this.lblMartes.Text = "Martes:";
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 2;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_eliminar;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(204, 366);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(109, 57);
+            this.btnCerrar.TabIndex = 48;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // lblPersonal
+            // btnEditar
             // 
-            this.lblPersonal.AutoSize = true;
-            this.lblPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonal.ForeColor = System.Drawing.Color.White;
-            this.lblPersonal.Location = new System.Drawing.Point(411, 25);
-            this.lblPersonal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPersonal.Name = "lblPersonal";
-            this.lblPersonal.Size = new System.Drawing.Size(101, 16);
-            this.lblPersonal.TabIndex = 42;
-            this.lblPersonal.Text = "Asignar al Dr:";
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnEditar.FlatAppearance.BorderSize = 2;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_editar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(204, 294);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(109, 57);
+            this.btnEditar.TabIndex = 47;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 2;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(32, 296);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(109, 57);
+            this.btnNuevo.TabIndex = 46;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.ho_eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(32, 366);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(109, 57);
+            this.btnEliminar.TabIndex = 45;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 2;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_buscar;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(266, 25);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(109, 52);
+            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtParametro
             // 
@@ -122,21 +208,6 @@
             this.txtParametro.TabIndex = 35;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
-            // cbxPersonal
-            // 
-            this.cbxPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.cbxPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxPersonal.FormattingEnabled = true;
-            this.cbxPersonal.Items.AddRange(new object[] {
-            "CANCELADO",
-            "PENDIENTE"});
-            this.cbxPersonal.Location = new System.Drawing.Point(530, 24);
-            this.cbxPersonal.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxPersonal.Name = "cbxPersonal";
-            this.cbxPersonal.Size = new System.Drawing.Size(254, 21);
-            this.cbxPersonal.TabIndex = 41;
-            // 
             // lblBusqueda
             // 
             this.lblBusqueda.AutoSize = true;
@@ -148,18 +219,6 @@
             this.lblBusqueda.Size = new System.Drawing.Size(238, 16);
             this.lblBusqueda.TabIndex = 34;
             this.lblBusqueda.Text = "Buscar  por nombre del Personal:";
-            // 
-            // lblLunes
-            // 
-            this.lblLunes.AutoSize = true;
-            this.lblLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLunes.ForeColor = System.Drawing.Color.White;
-            this.lblLunes.Location = new System.Drawing.Point(411, 55);
-            this.lblLunes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLunes.Name = "lblLunes";
-            this.lblLunes.Size = new System.Drawing.Size(52, 16);
-            this.lblLunes.TabIndex = 39;
-            this.lblLunes.Text = "Lunes:";
             // 
             // gbxLista
             // 
@@ -230,12 +289,63 @@
             this.dgvLista.Size = new System.Drawing.Size(334, 140);
             this.dgvLista.TabIndex = 0;
             // 
+            // lblMartes
+            // 
+            this.lblMartes.AutoSize = true;
+            this.lblMartes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMartes.ForeColor = System.Drawing.Color.White;
+            this.lblMartes.Location = new System.Drawing.Point(411, 71);
+            this.lblMartes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMartes.Name = "lblMartes";
+            this.lblMartes.Size = new System.Drawing.Size(58, 16);
+            this.lblMartes.TabIndex = 43;
+            this.lblMartes.Text = "Martes:";
+            // 
+            // lblPersonal
+            // 
+            this.lblPersonal.AutoSize = true;
+            this.lblPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonal.ForeColor = System.Drawing.Color.White;
+            this.lblPersonal.Location = new System.Drawing.Point(411, 8);
+            this.lblPersonal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPersonal.Name = "lblPersonal";
+            this.lblPersonal.Size = new System.Drawing.Size(101, 16);
+            this.lblPersonal.TabIndex = 42;
+            this.lblPersonal.Text = "Asignar al Dr:";
+            // 
+            // cbxPersonal
+            // 
+            this.cbxPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.cbxPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPersonal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxPersonal.FormattingEnabled = true;
+            this.cbxPersonal.Items.AddRange(new object[] {
+            "CANCELADO",
+            "PENDIENTE"});
+            this.cbxPersonal.Location = new System.Drawing.Point(530, 7);
+            this.cbxPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPersonal.Name = "cbxPersonal";
+            this.cbxPersonal.Size = new System.Drawing.Size(254, 21);
+            this.cbxPersonal.TabIndex = 41;
+            // 
+            // lblLunes
+            // 
+            this.lblLunes.AutoSize = true;
+            this.lblLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLunes.ForeColor = System.Drawing.Color.White;
+            this.lblLunes.Location = new System.Drawing.Point(411, 38);
+            this.lblLunes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLunes.Name = "lblLunes";
+            this.lblLunes.Size = new System.Drawing.Size(52, 16);
+            this.lblLunes.TabIndex = 39;
+            this.lblLunes.Text = "Lunes:";
+            // 
             // lblMiercoles
             // 
             this.lblMiercoles.AutoSize = true;
             this.lblMiercoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiercoles.ForeColor = System.Drawing.Color.White;
-            this.lblMiercoles.Location = new System.Drawing.Point(411, 118);
+            this.lblMiercoles.Location = new System.Drawing.Point(411, 101);
             this.lblMiercoles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMiercoles.Name = "lblMiercoles";
             this.lblMiercoles.Size = new System.Drawing.Size(79, 16);
@@ -247,7 +357,7 @@
             this.lblViernes.AutoSize = true;
             this.lblViernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViernes.ForeColor = System.Drawing.Color.White;
-            this.lblViernes.Location = new System.Drawing.Point(411, 183);
+            this.lblViernes.Location = new System.Drawing.Point(411, 166);
             this.lblViernes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblViernes.Name = "lblViernes";
             this.lblViernes.Size = new System.Drawing.Size(64, 16);
@@ -259,7 +369,7 @@
             this.lblJueves.AutoSize = true;
             this.lblJueves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJueves.ForeColor = System.Drawing.Color.White;
-            this.lblJueves.Location = new System.Drawing.Point(411, 148);
+            this.lblJueves.Location = new System.Drawing.Point(411, 131);
             this.lblJueves.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJueves.Name = "lblJueves";
             this.lblJueves.Size = new System.Drawing.Size(61, 16);
@@ -271,7 +381,7 @@
             this.lblSabado.AutoSize = true;
             this.lblSabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSabado.ForeColor = System.Drawing.Color.White;
-            this.lblSabado.Location = new System.Drawing.Point(411, 211);
+            this.lblSabado.Location = new System.Drawing.Point(411, 194);
             this.lblSabado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSabado.Name = "lblSabado";
             this.lblSabado.Size = new System.Drawing.Size(66, 16);
@@ -288,7 +398,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxLunes.Location = new System.Drawing.Point(530, 54);
+            this.cbxLunes.Location = new System.Drawing.Point(530, 37);
             this.cbxLunes.Margin = new System.Windows.Forms.Padding(2);
             this.cbxLunes.Name = "cbxLunes";
             this.cbxLunes.Size = new System.Drawing.Size(254, 21);
@@ -304,7 +414,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxMiercoles.Location = new System.Drawing.Point(530, 115);
+            this.cbxMiercoles.Location = new System.Drawing.Point(530, 98);
             this.cbxMiercoles.Margin = new System.Windows.Forms.Padding(2);
             this.cbxMiercoles.Name = "cbxMiercoles";
             this.cbxMiercoles.Size = new System.Drawing.Size(254, 21);
@@ -320,7 +430,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxMartes.Location = new System.Drawing.Point(530, 85);
+            this.cbxMartes.Location = new System.Drawing.Point(530, 68);
             this.cbxMartes.Margin = new System.Windows.Forms.Padding(2);
             this.cbxMartes.Name = "cbxMartes";
             this.cbxMartes.Size = new System.Drawing.Size(254, 21);
@@ -336,7 +446,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxViernes.Location = new System.Drawing.Point(530, 178);
+            this.cbxViernes.Location = new System.Drawing.Point(530, 161);
             this.cbxViernes.Margin = new System.Windows.Forms.Padding(2);
             this.cbxViernes.Name = "cbxViernes";
             this.cbxViernes.Size = new System.Drawing.Size(254, 21);
@@ -352,7 +462,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxJueves.Location = new System.Drawing.Point(530, 148);
+            this.cbxJueves.Location = new System.Drawing.Point(530, 131);
             this.cbxJueves.Margin = new System.Windows.Forms.Padding(2);
             this.cbxJueves.Name = "cbxJueves";
             this.cbxJueves.Size = new System.Drawing.Size(254, 21);
@@ -368,7 +478,7 @@
             "Turno Mañana",
             "Turno Tarde",
             "Libre"});
-            this.cbxSabado.Location = new System.Drawing.Point(530, 211);
+            this.cbxSabado.Location = new System.Drawing.Point(530, 191);
             this.cbxSabado.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSabado.Name = "cbxSabado";
             this.cbxSabado.Size = new System.Drawing.Size(254, 21);
@@ -379,7 +489,7 @@
             this.lblPermiso.AutoSize = true;
             this.lblPermiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPermiso.ForeColor = System.Drawing.Color.White;
-            this.lblPermiso.Location = new System.Drawing.Point(411, 245);
+            this.lblPermiso.Location = new System.Drawing.Point(411, 248);
             this.lblPermiso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPermiso.Name = "lblPermiso";
             this.lblPermiso.Size = new System.Drawing.Size(68, 16);
@@ -395,7 +505,7 @@
             this.dtpPermiso.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(164)))), ((int)(((byte)(168)))));
             this.dtpPermiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPermiso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPermiso.Location = new System.Drawing.Point(530, 245);
+            this.dtpPermiso.Location = new System.Drawing.Point(530, 248);
             this.dtpPermiso.Name = "dtpPermiso";
             this.dtpPermiso.Size = new System.Drawing.Size(253, 22);
             this.dtpPermiso.TabIndex = 56;
@@ -408,7 +518,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(425, 369);
+            this.btnGuardar.Location = new System.Drawing.Point(425, 374);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(109, 59);
@@ -416,6 +526,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -425,7 +536,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(425, 294);
+            this.btnCancelar.Location = new System.Drawing.Point(425, 301);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 57);
@@ -435,104 +546,66 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 2;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_eliminar;
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(204, 366);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(109, 57);
-            this.btnCerrar.TabIndex = 48;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnEditar.FlatAppearance.BorderSize = 2;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_editar;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(204, 294);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(109, 57);
-            this.btnEditar.TabIndex = 47;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnNuevo.FlatAppearance.BorderSize = 2;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_nuevo;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(32, 296);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(109, 57);
-            this.btnNuevo.TabIndex = 46;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 2;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.ho_eliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(32, 366);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 57);
-            this.btnEliminar.TabIndex = 45;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(124)))), ((int)(((byte)(127)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 2;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::CpConsultorioOdontologico.Properties.Resources.hor_buscar;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(266, 25);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(109, 52);
-            this.btnBuscar.TabIndex = 36;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CpConsultorioOdontologico.Properties.Resources.giphy;
-            this.pictureBox1.Location = new System.Drawing.Point(552, 278);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 283);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
+            // 
+            // erpLunes
+            // 
+            this.erpLunes.ContainerControl = this;
+            // 
+            // erpMartes
+            // 
+            this.erpMartes.ContainerControl = this;
+            // 
+            // erpMiercoles
+            // 
+            this.erpMiercoles.ContainerControl = this;
+            // 
+            // erpJueves
+            // 
+            this.erpJueves.ContainerControl = this;
+            // 
+            // erpViernes
+            // 
+            this.erpViernes.ContainerControl = this;
+            // 
+            // erpSabado
+            // 
+            this.erpSabado.ContainerControl = this;
+            // 
+            // erpMes
+            // 
+            this.erpMes.ContainerControl = this;
+            // 
+            // erpPermiso
+            // 
+            this.erpPermiso.ContainerControl = this;
+            // 
+            // lblMes
+            // 
+            this.lblMes.AutoSize = true;
+            this.lblMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMes.ForeColor = System.Drawing.Color.White;
+            this.lblMes.Location = new System.Drawing.Point(411, 220);
+            this.lblMes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(40, 16);
+            this.lblMes.TabIndex = 58;
+            this.lblMes.Text = "Mes:";
+            // 
+            // txtMes
+            // 
+            this.txtMes.Location = new System.Drawing.Point(530, 220);
+            this.txtMes.Name = "txtMes";
+            this.txtMes.Size = new System.Drawing.Size(253, 20);
+            this.txtMes.TabIndex = 59;
             // 
             // FrmHorario
             // 
@@ -540,6 +613,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(795, 454);
+            this.Controls.Add(this.txtMes);
+            this.Controls.Add(this.lblMes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtpPermiso);
             this.Controls.Add(this.btnGuardar);
@@ -571,6 +646,14 @@
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpLunes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMartes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMiercoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpJueves)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpViernes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSabado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpMes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPermiso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +690,15 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider erpLunes;
+        private System.Windows.Forms.ErrorProvider erpMartes;
+        private System.Windows.Forms.ErrorProvider erpMiercoles;
+        private System.Windows.Forms.ErrorProvider erpJueves;
+        private System.Windows.Forms.ErrorProvider erpViernes;
+        private System.Windows.Forms.ErrorProvider erpSabado;
+        private System.Windows.Forms.ErrorProvider erpMes;
+        private System.Windows.Forms.ErrorProvider erpPermiso;
+        private System.Windows.Forms.Label lblMes;
+        private System.Windows.Forms.TextBox txtMes;
     }
 }

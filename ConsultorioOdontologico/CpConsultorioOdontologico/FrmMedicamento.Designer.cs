@@ -44,6 +44,11 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cbxInventario = new System.Windows.Forms.ComboBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.cbxPaciente = new System.Windows.Forms.ComboBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -66,11 +71,7 @@
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.cbxInventario = new System.Windows.Forms.ComboBox();
-            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.pnlDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
@@ -78,11 +79,11 @@
             this.pnlTitulo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.gbxDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -100,6 +101,7 @@
             // 
             // pnlAcciones
             // 
+            this.pnlAcciones.Controls.Add(this.btnInventario);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
@@ -261,6 +263,57 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos del Medicamento";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(114, 119);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.MaxLength = 250;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(265, 21);
+            this.txtPrecio.TabIndex = 38;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(11, 125);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(52, 15);
+            this.lblPrecio.TabIndex = 37;
+            this.lblPrecio.Text = "Precio:";
+            // 
+            // nudCantidad
+            // 
+            this.nudCantidad.Location = new System.Drawing.Point(114, 24);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(101, 21);
+            this.nudCantidad.TabIndex = 36;
+            // 
+            // cbxInventario
+            // 
+            this.cbxInventario.BackColor = System.Drawing.Color.Wheat;
+            this.cbxInventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.cbxInventario.FormattingEnabled = true;
+            this.cbxInventario.Items.AddRange(new object[] {
+            "CANCELADO",
+            "PENDIENTE"});
+            this.cbxInventario.Location = new System.Drawing.Point(535, 38);
+            this.cbxInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxInventario.Name = "cbxInventario";
+            this.cbxInventario.Size = new System.Drawing.Size(230, 23);
+            this.cbxInventario.TabIndex = 35;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(11, 27);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(68, 15);
+            this.lblCantidad.TabIndex = 34;
+            this.lblCantidad.Text = "Cantidad:";
+            // 
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
@@ -358,7 +411,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnEditar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_editar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(175, 5);
+            this.btnEditar.Location = new System.Drawing.Point(117, 5);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(111, 59);
@@ -379,7 +432,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnEliminar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(317, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(231, 5);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(111, 59);
@@ -399,7 +452,7 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnNuevo.Image = global::CpConsultorioOdontologico.Properties.Resources.med_agregar;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(36, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(3, 5);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(111, 59);
@@ -419,7 +472,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
             this.btnCerrar.Image = global::CpConsultorioOdontologico.Properties.Resources.med_cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(454, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(345, 4);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(111, 59);
@@ -571,56 +624,25 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblCantidad
+            // btnInventario
             // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(11, 27);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(68, 15);
-            this.lblCantidad.TabIndex = 34;
-            this.lblCantidad.Text = "Cantidad:";
-            // 
-            // cbxInventario
-            // 
-            this.cbxInventario.BackColor = System.Drawing.Color.Wheat;
-            this.cbxInventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
-            this.cbxInventario.FormattingEnabled = true;
-            this.cbxInventario.Items.AddRange(new object[] {
-            "CANCELADO",
-            "PENDIENTE"});
-            this.cbxInventario.Location = new System.Drawing.Point(535, 38);
-            this.cbxInventario.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxInventario.Name = "cbxInventario";
-            this.cbxInventario.Size = new System.Drawing.Size(230, 23);
-            this.cbxInventario.TabIndex = 35;
-            // 
-            // nudCantidad
-            // 
-            this.nudCantidad.Location = new System.Drawing.Point(114, 24);
-            this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(101, 21);
-            this.nudCantidad.TabIndex = 36;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(11, 125);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(52, 15);
-            this.lblPrecio.TabIndex = 37;
-            this.lblPrecio.Text = "Precio:";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(114, 119);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrecio.MaxLength = 250;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(265, 21);
-            this.txtPrecio.TabIndex = 38;
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.btnInventario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnInventario.FlatAppearance.BorderSize = 3;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(84)))), ((int)(((byte)(87)))));
+            this.btnInventario.Image = global::CpConsultorioOdontologico.Properties.Resources.med_login;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(459, 5);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(129, 59);
+            this.btnInventario.TabIndex = 13;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // FrmMedicamento
             // 
@@ -646,11 +668,11 @@
             this.pnlMenu.ResumeLayout(false);
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -694,5 +716,6 @@
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Button btnInventario;
     }
 }

@@ -226,3 +226,4 @@ D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologi
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CpConsultorioOdontologico\obj\Debug\CpConsultorioOdontologico.pdb
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CpConsultorioOdontologico\obj\Debug\CpConsultorioOdontologico.FrmUsuario.resources
 D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CpConsultorioOdontologico\obj\Debug\CpConsultorioOdontologico.FrmHorario.resources
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CpConsultorioOdontologico\obj\Debug\CpConsultorioOdontologico.FrmInventario.resources

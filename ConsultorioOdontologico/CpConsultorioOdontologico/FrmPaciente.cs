@@ -120,7 +120,12 @@ namespace CpConsultorioOdontologico
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 esValido = false;
-                erpNombre.SetError(txtNombre, "El campo Nombre es obligatorio");
+                erpNombre.SetError(txtNombre, "El campo Nombre Completo es obligatorio");
+            }
+            else if (!Regex.IsMatch(cbxAlergias.Text, "^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ()\\s]+$"))
+            {
+                esValido = false;
+                erpAlergias.SetError(cbxAlergias, "El campo Nombre Completo debe contener solo letras, espacios y caracteres especiales");
             }
             if (string.IsNullOrEmpty(txtCedulaIdentidad.Text))
             {
@@ -132,10 +137,10 @@ namespace CpConsultorioOdontologico
                 esValido = false;
                 erpAlergias.SetError(cbxAlergias, "El campo Alergias es obligatorio");
             }
-            else if (!Regex.IsMatch(cbxAlergias.Text, "^[a-zA-Z\\s]+$"))
+            else if (!Regex.IsMatch(cbxAlergias.Text, "^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ()\\s]+$"))
             {
                 esValido = false;
-                erpAlergias.SetError(cbxAlergias, "El campo Alergias debe contener solo letras y espacios");
+                erpAlergias.SetError(cbxAlergias, "El campo Alergias debe contener solo letras, espacios y caracteres especiales");
             }
             if (string.IsNullOrEmpty(dtpFechaNacimiento.Text))
             {
@@ -177,7 +182,7 @@ namespace CpConsultorioOdontologico
                     paciente.alergias = cbxAlergias.Text;
                     paciente.fechaNacimiento = dtpFechaNacimiento.Value;
                     paciente.celular = int.Parse(txtCelular.Text);
-                    paciente.usuarioRegistro = "SIS324";
+                    paciente.usuarioRegistro = Util.usuario.usuario1;
 
                     var existePacientes = PacienteCln.listar();
                     bool pacienteExiste = false;
