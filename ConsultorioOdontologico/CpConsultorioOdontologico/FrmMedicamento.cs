@@ -60,6 +60,8 @@ namespace CpConsultorioOdontologico
             listar();
             cargarPaciente();
             cargarInventario();
+            lblPrecio.Visible = false;
+            txtPrecio.Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

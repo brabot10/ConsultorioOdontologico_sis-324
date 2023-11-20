@@ -1,0 +1,145 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebConsultorioOdontologicoMVC
+build_property.RootNamespace = WebConsultorioOdontologicoMVC
+build_property.ProjectDir = D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\WebConsultorioOdontologicoMVC\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\WebConsultorioOdontologicoMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Citas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Citas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Citas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Citas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Citas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Pacientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Pacientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Pacientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Pacientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Pacientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Personals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Personals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Personals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Personals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Personals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8s4p0cxnz4

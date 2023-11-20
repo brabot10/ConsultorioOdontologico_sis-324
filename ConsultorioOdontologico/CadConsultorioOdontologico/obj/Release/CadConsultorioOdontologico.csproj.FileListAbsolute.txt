@@ -1,0 +1,12 @@
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\CadConsultorioOdontologico.dll.config
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\CadConsultorioOdontologico.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\CadConsultorioOdontologico.pdb
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\EntityFramework.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\EntityFramework.SqlServer.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\EntityFramework.xml
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\bin\Release\EntityFramework.SqlServer.xml
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Release\CadConsultorioOdontologico.csproj.AssemblyReference.cache
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Release\CadConsultorioOdontologico.csproj.CoreCompileInputs.cache
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Release\CadConsultorioOdontologico.csproj.CopyComplete
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Release\CadConsultorioOdontologico.dll
+D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\CadConsultorioOdontologico\obj\Release\CadConsultorioOdontologico.pdb

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadConsultorioOdontologico"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClnConsultorioOdontologico", "ClnConsultorioOdontologico\ClnConsultorioOdontologico.csproj", "{376BE4A5-C10F-47E3-BC26-46DB2653D912}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConsultorioOdontologicoMVC", "WebConsultorioOdontologicoMVC\WebConsultorioOdontologicoMVC.csproj", "{81DF3387-2BCE-4956-A841-3B2E28E4BB8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{376BE4A5-C10F-47E3-BC26-46DB2653D912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{376BE4A5-C10F-47E3-BC26-46DB2653D912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{376BE4A5-C10F-47E3-BC26-46DB2653D912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DF3387-2BCE-4956-A841-3B2E28E4BB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DF3387-2BCE-4956-A841-3B2E28E4BB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DF3387-2BCE-4956-A841-3B2E28E4BB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DF3387-2BCE-4956-A841-3B2E28E4BB8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
