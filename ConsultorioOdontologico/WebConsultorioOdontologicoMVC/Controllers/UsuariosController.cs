@@ -47,7 +47,7 @@ namespace WebConsultorioOdontologicoMVC.wwwroot
         // GET: Usuarios/Create
         public IActionResult Create()
         {
-            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "nombres");
+            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Nombres");
             return View();
         }
 
@@ -60,7 +60,8 @@ namespace WebConsultorioOdontologicoMVC.wwwroot
         {
             if (!string.IsNullOrEmpty(usuario.Usuario1))
             {
-                usuario.UsuarioRegistro = "sis457";
+                usuario.Clave = Util.Encrypt("sis324");
+                usuario.UsuarioRegistro = "sis324 web";
                 usuario.FechaRegistro = DateTime.Now;
                 usuario.Estado = 1;
                 _context.Add(usuario);

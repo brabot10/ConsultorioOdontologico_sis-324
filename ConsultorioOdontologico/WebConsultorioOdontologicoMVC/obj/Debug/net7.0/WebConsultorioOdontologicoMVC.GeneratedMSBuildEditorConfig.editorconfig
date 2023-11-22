@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebConsultorioOdontologicoMVC
 build_property.RootNamespace = WebConsultorioOdontologicoMVC
 build_property.ProjectDir = D:\Bryan 2023\Info\Ingenieria de Software- sis 324\SIS_324_ConsultorioOdontologico\ConsultorioOdontologico\WebConsultorioOdontologicoMVC\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -42,6 +44,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Horarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Horarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Horarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Horarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Horarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Inventarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Inventarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Inventarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Inventarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Inventarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Bryan 2023/Info/Ingenieria de Software- sis 324/SIS_324_ConsultorioOdontologico/ConsultorioOdontologico/WebConsultorioOdontologicoMVC/Views/Medicamentos/Create.cshtml]

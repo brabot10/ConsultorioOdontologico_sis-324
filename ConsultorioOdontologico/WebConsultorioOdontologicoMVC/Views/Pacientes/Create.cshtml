@@ -5,54 +5,64 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
-
-<h4>Paciente</h4>
+<h1>Crear Paciente</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="IdPersonal" class="control-label"></label>
-                <select asp-for="IdPersonal" class ="form-control" asp-items="ViewBag.IdPersonal"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nombres" class="control-label"></label>
+                <label class="control-label">Nombre Completo</label>
                 <input asp-for="Nombres" class="form-control" />
                 <span asp-validation-for="Nombres" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CedulaIdentidad" class="control-label"></label>
+                <label class="control-label">Ceédula de Identidad</label>
                 <input asp-for="CedulaIdentidad" class="form-control" />
                 <span asp-validation-for="CedulaIdentidad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Alergias" class="control-label"></label>
-                <input asp-for="Alergias" class="form-control" />
+                <label class="control-label">Alergias</label>
+                <select asp-for="Alergias" class="form-control">
+                    <option> Guantes de Látex</option>
+                    <option> Metales (Cromo)</option>
+                    <option>Metales (Niquel)</option>
+                    <option>Metales (Cobalto)</option>
+                    <option>Metales (Titanio)</option>
+                    <option>Metales (Platino)</option>
+                    <option>Monómero Acrílico</option>
+                    <option>Menta y Pino</option>
+                    <option>Anestesia Local</option>
+                    <option>Resinas</option>
+                    <option>Materiales de Impresión</option>
+                    <option>Productos  que contienen Eugenol</option>
+                </select>
                 <span asp-validation-for="Alergias" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <label class="control-label">Fecha de Nacimiento</label>
                 <input asp-for="FechaNacimiento" class="form-control" />
                 <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Celular" class="control-label"></label>
+                <label class="control-label">Celular</label>
                 <input asp-for="Celular" class="form-control" />
                 <span asp-validation-for="Celular" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

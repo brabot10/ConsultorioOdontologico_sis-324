@@ -22,7 +22,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         public async Task<IActionResult> Index()
         {
             var labSis324Context = _context.Pacientes.Include(p => p.IdPersonalNavigation);
-            return View(await labSis324Context.ToListAsync());
+            return View(await labSis324Context.Where(x => x.Estado != -1).ToListAsync());
         }
 
         // GET: Pacientes/Details/5
@@ -47,7 +47,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         // GET: Pacientes/Create
         public IActionResult Create()
         {
-            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Id");
+            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "nombres");
             return View();
         }
 
@@ -56,10 +56,13 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdPersonal,Nombres,CedulaIdentidad,Alergias,FechaNacimiento,Celular,UsuarioRegistro,FechaRegistro,Estado")] Paciente paciente)
+        public async Task<IActionResult> Create([Bind("Id,IdPersonal,Nombres,CedulaIdentidad,Alergias,FechaNacimiento,Celular")] Paciente paciente)
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(paciente.Nombres) )//poner ¼¼todas las validaciones de los demas campos
             {
+                paciente.UsuarioRegistro = "sis324 web";
+                paciente.FechaRegistro = DateTime.Now;
+                paciente.Estado = 1;
                 _context.Add(paciente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -90,17 +93,20 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdPersonal,Nombres,CedulaIdentidad,Alergias,FechaNacimiento,Celular,UsuarioRegistro,FechaRegistro,Estado")] Paciente paciente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdPersonal,Nombres,CedulaIdentidad,Alergias,FechaNacimiento,Celular")] Paciente paciente)
         {
             if (id != paciente.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(paciente.Nombres))
             {
                 try
                 {
+                    paciente.UsuarioRegistro = User.Identity?.Name;
+                    paciente.FechaRegistro = DateTime.Now;
+                    paciente.Estado = 1;
                     _context.Update(paciente);
                     await _context.SaveChangesAsync();
                 }
@@ -152,7 +158,8 @@ namespace WebConsultorioOdontologicoMVC.Controllers
             var paciente = await _context.Pacientes.FindAsync(id);
             if (paciente != null)
             {
-                _context.Pacientes.Remove(paciente);
+                paciente.Estado = -1;
+               // _context.Pacientes.Remove(paciente);
             }
             
             await _context.SaveChangesAsync();

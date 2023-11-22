@@ -38,12 +38,12 @@ namespace CpConsultorioOdontologico
             dgvLista.Columns["aCuenta"].HeaderText = "A Cuenta";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha del Registro";
-            btnEditar.Enabled = cita.Count > 0 ;
+            btnEditar.Enabled = cita.Count > 0;
             btnEliminar.Enabled = cita.Count > 0;
             if (cita.Count > 0) dgvLista.Rows[0].Cells["tratamiento"].Selected = true;
             //int valorRegistroSeleccionado = ObtenerValorRegistroSeleccionado();
             //btnEditar.Enabled = cita.Count > 0 && ObtenerValorRegistroSeleccionado() == 2;
-           // btnEliminar.Enabled = cita.Count > 0 && ObtenerValorRegistroSeleccionado() == 2;
+            // btnEliminar.Enabled = cita.Count > 0 && ObtenerValorRegistroSeleccionado() == 2;
         }
         private int ObtenerValorRegistroSeleccionado()
         {
@@ -88,22 +88,32 @@ namespace CpConsultorioOdontologico
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Size = new Size(776, 493);
+            
             esNuevo = false;
 
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             var cita = CitaCln.get(id);
             dtpFecha.Value = cita.fecha;
-            txtTratamiento.Text = cita.tratamiento;
-            cbxPago.Text = cita.pago;
-            txtAcuenta.Text = cita.aCuenta;
-            dtpHora.Value = DateTime.Today.Add(cita.hora);
-            //dtpHora.Value = Convert.ToDateTime(cita.hora);
-            cbxPaciente.Visible = false;
-            lblPaciente.Visible = false;
-            cbxRegistro.Visible = false;
-            lblRegistro.Visible = false;
+            if (cita.fecha < DateTime.Now)
+            {
+                MessageBox.Show("Cita antigua", "::: Consultorio Odontologico - Mensaje::: ",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Size = new Size(776, 493);
+                txtTratamiento.Text = cita.tratamiento;
+                cbxPago.Text = cita.pago;
+                txtAcuenta.Text = cita.aCuenta;
+                dtpHora.Value = DateTime.Today.Add(cita.hora);
+                //dtpHora.Value = Convert.ToDateTime(cita.hora);
+                cbxPaciente.Visible = false;
+                lblPaciente.Visible = false;
+                cbxRegistro.Visible = false;
+                lblRegistro.Visible = false;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)//Cancelar
@@ -268,7 +278,7 @@ namespace CpConsultorioOdontologico
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
- 
+
         }
 
         private void btnMedicamentos_Click(object sender, EventArgs e)

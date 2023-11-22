@@ -74,17 +74,29 @@
                                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                                        <li><a asp-controller="Home" asp-action="Index" class="nav-item nav-link active text-secondary">Inicio</a></li>
-                                        <!--<li><a asp-controller="about.html" asp-action="Index" class="nav-item nav-link">Sobre nosotros</a></li>-->
+                                        <li><a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Inicio</a></li>
+                                
                                         <li class="has-children">
                                             <a asp-controller="Pacientes" asp-action="Index" class="nav-item nav-link">Pacientes</a>
                                             <ul class="dropdown arrow-top">
                                                 <li><a asp-controller="Citas" asp-action="Index" class="nav-item nav-link">Citas</a></li>
-                                                <li><a asp-controller="Medicamentos" asp-action="Index" class="nav-item nav-link">Medicamentos</a></li>
                                             </ul>
                                         </li>
-                                        <li><a asp-controller="Personals" asp-action="Index" class="nav-item nav-link">Personal</a></li>
-                                        <li><a asp-controller="usuarios" asp-action="Index" class="nav-item nav-link">Usuarios</a></li>
+                                        <li class="has-children">
+                                            <a asp-controller="Medicamentos" asp-action="Index" class="nav-item nav-link">Medicamentos</a>
+                                            <ul class="dropdown arrow-top">                                     
+                                                <li><a asp-controller="Inventarios" asp-action="Index" class="nav-item nav-link">Inventarios</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a asp-controller="Personals" asp-action="Index" class="nav-item nav-link">Personal</a>
+                                            <ul class="dropdown arrow-top">
+                                                <li><a asp-controller="Citas" asp-action="Index" class="nav-item nav-link">Citas</a></li>
+                                                <li><a asp-controller="horarios" asp-action="Index" class="nav-item nav-link">Horarios</a></li>
+                                                <li><a asp-controller="usuarios" asp-action="Index" class="nav-item nav-link">Usuarios</a></li>
+                                            </ul>
+                                        </li>
+                                      
                                     </ul>
                                 </div>
                             </nav>
@@ -98,7 +110,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-7">
-                        <span class="sub-text">Defensa de 20/11/2023</span>
+                        <span class="sub-text">Defensa de sis-324  22/11/2023</span>
                         <h1>sis-324 <strong>INFORMÁTICA </strong></h1>
                     </div>
                 </div>
@@ -111,43 +123,42 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <h3 class="footer-heading mb-4">Navigation</h3>
+                                <h3 class="footer-heading mb-4">Caracteristicas de nuestro Consultorio</h3>
                             </div>
                             <div class="col-md-6 col-lg-6">
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Team</a></li>
+                                    <li style="color: #ffffff;">Equipo y materiales de calidad</li>
+                                    <li style="color: #ffffff;">Personal capacitado</li>
+                                    <li style="color: #ffffff;">Ambiente limpio y seguro</li>
+                                    <li style="color: #ffffff;">Servicios personalizados</li>
                                 </ul>
                             </div>
                             <div class="col-md-6 col-lg-6">
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Membership</a></li>
+                                    <li style="color: #ffffff;"><a>Precios competitivos</a></li>
+                                    <li style="color: #ffffff;"><a>Ubicación conveniente</a></li>
+                                    <li style="color: #ffffff;"><a>Confianza</a></li>
+                                    <li style="color: #ffffff;"><a>Innovación</a></li>
                                 </ul>
                             </div>
                         </div>
-
 
                     </div>
                     <div class="col-lg-4">
 
 
                         <div class="mb-5">
-                            <h3 class="footer-heading mb-4">Recent News</h3>
+                            <h3 style="color: #ffffff;" class="footer-heading mb-4">Nuestros Doctores:</h3>
                             <div class="block-25">
                                 <ul class="list-unstyled">
                                     <li class="mb-3">
                                         <a href="#" class="d-flex">
                                             <figure class="image mr-4">
-                                                <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
+                                                <img src="images/hero_bg_bryan.jpg" alt="" class="img-fluid">
                                             </figure>
                                             <div class="text">
-                                                <span class="small text-uppercase date">Sep 16, 2018</span>
-                                                <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
+                                                <span class="small text-uppercase date">21/11/2023</span>
+                                                <h3 class="heading font-weight-light">Dr. Bryan Pilcolora Mendoza</h3>
                                             </div>
                                         </a>
                                     </li>
@@ -157,19 +168,19 @@
                                                 <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
                                             </figure>
                                             <div class="text">
-                                                <span class="small text-uppercase date">Sep 16, 2018</span>
-                                                <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
+                                                <span class="small text-uppercase date">21/11/2023</span>
+                                                <h3 class="heading font-weight-light">Dra. Karen Yucra Bustamante</h3>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="mb-3">
                                         <a href="#" class="d-flex">
                                             <figure class="image mr-4">
-                                                <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
+                                                <img src="images/hero_bg_marquez.jpg" alt="" class="img-fluid">
                                             </figure>
                                             <div class="text">
-                                                <span class="small text-uppercase date">Sep 16, 2018</span>
-                                                <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
+                                                <span class="small text-uppercase date">21/11/2023</span>
+                                                <h3 class="heading font-weight-light">Dr. Gabriel García Marquez</h3>
                                             </div>
                                         </a>
                                     </li>
@@ -183,23 +194,13 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
 
                         <div class="mb-5">
-                            <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
-
-                            <form action="#" method="post">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control border-white text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-                                    </div>
-                                </div>
-                            </form>
-
+                            <h3 class="footer-heading mb-2">¿Qué es un Consultorio Odontologico?</h3>
+                            <p>Un consultorio odontológico es un establecimiento sanitario dedicado a la atención odontológica. En este establecimiento, los profesionales de la odontología (dentistas, higienistas dentales, técnicos dentales, etc.) brindan atención a los pacientes para prevenir, diagnosticar y tratar problemas dentales.</p>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 class="footer-heading mb-4">Follow Us</h3>
+                                <h3 class="footer-heading mb-4">Encuentranos en:</h3>
 
                                 <div>
                                     <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
@@ -226,20 +227,21 @@
                 </div>
             </div>
         </footer>
+    </div>
 
-        <script src="~/js/jquery-3.3.1.min.js"></script>
-        <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="~/js/jquery-ui.js"></script>
-        <script src="~/js/popper.min.js"></script>
-        <script src="~/js/bootstrap.min.js"></script>
-        <script src="~/js/owl.carousel.min.js"></script>
-        <script src="~/js/jquery.stellar.min.js"></script>
-        <script src="~/js/jquery.countdown.min.js"></script>
-        <script src="~/js/jquery.magnific-popup.min.js"></script>
-        <script src="~/js/bootstrap-datepicker.min.js"></script>
-        <script src="~/js/aos.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/aos.js"></script>
 
-        <script src="js/main.js"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+    <script src="js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

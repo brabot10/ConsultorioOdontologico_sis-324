@@ -5,45 +5,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>CONSULTORIO ODONTOLÓGICO :::PACIENTES:::</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">
+        <i class="fa-solid fa-calendar-plus"></i>Crear nuevo Paciente
+    </a>
 </p>
 <table class="table">
+   <tbody>
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CedulaIdentidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Alergias)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaNacimiento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Celular)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UsuarioRegistro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaRegistro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPersonalNavigation)
-            </th>
+            <th>Nombre Completo</th>
+            <th>Cedula de Identidad</th>
+            <th>Alergías</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Celular</th>
+            <th>Usuario Registro</th>
+            <th>Fecha Registro</th>
+            <th>Estado</th>
             <th></th>
         </tr>
     </thead>
-    <tbody>
+   <tbody>
+   <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -68,15 +53,15 @@
                 @Html.DisplayFor(modelItem => item.FechaRegistro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Estado)
+                            @(item.Estado == 1 ? "Activo" : "Inactivo")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdPersonalNavigation.Id)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
             </td>
         </tr>
 }

@@ -133,10 +133,6 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
-      "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\.DS_Store",
-      "PackagePath": "staticwebassets\\images\\.DS_Store"
-    },
-    {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_1.jpg",
       "PackagePath": "staticwebassets\\images\\hero_bg_1.jpg"
     },
@@ -147,6 +143,14 @@
     {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_2.jpg",
       "PackagePath": "staticwebassets\\images\\hero_bg_2.jpg"
+    },
+    {
+      "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_bryan.jpg",
+      "PackagePath": "staticwebassets\\images\\hero_bg_bryan.jpg"
+    },
+    {
+      "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_marquez.jpg",
+      "PackagePath": "staticwebassets\\images\\hero_bg_marquez.jpg"
     },
     {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\img_1.jpg",
@@ -465,10 +469,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\scss\\.DS_Store",
-      "PackagePath": "staticwebassets\\scss\\.DS_Store"
-    },
-    {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\scss\\_site-base.scss",
       "PackagePath": "staticwebassets\\scss\\_site-base.scss"
     },
@@ -479,10 +479,6 @@
     {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\scss\\_site-navbar.scss",
       "PackagePath": "staticwebassets\\scss\\_site-navbar.scss"
-    },
-    {
-      "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\scss\\bootstrap\\.DS_Store",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\.DS_Store"
     },
     {
       "Id": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\scss\\bootstrap\\_alert.scss",
