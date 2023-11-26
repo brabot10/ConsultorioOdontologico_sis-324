@@ -4,69 +4,71 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="mx-5">
+    <h1>Detalles delPaciente</h1>
 
-<h1>Detalles delPaciente</h1>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nombre Completo
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombres)
+            </dd>
+            <dt class="col-sm-2">
+                Cédula de Identidad
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CedulaIdentidad)
+            </dd>
+            <dt class="col-sm-2">
+                Alergias
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Alergias)
+            </dd>
+            <dt class="col-sm-2">
+                Fecha de Nacimiento
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaNacimiento)
+            </dd>
+            <dt class="col-sm-2">
+                Celular
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Celular)
+            </dd>
+            <dt class="col-sm-2">
+                Usuario de Registro
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UsuarioRegistro)
+            </dd>
+            <dt class="col-sm-2">
+                Fecha de Registro
+            </dt>
+            <dd class="col-sm-10">
+                @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
+            </dd>
+            <dt class="col-sm-2">
+                Estado
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+            <dt class="col-sm-2">
+                Id del Doctor
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdPersonalNavigation.Id)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+        <a asp-action="Index">Volver a la lista</a>
+    </div>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Nombre Completo
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nombres)
-        </dd>
-        <dt class="col-sm-2">
-            Cédula de Identidad
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CedulaIdentidad)
-        </dd>
-        <dt class="col-sm-2">
-            Alergias
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Alergias)
-        </dd>
-        <dt class="col-sm-2">
-            Fecha de Nacimiento
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaNacimiento)
-        </dd>
-        <dt class="col-sm-2">
-            Celular
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Celular)
-        </dd>
-        <dt class="col-sm-2">
-            Usuario de Registro
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UsuarioRegistro)
-        </dd>
-        <dt class="col-sm-2">
-            Fecha de Registro
-        </dt>
-        <dd class="col-sm-10">
-            @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
-        </dd>
-        <dt class="col-sm-2">
-            Estado
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-        <dt class="col-sm-2">
-            Id del Doctor
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdPersonalNavigation.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Volver a la lista</a>
 </div>

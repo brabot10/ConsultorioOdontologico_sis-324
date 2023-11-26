@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dkh/Kikrhmynp3WwLKsXFKiGd3SQPDKg6NNhUd5j/xQ=",
+  "Hash": "VFqbERTlpW1qVcDV8zQ2fuGoRVw0FW5uGGZe/04Rw3c=",
   "Source": "WebConsultorioOdontologicoMVC",
   "BasePath": "_content/WebConsultorioOdontologicoMVC",
   "Mode": "Default",
@@ -737,6 +737,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\hero_bg_bryan.jpg"
+    },
+    {
+      "Identity": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_daniela.jpg",
+      "SourceId": "WebConsultorioOdontologicoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\",
+      "BasePath": "_content/WebConsultorioOdontologicoMVC",
+      "RelativePath": "images/hero_bg_daniela.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hero_bg_daniela.jpg"
     },
     {
       "Identity": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\images\\hero_bg_marquez.jpg",

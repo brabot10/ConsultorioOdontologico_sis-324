@@ -47,7 +47,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         // GET: Pacientes/Create
         public IActionResult Create()
         {
-            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "nombres");
+            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Nombres");
             return View();
         }
 
@@ -84,7 +84,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Id", paciente.IdPersonal);
+            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Nombres", paciente.IdPersonal);
             return View(paciente);
         }
 
@@ -104,7 +104,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
             {
                 try
                 {
-                    paciente.UsuarioRegistro = User.Identity?.Name;
+                    paciente.UsuarioRegistro = "sis324 web";
                     paciente.FechaRegistro = DateTime.Now;
                     paciente.Estado = 1;
                     _context.Update(paciente);

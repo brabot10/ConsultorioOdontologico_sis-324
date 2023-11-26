@@ -5,65 +5,71 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CONSULTORIO ODONTOLÓGICO :::PACIENTES:::</h1>
+<div class="mx-5">
 
-<p>
-    <a asp-action="Create">
-        <i class="fa-solid fa-calendar-plus"></i>Crear nuevo Paciente
-    </a>
-</p>
-<table class="table">
-   <tbody>
-    <thead>
-        <tr>
-            <th>Nombre Completo</th>
-            <th>Cedula de Identidad</th>
-            <th>Alergías</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Celular</th>
-            <th>Usuario Registro</th>
-            <th>Fecha Registro</th>
-            <th>Estado</th>
-            <th></th>
-        </tr>
-    </thead>
-   <tbody>
-   <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombres)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CedulaIdentidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Alergias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaNacimiento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsuarioRegistro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaRegistro)
-            </td>
-            <td>
-                            @(item.Estado == 1 ? "Activo" : "Inactivo")
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPersonalNavigation.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <h1>LISTA DE PACIENTES</h1>
+
+    <p>
+        <a asp-action="Create">
+            <i class="fas fa-plus me-6"></i>Crear nuevo Paciente
+        </a>
+    </p>
+    <table class="table">
+        <tbody>
+        <thead>
+            <tr style="background-color: #333333">
+                <th style="color : #C7180C">Nombre del Doctor</th>
+                <th style="color : #C7180C">Nombre Completo</th>
+                <th style="color : #C7180C">Cedula de Identidad</th>
+                <th style="color : #C7180C">Alergías</th>
+                <th style="color : #C7180C">Fecha de Nacimiento</th>
+                <th style="color : #C7180C">Celular</th>
+                <th style="color : #C7180C">Usuario Registro</th>
+                <th style="color : #C7180C">Fecha Registro</th>
+                <th style="color : #C7180C">Estado</th>        
+                <th style="color : #C7180C">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tbody>
+                    @foreach (var item in Model)
+                    {
+                <tr style="background-color: #333333">
+                    <td style="color : white">
+                                @item.IdPersonalNavigation.Nombres
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.Nombres)
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.CedulaIdentidad)
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.Alergias)
+                    </td>
+                    <td style="color : white">
+                                @item.FechaNacimiento.ToShortDateString()
+
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.Celular)
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+                    </td>
+                    <td style="color : white">
+                                @Html.DisplayFor(modelItem => item.FechaRegistro)
+                    </td>
+                    <td style="color : white">
+                                @(item.Estado == 1 ? "Activo" : "Inactivo")
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver"><i class="fas fa-eye me-2"></i></a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i class="fas fa-edit me-2"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar"><i class="fas fa-trash me-2"></i></a>
+                    </td>
+                </tr>
+                    }
+        </tbody>
+    </table>
+</div>

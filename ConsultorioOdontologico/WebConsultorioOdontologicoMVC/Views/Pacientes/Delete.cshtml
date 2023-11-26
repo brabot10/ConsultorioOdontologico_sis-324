@@ -5,73 +5,76 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Eliminar Paciente </h1>
+<div class="mx-5">
+    <h1>Eliminar Paciente </h1>
 
-<h3>¿Esta seguro que desea eliminar el Paciente?</h3>
-<div>
-    <h4>Paciente</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Nombre Completo
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nombres)
-        </dd>
-        <dt class="col-sm-2">
-            Cédula de Identidad
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CedulaIdentidad)
-        </dd>
-        <dt class="col-sm-2">
-            Alergias
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Alergias)
-        </dd>
-        <dt class="col-sm-2">
-            Fecha de Nacimiento
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaNacimiento)
-        </dd>
-        <dt class="col-sm-2">
-            Celular
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Celular)
-        </dd>
-        <dt class="col-sm-2">
-            Usuario de Registro
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UsuarioRegistro)
-        </dd>
-        <dt class="col-sm-2">
-            Fecha de Registro
-        </dt>
-        <dd class="col-sm-10">
-            @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
-        </dd>
-        <dt class="col-sm-2">
-            Estado
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-        <dt class="col-sm-2">
-            Id del Doctor
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdPersonalNavigation.Id)
-        </dd>
-    </dl>
+    <h3>¿Esta seguro que desea eliminar el Paciente?</h3>
+    <div>
+        <h4>Paciente</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nombre Completo
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombres)
+            </dd>
+            <dt class="col-sm-2">
+                Cédula de Identidad
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CedulaIdentidad)
+            </dd>
+            <dt class="col-sm-2">
+                Alergias
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Alergias)
+            </dd>
+            <dt class="col-sm-2">
+                Fecha de Nacimiento
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaNacimiento)
+            </dd>
+            <dt class="col-sm-2">
+                Celular
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Celular)
+            </dd>
+            <dt class="col-sm-2">
+                Usuario de Registro
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UsuarioRegistro)
+            </dd>
+            <dt class="col-sm-2">
+                Fecha de Registro
+            </dt>
+            <dd class="col-sm-10">
+                @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
+            </dd>
+            <dt class="col-sm-2">
+                Estado
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+            <dt class="col-sm-2">
+                Id del Doctor
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdPersonalNavigation.Id)
+            </dd>
+        </dl>
 
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver a la lista</a>
-    </form>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            <a asp-action="Index">Volver a la lista</a>
+        </form>
+    </div>
 </div>
+
