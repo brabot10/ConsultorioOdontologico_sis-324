@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="mx-5">
-    <h1>Editar Paciente</h1>
+    <h1 style="color:red">EDITAR PACIENTE</h1>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -13,22 +13,22 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
                 <div class="form-group">
-                    <label class="control-label">Editar Doctor</label>
+                    <label class="control-label" style="color:red">Editar Doctor</label>
                     <select asp-for="IdPersonal" class="form-control" asp-items="ViewBag.IdPersonal"></select>
                     @* <span asp-validation-for="IdPersonal" class="text-danger"></span> *@
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Nombres</label>
+                    <label class="control-label" style="color:red">Nombres</label>
                     <input asp-for="Nombres" class="form-control" />
                     <span asp-validation-for="Nombres" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Cédula de Identiad</label>
+                    <label class="control-label" style="color:red">Cédula de Identiad</label>
                     <input asp-for="CedulaIdentidad" class="form-control" />
                     <span asp-validation-for="CedulaIdentidad" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Alergias</label>
+                    <label class="control-label" style="color:red">Alergias</label>
                     <select asp-for="Alergias" class="form-control">
                         <option> Guantes de Látex</option>
                         <option> Metales (Cromo)</option>
@@ -42,26 +42,30 @@
                         <option>Resinas</option>
                         <option>Materiales de Impresión</option>
                         <option>Productos  que contienen Eugenol</option>
+                        <option>Materiales de restauración dental</option>
+                        <option>Materiales de prótesis dentales</option>
+                        <option>Pasta de dientes y enjuagues bucales</option>
+                        <option>Material de desinfección</option>
                     </select>
                     <span asp-validation-for="Alergias" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Fecha de Nacimiento</label>
+                    <label class="control-label" style="color:red">Fecha de Nacimiento</label>
                     <input asp-for="FechaNacimiento" class="form-control" />
                     <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Celular</label>
+                    <label class="control-label" style="color:red">Celular</label>
                     <input asp-for="Celular" class="form-control" />
                     <span asp-validation-for="Celular" class="text-danger"></span>
                 </div>
                 <input type="hidden" asp-for="UsuarioRegistro" />
                 <input type="hidden" asp-for="FechaRegistro" />
                 <div class="form-group">
-                    <label class="control-label">Estado</label>
+                    <label class="control-label" style="color:red">Estado</label>
                     <select asp-for="Estado" class="form-select">
-                        <option value="1">Activo</option>
-                        <option value="0">Inactivo</option>
+                        <option value="1">Disponible</option>
+                        <option value="0">No Disponible</option>
                     </select>
                     <span asp-validation-for="Estado" class="text-danger"></span>
                 </div>
@@ -73,7 +77,8 @@
     </div>
 
     <div>
-        <a asp-action="Index">Volver ala lista</a>
+        <i class="fas fa-share fa-flip-horizontal" style="color:red "></i>
+        <a asp-action="Index" style="color:red ">Volver a la lista</a>
     </div>
 </div>
 

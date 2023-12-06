@@ -3,15 +3,27 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    }
+@* //     var pacientesFiltrados = _context.Pacientes.Where(x => x.Estado != -1).ToList();
 
+//     ViewData["IdPaciente"] = new SelectList(pacientesFiltrados, "Id", "Nombres", citum.IdPaciente);
+//     var pacientesFiltrados = _context.Pacientes.Where(x => x.Estado != -1).ToList();
+
+//     ViewData["IdPaciente"] = new SelectList(pacientesFiltrados, "Id", "Nombres");
+// }
+
+
+// <hr />
+// <div class="site-section site-block-3">
+//     <div class="container">
+//     </div> *@
 <div class="mx-5">
 
     <h1>LISTA DE PACIENTES</h1>
 
     <p>
         <a asp-action="Create">
-            <i class="fas fa-plus me-6"></i>Crear nuevo Paciente
+            <i class="fas fa-user-plus me-6 " style="transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">Crear nuevo Paciente</i>
         </a>
     </p>
     <table class="table">
@@ -19,14 +31,14 @@
         <thead>
             <tr style="background-color: #333333">
                 <th style="color : #C7180C">Nombre del Doctor</th>
-                <th style="color : #C7180C">Nombre Completo</th>
-                <th style="color : #C7180C">Cedula de Identidad</th>
-                <th style="color : #C7180C">Alergías</th>
+                <th style="color : #C7180C">Nombre del Paciente</th>
+                <th style="color : #C7180C">Cédula de Identidad</th>
+                <th style="color : #C7180C">Alergias</th>
                 <th style="color : #C7180C">Fecha de Nacimiento</th>
                 <th style="color : #C7180C">Celular</th>
-                <th style="color : #C7180C">Usuario Registro</th>
-                <th style="color : #C7180C">Fecha Registro</th>
-                <th style="color : #C7180C">Estado</th>        
+                <th style="color : #C7180C">Usuario del Registro</th>
+                <th style="color : #C7180C">Fecha del Registro</th>
+                <th style="color : #C7180C">Estado del Registro</th>
                 <th style="color : #C7180C">Acciones</th>
             </tr>
         </thead>
@@ -61,12 +73,12 @@
                                 @Html.DisplayFor(modelItem => item.FechaRegistro)
                     </td>
                     <td style="color : white">
-                                @(item.Estado == 1 ? "Activo" : "Inactivo")
+                                @(item.Estado == 1 ? "Disponible" : "No disponible")
                     </td>
                     <td>
-                        <a asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver"><i class="fas fa-eye me-2"></i></a>
-                        <a asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i class="fas fa-edit me-2"></i></a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar"><i class="fas fa-trash me-2"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver"><i class="fas fa-eye me-2" style="transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></i></a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i class="fas fa-edit me-2" style="transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar"><i class="fas fa-trash me-2" style="transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></i></a>
                     </td>
                 </tr>
                     }

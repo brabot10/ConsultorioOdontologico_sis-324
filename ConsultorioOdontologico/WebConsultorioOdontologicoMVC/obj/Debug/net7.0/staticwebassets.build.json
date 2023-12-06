@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VFqbERTlpW1qVcDV8zQ2fuGoRVw0FW5uGGZe/04Rw3c=",
+  "Hash": "qD2uyWC6/pXVT3kkqjze1tACd6uGi4k8TU69sGMxdkU=",
   "Source": "WebConsultorioOdontologicoMVC",
   "BasePath": "_content/WebConsultorioOdontologicoMVC",
   "Mode": "Default",
@@ -984,6 +984,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Identity": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\js\\Custom.js",
+      "SourceId": "WebConsultorioOdontologicoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\",
+      "BasePath": "_content/WebConsultorioOdontologicoMVC",
+      "RelativePath": "js/Custom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Custom.js"
     },
     {
       "Identity": "D:\\Bryan 2023\\Info\\Ingenieria de Software- sis 324\\SIS_324_ConsultorioOdontologico\\ConsultorioOdontologico\\WebConsultorioOdontologicoMVC\\wwwroot\\js\\jquery.countdown.min.js",

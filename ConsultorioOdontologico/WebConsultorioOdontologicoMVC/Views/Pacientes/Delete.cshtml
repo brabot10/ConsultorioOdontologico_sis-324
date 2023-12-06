@@ -6,66 +6,66 @@
 }
 
 <div class="mx-5">
-    <h1>Eliminar Paciente </h1>
+    <h1 style="color:red">Eliminar Paciente </h1>
 
-    <h3>¿Esta seguro que desea eliminar el Paciente?</h3>
+    <h3 style="color:red">¿Esta seguro que desea eliminar el Paciente?</h3>
     <div>
-        <h4>Paciente</h4>
+        <h4 style="color:red">Paciente</h4>
         <hr />
         <dl class="row">
-            <dt class="col-sm-2">
-                Nombre Completo
+            <dt class="col-sm-2" style="color:red">
+                Nombre del Doctor
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdPersonalNavigation.Nombres)
+            </dd>
+            <dt class="col-sm-2" style="color:red">
+                Nombre Completo del Paciente
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Nombres)
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Cédula de Identidad
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.CedulaIdentidad)
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Alergias
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Alergias)
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Fecha de Nacimiento
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.FechaNacimiento)
+                @Model.FechaNacimiento.ToShortDateString()
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Celular
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Celular)
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Usuario de Registro
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.UsuarioRegistro)
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Fecha de Registro
             </dt>
             <dd class="col-sm-10">
                 @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
             </dd>
-            <dt class="col-sm-2">
+            <dt class="col-sm-2" style="color:red">
                 Estado
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Estado)
-            </dd>
-            <dt class="col-sm-2">
-                Id del Doctor
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.IdPersonalNavigation.Id)
+                @(Model.Estado == 1 ? "Disponible" : "No disponible")
             </dd>
         </dl>
 
@@ -73,8 +73,10 @@
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
             <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            <i class="fas fa-share fa-flip-horizontal" style="color:red "></i>
             <a asp-action="Index">Volver a la lista</a>
         </form>
     </div>
 </div>
+
 

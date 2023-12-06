@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,6 +13,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
     public class PacientesController : Controller
     {
         private readonly LabSis324Context _context;
+        bool esNuevo = false;
 
         public PacientesController(LabSis324Context context)
         {
@@ -48,6 +50,7 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         public IActionResult Create()
         {
             ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Nombres");
+            esNuevo = true;
             return View();
         }
 
@@ -58,16 +61,22 @@ namespace WebConsultorioOdontologicoMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdPersonal,Nombres,CedulaIdentidad,Alergias,FechaNacimiento,Celular")] Paciente paciente)
         {
-            if (!string.IsNullOrEmpty(paciente.Nombres) )//poner ¼¼todas las validaciones de los demas campos
+            var personalFiltrados = _context.Personals.Where(x => x.Estado != -1).ToList();
+            if (!string.IsNullOrEmpty(paciente.Nombres))
             {
-                paciente.UsuarioRegistro = "sis324 web";
+                if (!Regex.IsMatch(paciente.Nombres, "^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ()\\s]+$"))
+                {
+                    ModelState.AddModelError(nameof(paciente.Nombres), "El campo Nombres solo puede contener letras");
+                }
+                paciente.UsuarioRegistro = User.Identity?.Name;
                 paciente.FechaRegistro = DateTime.Now;
                 paciente.Estado = 1;
                 _context.Add(paciente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdPersonal"] = new SelectList(_context.Personals, "Id", "Id", paciente.IdPersonal);
+
+            ViewData["IdPersonal"] = new SelectList(personalFiltrados, "Id", "Nombres", paciente.IdPersonal);  
             return View(paciente);
         }
 
